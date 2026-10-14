@@ -57,7 +57,7 @@ section{position:relative}
 .btn{display:flex;align-items:center;justify-content:center;gap:12px;min-height:60px;padding:14px 26px;border-radius:14px;font-size:20px;font-weight:800;text-decoration:none;border:3px solid transparent;cursor:pointer;font-family:inherit;line-height:1.15;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s,box-shadow .2s}
 .btn svg{flex:none;width:24px;height:24px}
 .btn-call{background:var(--lane);color:var(--lane-ink);border-color:var(--lane);box-shadow:0 8px 22px -8px rgba(0,0,0,.55)}
-.btn-line{background:rgba(19,40,73,.68);color:var(--white);border-color:var(--white)}
+.btn-line{background:rgba(19,40,73,.22);text-shadow:0 1px 8px rgba(0,0,0,.45);color:var(--white);border-color:var(--white)}
 .btn:active{transform:translateY(1px) scale(.99)}
 .btn small{display:block;font-size:17px;font-weight:700}
 .btn-stack{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15}
@@ -76,11 +76,12 @@ section{position:relative}
 .hero-drag:active{cursor:grabbing}
 .hero-copy{position:relative;z-index:2;padding-top:96px;pointer-events:none}
 .hero-copy .btn,.hero-copy a{pointer-events:auto}
-.hero h1{font-size:clamp(3rem,14.5vw,6rem);line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 24px rgba(19,40,73,.6)}
+.hero h1{font-size:clamp(3rem,14.5vw,6rem);line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 18px rgba(0,0,0,.28)}
 .hero h1 span{display:block}
 .hero h1 .yl{color:var(--lane)}
-.promise{margin-top:18px;font-size:clamp(19px,5.2vw,22px);line-height:1.4;max-width:30ch;color:var(--white);text-shadow:0 1px 14px rgba(19,40,73,.8)}
+.promise{margin-top:18px;font-size:clamp(19px,5.2vw,20px);line-height:1.4;max-width:32ch;color:var(--white);text-shadow:0 1px 10px rgba(0,0,0,.4)}
 .hero-actions{margin-top:24px;display:grid;gap:12px}
+.hero-actions .btn{min-height:76px}
 
 /* ============ ROAD DIVIDER (top-down) ============ */
 .divider{display:block;width:100%;height:76px;touch-action:pan-y}
@@ -97,12 +98,12 @@ section{position:relative}
 .board ul{list-style:none;margin:0;padding:0}
 .board li + li{border-top:2px solid rgba(247,251,248,.22)}
 .route{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 14px;padding:18px 16px;text-decoration:none;border-radius:10px;min-height:76px}
-.route .where{font-size:21px;font-weight:900;text-transform:uppercase;line-height:1.1;letter-spacing:.01em}
+.route .where{font-size:23px;font-weight:800;line-height:1.15}
 .route .to{white-space:nowrap}
 .route .where svg{display:inline-block;width:.9em;height:.9em;vertical-align:-.08em;margin:0 .12em}
 .route .rate{grid-column:1;font-size:19px;font-weight:800;color:var(--lane)}
 .board-note{padding:14px 16px 8px;font-size:19px;font-weight:800;color:var(--lane)}
-.route .go{grid-column:2;grid-row:1 / span 2;width:40px;height:40px;border-radius:50%;border:2px solid rgba(247,251,248,.55);display:grid;place-items:center;transition:background .2s,border-color .2s,color .2s}
+.route .go{grid-column:2;grid-row:1;width:40px;height:40px;border-radius:50%;border:2px solid rgba(247,251,248,.55);display:grid;place-items:center;transition:background .2s,border-color .2s,color .2s}
 .route .go svg{width:18px;height:18px}
 .asks{margin-top:40px}
 .asks h3{font-size:clamp(1.4rem,6vw,2rem)}
@@ -123,10 +124,10 @@ section{position:relative}
 /* ============ HOW IT WORKS ============ */
 .how{padding:60px 0 40px}
 .steps{list-style:none;margin:56px 0 0;padding:0;display:grid;gap:52px;position:relative}
-.steps::before{content:"";position:absolute;left:28px;top:-20px;bottom:-20px;width:6px;background:repeating-linear-gradient(180deg,var(--lane) 0 26px,transparent 26px 52px);opacity:.75}
+.steps::before{content:"";position:absolute;left:12px;top:-24px;bottom:-24px;width:30px;border-radius:3px;background:repeating-linear-gradient(180deg,#eef1ed 0 16px,transparent 16px 46px) center top / 3px 46px repeat-y,linear-gradient(90deg,#59626b 0 2px,#f5c242 2px 5px,#2e3740 5px calc(100% - 5px),#eef1ed calc(100% - 5px) calc(100% - 2px),#59626b calc(100% - 2px))}
 .steps::before{animation:lane 1.4s linear infinite}
-@keyframes lane{to{background-position:0 52px}}
-.steps .sign{margin-left:56px;padding:22px 22px 24px}
+@keyframes lane{from{background-position:center 0,0 0}to{background-position:center 46px,0 0}}
+.steps .sign{margin-left:58px;padding:22px 22px 24px}
 .steps h3{font-size:24px;line-height:1.08}
 .steps p{margin-top:8px;color:var(--ink-soft);font-size:18px}
 .steps .exit-tab{left:18px;right:auto}
@@ -209,6 +210,7 @@ footer a{color:var(--white);font-weight:700;text-decoration:none;display:inline-
   .brand svg{width:52px;height:52px}
   .hero-copy{padding-top:132px}
   .hero h1{font-size:clamp(4.4rem,8.4vw,6rem)}
+  .promise{max-width:none}
   .hero-actions{grid-template-columns:auto auto;justify-content:start;gap:16px}
   .hero-actions .btn{padding:14px 30px}
   .rates{padding:96px 0 40px}
@@ -216,15 +218,15 @@ footer a{color:var(--white);font-weight:700;text-decoration:none;display:inline-
   .board{margin-top:8px;grid-column:2;grid-row:1 / span 2}
   .rates-grid .asks{grid-column:1;grid-row:2;margin-top:0}
   .route{padding:22px 26px}
-  .route .where{font-size:26px}
+  .route .where{font-size:27px}
   .pack{padding:88px 0 92px}
   .pack .wrap{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:end}
   .manifest{margin-top:0}
-  .how{padding:96px 0 64px}
+  .how{padding:96px 0 96px}
   .steps{grid-template-columns:repeat(4,1fr);gap:22px;margin-top:70px}
-  .steps::before{left:-40px;right:-40px;top:auto;bottom:-34px;width:auto;height:6px;background:repeating-linear-gradient(90deg,var(--lane) 0 34px,transparent 34px 68px)}
+  .steps::before{left:0;right:0;top:auto;bottom:-48px;width:auto;height:30px;background:repeating-linear-gradient(90deg,#eef1ed 0 16px,transparent 16px 46px) left center / 46px 3px repeat-x,linear-gradient(180deg,#59626b 0 2px,#f5c242 2px 5px,#2e3740 5px calc(100% - 5px),#eef1ed calc(100% - 5px) calc(100% - 2px),#59626b calc(100% - 2px))}
   .steps::before{animation-name:laneX}
-  @keyframes laneX{to{background-position:68px 0}}
+  @keyframes laneX{from{background-position:0 center,0 0}to{background-position:46px center,0 0}}
   .steps .sign{margin-left:0;height:100%}
   .quote{padding:96px 0 88px}
   .quote-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
@@ -263,7 +265,7 @@ footer a{color:var(--white);font-weight:700;text-decoration:none;display:inline-
 <!--
 THESIS: The interstate itself sells the trip: a dusk drive down I-95 you can steer, and rates posted like a guide sign, plain enough to read at 65 mph. Refuses the auto-transport default of a stock truck photo, a quote form wall and fine print.
 OWN-WORLD: Guide-sign green panels with an inset white border and exit tabs, retroreflective white uppercase, lane-line yellow for the one action, asphalt with yellow left edge and white dashes, dusk sky (navy to Florida-peach glow), highway-concrete light sections. Deep roadside green ground, never black.
-STORY: Snowbird sees "One rate. No surprises.", understands Ed drives their car while they fly, sees the rate board and the five things every quote answers, learns they can pack the car full, and calls (or texts route, dates and car).
+STORY: Snowbird sees "One rate. No surprises.", understands Ed drives their car while they fly, sees the rate board and the four things every quote answers, learns they can pack the car full, and calls (or texts route, dates and car).
 FIRST VIEWPORT: Phone: brand mark top-left; huge two-line headline; one-line promise; yellow Call Ed 732-300-3835 (full width) and outlined Get my rate; below, the live road running to a pine horizon, steerable by finger in every direction.
 FORM: Interstate guide signs + dusk highway, my list #1 (seed b9fde720 assigned #6 luggage tags; overridden by Ellie's pitch-site rule: brand + fluid touchable signature). Raises: the road is the page's one unbroken line (drum-machine step row); sections advance along the route (agit-train).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
@@ -548,15 +550,26 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var r = hero.getBoundingClientRect();
     var w = Math.round(r.width), h = Math.round(r.height);
     var cr = copy.getBoundingClientRect();
-    horizon = Math.max(cr.bottom - r.top + 34, h * 0.42);
+    horizon = Math.max(cr.bottom - r.top + 48, h * 0.42);
     drag.style.top = Math.round(horizon - 20) + 'px';   /* only the road takes drags; the text above scrolls the page */
     if (w === W && h === H) return;   /* phones fire resize when the address bar moves; don't rebuild */
     W = w; H = h; dpr = Math.min(W < 700 ? 1.5 : 2, window.devicePixelRatio || 1);
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    trees = []; var x = -60, seed = 7;
+    trees = []; var seed = 7;
     function rnd(){ seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-    while (x < W + 60){ var s = 6 + rnd() * 12; trees.push({x:x, h:s * (1.1 + rnd()), w:s * .55}); x += s * (.45 + rnd() * .5); }
+    [[.6, '#2f4a5c'], [1, '#1d3445']].forEach(function(row){      /* back row lighter, front row darker */
+      var x = -60;
+      while (x < W + 60){
+        var hgt = (8 + rnd() * 14) * row[0] + 4, wid = hgt * (.32 + rnd() * .12), tiers = 3 + Math.floor(rnd() * 3), pts = [];
+        for (var t = 0; t < tiers; t++){                            /* each tier: a drooping bough out, a notch back in */
+          var ty = hgt * (t + 1) / tiers, tw = wid * (t + 1) / tiers;
+          pts.push([tw * (.9 + rnd() * .25), ty - hgt * .04], [tw * .45, ty - hgt * (.1 + rnd() * .06)]);
+        }
+        trees.push({x:x, h:hgt, pts:pts, c:row[1], lean:(rnd() - .5) * 1.4});
+        x += wid * (.5 + rnd() * .9);
+      }
+    });
   }
 
   function mix(a, b, t){ return [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t, a[2]+(b[2]-a[2])*t]; }
@@ -619,7 +632,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     R = H - horizon; S = Math.min(W * .62, R * 1.55) / HALF;
     /* sky */
     var g = ctx.createLinearGradient(0, 0, 0, horizon);
-    g.addColorStop(0, '#132849'); g.addColorStop(.55, '#2c4770'); g.addColorStop(.86, '#a4776c'); g.addColorStop(1, '#eaa064');
+    g.addColorStop(0, '#132849'); g.addColorStop(.62, '#2c4770'); g.addColorStop(.9, '#8d6c72'); g.addColorStop(1, '#eaa064');
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, horizon + 2);
     /* low sun glow on the horizon */
     ctx.save(); ctx.translate(W * .5 - camX * 30, horizon); ctx.scale(1, .28);
@@ -631,14 +644,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     fg.addColorStop(0, rgb(mix(VERGE_B, HAZE, .7))); fg.addColorStop(.12, rgb(mix(VERGE_B, HAZE, .55))); fg.addColorStop(.5, rgb(mix(VERGE_A, HAZE, .2))); fg.addColorStop(1, rgb(VERGE_A));
     ctx.fillStyle = fg; ctx.fillRect(0, horizon, W, H - horizon);
     /* pine treeline, far away */
-    ctx.fillStyle = '#20384a';
     var shift = ((sway % (W + 120)) + (W + 120)) % (W + 120);
-    ctx.beginPath(); ctx.moveTo(0, horizon + 1);
     for (var i = 0; i < trees.length; i++){
-      var t = trees[i], tx = ((t.x + shift) % (W + 120)) - 60;
-      ctx.moveTo(tx - t.w, horizon + 1); ctx.lineTo(tx, horizon - t.h); ctx.lineTo(tx + t.w, horizon + 1);
+      var t = trees[i], tx = ((t.x + shift) % (W + 120)) - 60, base = horizon + 1, top = base - t.h;
+      ctx.fillStyle = t.c; ctx.beginPath(); ctx.moveTo(tx + t.lean, top);
+      for (var k = 0; k < t.pts.length; k++) ctx.lineTo(tx + t.pts[k][0], top + t.pts[k][1]);
+      ctx.lineTo(tx + 1, base); ctx.lineTo(tx - 1, base);
+      for (k = t.pts.length - 1; k >= 0; k--) ctx.lineTo(tx - t.pts[k][0] * (.92 + (k % 2) * .1), top + t.pts[k][1] + (k % 3) * .4);
+      ctx.closePath(); ctx.fill();
     }
-    ctx.fill();
+    ctx.fillStyle = '#1d3445';
     ctx.fillRect(0, horizon - 3, W, 5);
 
     var n = W < 700 ? STRIPS_PHONE : STRIPS_DESK, rows = [];
@@ -706,10 +721,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       } else {
         var bx = px(HALF + .55, z), top = py(.55, z), bot = py(0, z), pw = Math.max(1, .09 * S / z);
         ctx.fillStyle = rgb(mix([226, 230, 226], HAZE, fog)); ctx.fillRect(bx - pw / 2, top, pw, bot - top);
-        ctx.fillStyle = rgb(mix([255, 176, 60], HAZE, fog * .7)); ctx.fillRect(bx - pw / 2, top + (bot - top) * .06, pw, Math.max(1, (bot - top) * .12));
+        ctx.fillStyle = rgb(mix([255, 170, 50], HAZE, fog * .35)); ctx.fillRect(bx - pw / 2, top + (bot - top) * .06, pw, Math.max(1, (bot - top) * .12));
         var lx = px(-HALF - .55, z);   /* left side posts carry yellow reflectors */
         ctx.fillStyle = rgb(mix([226, 230, 226], HAZE, fog)); ctx.fillRect(lx - pw / 2, top, pw, bot - top);
-        ctx.fillStyle = rgb(mix([255, 205, 70], HAZE, fog * .7)); ctx.fillRect(lx - pw / 2, top + (bot - top) * .06, pw, Math.max(1, (bot - top) * .12));
+        ctx.fillStyle = rgb(mix([255, 214, 70], HAZE, fog * .35)); ctx.fillRect(lx - pw / 2, top + (bot - top) * .06, pw, Math.max(1, (bot - top) * .12));
       }
     });
 
