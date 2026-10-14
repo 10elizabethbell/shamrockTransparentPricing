@@ -260,7 +260,7 @@ Roadside green and concrete for the page, guide-sign green for the panel, lane y
 - **Control** (800, 20px): button text, form legends, labels, trip rows. The header phone link is 800 at 18px (17px under 430px, 22px from 760px).
 - **Answer** (400, 19px): FAQ answers (60ch), step lines, the footer Ed line, field text.
 - **Body** (400, 18px, 1.55): running copy, notes, error sentences (700).
-- **Small** (17px): a button's second line (700), footer text.
+- **Small** (17px): a button's second line (700, centered under the first line), footer text.
 - **Brand** (900, 17px, uppercase two-line wordmark; 20px from 760px). Under 430px it drops to 14px with no tracking so the full header number fits; that is the one recorded exception to the floor. Under 340px the words go visually hidden and the tile remains.
 
 The road sign's lettering is drawn in the same stack at 800 (route) and 900 (destination), sized to the sign.
