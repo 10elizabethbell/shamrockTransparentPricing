@@ -3,12 +3,12 @@
 **Live:** https://10elizabethbell.github.io/shamrockTransparentPricing/ · **Repo:** https://github.com/10elizabethbell/shamrockTransparentPricing · **Built:** 2026-10-14 from Muse brief (run 2026-10-13, "Vibe 3 — Transparent pricing", approved by Ellie 2026-10-14)
 
 ## What's built
-- One short page, single `index.html`, no images in the page itself, ~35KB. The world is an interstate at dusk: guide-sign green panels with an inset white border, lane-line yellow for the call buttons, highway-concrete light section, dusk sky. The page ground is deep roadside green, not black.
-- **Simplified 2026-10-14 for a 40-70 audience (Ellie):** one moving thing on the page, nothing to figure out, sections with little detail cut. Removed: the moving road dividers, the separate rate board, the "before you say yes" list, "Pack the car full", "How the trip goes", and the closing sign (its content now lives in the footer).
+- One short page, single `index.html`, no images in the page itself, no animation, ~20KB. The world is an interstate at dusk: guide-sign green panels with an inset white border, lane-line yellow for the call buttons, highway-concrete light section, dusk sky. The page ground is deep roadside green, not black.
+- **Simplified 2026-10-14 for a 40-70 audience (Ellie):** nothing moves, nothing to figure out, sections with little detail cut. Removed: the moving road dividers, the separate rate board, the "before you say yes" list, "Pack the car full", "How the trip goes", and the closing sign (its content now lives in the footer).
 - **Applied Ellie's 40-70 research brief (2026-10-14, `~/Downloads/NJ_Florida_Vehicle_Delivery_Website_Research_and_Design_Brief_Ages_40_to_70.pdf`):** full phone number in the header, a static three-step "How it works", mixed-case section headings (hero stays sign caps), "When" made optional in the form, and a "Who will I be dealing with?" answer naming Ed.
 - **Header:** shamrock and name on the left, the full number 732-300-3835 on the right (tap to call). On phones under 430px the name shrinks to 14px so the number fits; under 340px only the shamrock shows.
-- **Hero:** "One rate. No surprises." and "You fly. I'm Ed, and I'll drive your car between New Jersey and Florida." Two buttons: Call Ed (filled yellow, `tel:`) and Get a rate by text (outlined, scrolls to the form).
-- **The one moving element:** an I-95 at dusk seen from the driver's seat. It drives itself at an easy pace with slow, gentle bends: lane dashes, reflector posts, a pine treeline, a low sun. Every so often a green sign passes ("I-95 SOUTH / FLORIDA" from September to March, "I-95 NORTH / NEW JERSEY" from April to August). It doesn't react to touch, so a swipe anywhere scrolls the page. Reduced-motion visitors see a still frame.
+- **Hero (replaced 2026-10-14, Ellie: the road hero was too much for this audience):** one still guide sign on a dusk-to-green sky: "I'll drive your car. You fly." over "New Jersey ⇄ Florida". Under it: "One flat rate, said up front. I'm Ed Brannagan, owner and driver." One yellow Call Ed button (`tel:`) and a plain "or text me for a rate" link to the form. A still strip of highway (yellow edge, white dashes) runs along the hero's bottom edge. Centered on desktop.
+- **No animation anywhere.** The animated road and all its code are gone; the only script left is the text-message form. This overrides the pitch-site "signature motion" rule for this site, by Ellie's call.
 - **How it works:** three plain numbered steps, no animation: call or text me / set your pickup / fly, your car follows.
 - **One flat rate per trip** (the form, on a guide sign): four big trip choices (New Jersey to Florida, Florida to New Jersey, Florida airport run, Somewhere else), then when (optional), car and name. "Text this to Ed" opens a pre-written text to 732-300-3835, with a line under the button explaining exactly that. A fallback box shows the text if Messages doesn't open. There's also a "Call 732-300-3835" link beside the form.
 - **Straight answers:** five questions with the answers always showing (no tapping to open): who you'll be dealing with (Ed), packing the car full, airport runs, other routes, and when a truck carrier is the better call.
@@ -18,12 +18,11 @@
 ## Assumptions I made
 - **The shamrock is mine, drawn in SVG.** I don't have the card photo, and the brief says to ask before using a card scan publicly. Swap in Ed's real emblem when Ellie clears it; it's used in the header, the close, the favicon and `apple-touch-icon.png`.
 - **Green:** the brief said to sample the card's green, else use a deep Irish green. I used interstate guide-sign green (#0d6a43) because it is both. Re-sample it from the card.
-- **"One rate. No surprises." and "One flat rate per trip"** are the brief's suggested positioning. Ed hasn't confirmed he quotes flat rates. The form lead promises he'll say who pays gas and tolls and the pickup and drop-off days before booking; confirm he's fine saying that.
+- **"One flat rate, said up front" and "One flat rate per trip"** are the brief's suggested positioning. Ed hasn't confirmed he quotes flat rates. The form lead promises he'll say who pays gas and tolls and the pickup and drop-off days before booking; confirm he's fine saying that.
 - **"Trailer shippers make you empty it. I don't."** The brief names "pack the car full" as the #1 differentiator. Ed hasn't confirmed his own packing policy or any weight limit.
 - **"I'm Ed Brannagan, owner and driver"** comes from the card. Nothing on the page says he's the only driver.
 - **First-person voice as Ed.** The tone is plain-spoken, from the brief's notes; no social presence exists to match.
-- **The hero sign reads "I-95"**: assumed route.
-- **The hero names New Jersey and Florida.** The finishing rules keep service areas out of the hero, but here the route is the product. Cut it if you disagree.
+- **The hero sign names New Jersey and Florida.** The finishing rules keep service areas out of the hero, but here the route is the product and the research brief asks the first screen to say where. Cut it if you disagree.
 - **One outline color (#8fd6ff) everywhere.**
 
 ## Placeholders and gaps
@@ -54,13 +53,13 @@
 - **Usability test with 5-6 people aged 40-70** (the brief's section 10). Worth doing before handing it to Ed.
 
 ## Ideas not built (yours to pick)
-- **Brought back if wanted:** the cut sections are in git history (commit before "Simplify for a 40-70 audience"): the steerable hero road, the moving road dividers, the rate board, "Pack the car full" with its list, and the four exit-sign steps.
+- **Brought back if wanted:** the cut sections are in git history (commit before "Simplify for a 40-70 audience"): the animated road hero (steerable in the first build, self-driving in the second), the moving road dividers, the rate board, "Pack the car full" with its list, and the four exit-sign steps.
 - **Runner-up world:** an AAA TripTik strip map, with the route as flip-strips from NJ to FL and the rate per strip. Very familiar to this audience.
 - **Highway Gothic look:** Overpass (a free Highway Gothic cousin) for the headings. I kept the system font stack per house style.
 - **When rates exist,** show the flat number the moment a trip is picked, before texting.
-- **Tuning:** `SPEED` and `BEND` at the top of the hero script.
+- **Former headline "One rate. No surprises."** Could come back as the sign's headline once Ed confirms flat rates; the current one says what he does instead.
 
 ## Not verified
-- Real-device touch feel and frame rate on an older Android inside Facebook's in-app browser. Tested with Playwright and real CDP touch events at 390 and 360: swipes on the headline and on the road both scroll the page, the hero animates, no overflow, no JS errors.
+- Real devices, including Facebook's in-app browser. Tested with Playwright at 390, 360 and 1440: no overflow, no JS errors, the Call Ed button sits in the first screen on phones (bottom at about 500px).
 - The SMS handoff on real iOS and Android (`sms:+17323003835?&body=…`). The body is URL-encoded and decodes correctly in testing; the Messages app itself wasn't opened.
 - Note for the skill: `scripts/shoot.sh` now produces blank canvases in this Chrome. Both its `--disable-accelerated-2d-canvas` flag and the rAF-to-setTimeout shim cause it. Playwright full-page capture (`isMobile`, real viewport) worked and also avoids the iframe making `100svh` the iframe's height.
