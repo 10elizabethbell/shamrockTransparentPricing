@@ -57,10 +57,9 @@ section{position:relative}
 .btn{display:flex;align-items:center;justify-content:center;gap:12px;min-height:60px;padding:14px 26px;border-radius:14px;font-size:20px;font-weight:800;text-decoration:none;border:3px solid transparent;cursor:pointer;font-family:inherit;line-height:1.15;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s,box-shadow .2s}
 .btn svg{flex:none;width:24px;height:24px}
 .btn-call{background:var(--lane);color:var(--lane-ink);border-color:var(--lane);box-shadow:0 8px 22px -8px rgba(0,0,0,.55)}
-.btn-line{background:transparent;color:var(--white);border-color:var(--white)}
-.btn:hover{outline:3px solid var(--focus);outline-offset:3px}
+.btn-line{background:rgba(19,40,73,.68);color:var(--white);border-color:var(--white)}
 .btn:active{transform:translateY(1px) scale(.99)}
-.btn small{display:block;font-size:15px;font-weight:700;opacity:.85}
+.btn small{display:block;font-size:17px;font-weight:700}
 .btn-stack{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15}
 
 /* ============ TOP BAR ============ */
@@ -68,13 +67,13 @@ section{position:relative}
 .top .wrap{display:flex;align-items:center;gap:12px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:17px;line-height:1.05}
 .brand svg{width:44px;height:44px;flex:none}
-.brand span small{display:block;font-size:12px;letter-spacing:.14em;font-weight:700;color:var(--ink-soft)}
 
 /* ============ HERO (dusk + the road) ============ */
-.hero{min-height:max(640px,min(100svh,1000px));background:linear-gradient(180deg,var(--dusk-top) 0%,var(--dusk-mid) 40%,#a2786a 56%,#284638 57%,#1a3d2c 100%);overflow:hidden;display:flex;flex-direction:column}
+.hero{min-height:max(640px,min(100svh,1000px));background:linear-gradient(180deg,var(--dusk-top) 0%,var(--dusk-mid) 40%,#5d4f63 56%,#284638 57%,#1a3d2c 100%);overflow:hidden;display:flex;flex-direction:column}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(180deg,rgba(12,58,42,0),var(--ground));pointer-events:none;z-index:1}
-.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;-webkit-user-select:none;user-select:none;cursor:grab}
-.hero canvas:active{cursor:grabbing}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.hero-drag{position:absolute;left:0;right:0;bottom:0;top:60%;z-index:1;touch-action:none;-webkit-user-select:none;user-select:none;cursor:grab}
+.hero-drag:active{cursor:grabbing}
 .hero-copy{position:relative;z-index:2;padding-top:96px;pointer-events:none}
 .hero-copy .btn,.hero-copy a{pointer-events:auto}
 .hero h1{font-size:clamp(3rem,14.5vw,6rem);line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 24px rgba(19,40,73,.6)}
@@ -88,7 +87,7 @@ section{position:relative}
 
 /* ============ SIGN PANEL (guide-sign grammar) ============ */
 .sign{position:relative;background:var(--sign);border-radius:var(--radius);box-shadow:inset 0 0 0 7px var(--sign),inset 0 0 0 10px var(--white),0 18px 40px -18px rgba(0,0,0,.6);padding:26px 22px}
-.exit-tab{position:absolute;top:-30px;right:18px;background:var(--sign);color:var(--white);font-weight:900;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px 10px;border-radius:10px 10px 0 0;box-shadow:inset 0 0 0 3px var(--sign),inset 0 0 0 5px var(--white);line-height:1.1}
+.exit-tab{position:absolute;top:-28px;right:18px;background:var(--sign);color:var(--white);font-weight:900;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px 6px;border-radius:9px 9px 0 0;border:2px solid var(--white);border-bottom:0;line-height:1.1}
 
 /* ============ RATES ============ */
 .rates{padding:64px 0 24px}
@@ -99,12 +98,12 @@ section{position:relative}
 .board li + li{border-top:2px solid rgba(247,251,248,.22)}
 .route{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 14px;padding:18px 16px;text-decoration:none;border-radius:10px;min-height:76px}
 .route .where{font-size:21px;font-weight:900;text-transform:uppercase;line-height:1.1;letter-spacing:.01em}
+.route .to{white-space:nowrap}
 .route .where svg{display:inline-block;width:.9em;height:.9em;vertical-align:-.08em;margin:0 .12em}
-.route .rate{grid-column:1;font-size:17px;font-weight:700;color:var(--lane)}
+.route .rate{grid-column:1;font-size:19px;font-weight:800;color:var(--lane)}
+.board-note{padding:14px 16px 8px;font-size:19px;font-weight:800;color:var(--lane)}
 .route .go{grid-column:2;grid-row:1 / span 2;width:40px;height:40px;border-radius:50%;border:2px solid rgba(247,251,248,.55);display:grid;place-items:center;transition:background .2s,border-color .2s,color .2s}
 .route .go svg{width:18px;height:18px}
-.route:hover .go,.route:focus-visible .go{background:var(--lane);border-color:var(--lane);color:var(--lane-ink)}
-.route:hover{outline:3px solid var(--focus);outline-offset:-3px}
 .asks{margin-top:40px}
 .asks h3{font-size:clamp(1.4rem,6vw,2rem)}
 .asks ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:2px}
@@ -125,6 +124,8 @@ section{position:relative}
 .how{padding:60px 0 40px}
 .steps{list-style:none;margin:56px 0 0;padding:0;display:grid;gap:52px;position:relative}
 .steps::before{content:"";position:absolute;left:28px;top:-20px;bottom:-20px;width:6px;background:repeating-linear-gradient(180deg,var(--lane) 0 26px,transparent 26px 52px);opacity:.75}
+.steps::before{animation:lane 1.4s linear infinite}
+@keyframes lane{to{background-position:0 52px}}
 .steps .sign{margin-left:56px;padding:22px 22px 24px}
 .steps h3{font-size:24px;line-height:1.08}
 .steps p{margin-top:8px;color:var(--ink-soft);font-size:18px}
@@ -135,25 +136,39 @@ section{position:relative}
 .quote .lead{margin-top:14px;font-size:20px;color:var(--ink-soft);max-width:34ch}
 .quote form{margin-top:30px;padding:30px 22px 28px;display:grid;gap:22px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
-legend,.lbl{display:block;font-weight:900;text-transform:uppercase;font-size:17px;letter-spacing:.04em;margin-bottom:10px;padding:0}
+legend,.lbl{display:block;font-weight:800;text-transform:uppercase;font-size:17px;letter-spacing:.04em;margin-bottom:10px;padding:0}
 .chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .chip{position:relative;display:block}
 .chip input{position:absolute;opacity:0;width:1px;height:1px}
 .chip span{display:flex;align-items:center;min-height:58px;padding:10px 14px;border:2px solid rgba(247,251,248,.7);border-radius:12px;font-size:17px;font-weight:800;line-height:1.15;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
-.chip:hover span{outline:3px solid var(--focus);outline-offset:2px}
 .chip input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
-.chip input:checked + span{background:var(--lane);border-color:var(--lane);color:var(--lane-ink)}
+.chip input:checked + span{animation:pick .25s ease-out;background:var(--lane);border-color:var(--lane);color:var(--lane-ink)}
 input[type=text],input[type=tel],textarea{width:100%;min-height:58px;padding:14px 16px;font:inherit;font-size:19px;color:#10261c;background:var(--white);border:2px solid var(--white);border-radius:12px;caret-color:var(--sign)}
-input::placeholder,textarea::placeholder{color:#557566}
-input[type=text]:hover,input[type=tel]:hover,textarea:hover,input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
+input::placeholder,textarea::placeholder{color:#6f897d}
+.lbl .opt{font-weight:600;text-transform:none;letter-spacing:0;color:var(--ink-soft)}
+input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
+.route:focus-visible .go{background:var(--lane);border-color:var(--lane);color:var(--lane-ink)}
+@media (hover:hover){
+  .btn:hover{outline:3px solid var(--focus);outline-offset:3px}
+  .route:hover .go{background:var(--lane);border-color:var(--lane);color:var(--lane-ink)}
+  .route:hover{outline:3px solid var(--focus);outline-offset:-3px}
+  .chip:hover span{outline:3px solid var(--focus);outline-offset:2px}
+  input[type=text]:hover,input[type=tel]:hover,textarea:hover{outline:3px solid var(--focus);outline-offset:2px}
+  .faq summary:hover{outline:3px solid #1f6fa8;outline-offset:-2px}
+  footer a:hover,.note a:hover,.alt a:hover,.brand:hover{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+}
+@media (forced-colors:active){.chip input:checked + span{outline:3px solid Highlight}}
 .field.bad input,.chips.bad .chip span{border-color:#ffb199}
-.err{display:none;margin-top:8px;font-size:16px;font-weight:700;color:#ffd0c2}
+.err{display:none;margin-top:8px;font-size:18px;font-weight:700;color:#ffd0c2}
 .bad > .err,.field.bad .err{display:block}
 .row2{display:grid;gap:22px}
 .form-foot{display:grid;gap:14px;margin-top:4px}
-.form-foot .note{font-size:16px;color:var(--ink-soft)}
-.form-foot .note a{font-weight:800;color:var(--white)}
-.sent{display:none;padding:18px;border-radius:12px;background:rgba(8,42,30,.55);font-size:17px}
+.form-foot noscript{display:block}
+.form-foot .note{font-size:18px;color:var(--ink-soft)}
+.alt{margin-top:26px;font-size:22px;font-weight:800}
+.alt a{color:var(--lane);text-decoration:none;white-space:nowrap;display:inline-block;padding:6px 0}
+.form-foot .note a{font-weight:800;color:var(--white);white-space:nowrap;display:inline-block;padding:10px 0}
+.sent{display:none;padding:18px;border-radius:12px;background:rgba(8,42,30,.55);font-size:18px}
 .sent.show{display:block}
 .sent pre{white-space:pre-wrap;font:inherit;margin:10px 0 0;color:var(--ink-soft)}
 
@@ -161,10 +176,9 @@ input[type=text]:hover,input[type=tel]:hover,textarea:hover,input:focus,textarea
 .faq{padding:60px 0 40px;background:var(--concrete);color:var(--concrete-ink)}
 .faq details{border-bottom:2px solid rgba(12,58,42,.18)}
 .faq details:first-of-type{margin-top:28px;border-top:2px solid rgba(12,58,42,.18)}
-.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;font-size:21px;font-weight:800;line-height:1.25;border-radius:8px}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;font-size:21px;font-weight:800;line-height:1.35;border-radius:8px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary:hover{outline:3px solid #2f8bc9;outline-offset:-2px}
-.faq summary:focus-visible{outline-color:#2f8bc9}
+.faq summary:focus-visible{outline-color:#1f6fa8}
 .faq summary svg{flex:none;width:28px;height:28px;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
 .faq details[open] summary svg{transform:rotate(45deg)}
 .faq .ans{padding:0 4px 22px;font-size:19px;color:var(--concrete-soft);max-width:60ch}
@@ -177,7 +191,7 @@ input[type=text]:hover,input[type=tel]:hover,textarea:hover,input:focus,textarea
 .close .sign svg.mark{width:84px;height:84px}
 .close h2{margin-top:14px;font-size:clamp(1.9rem,8.6vw,3.4rem)}
 .close .fly{margin-top:10px;font-size:clamp(20px,5.6vw,26px);font-weight:800}
-.close .tag{margin-top:18px;font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.close .tag{margin-top:18px;font-size:17px;font-style:italic;color:var(--ink-soft)}
 .close .ed{margin:30px auto 0;max-width:34ch;font-size:19px}
 .close .btn{margin:26px auto 0;max-width:420px}
 
@@ -186,7 +200,6 @@ footer{background:var(--ground-deep);padding:40px 0 calc(40px + env(safe-area-in
 footer .name{font-weight:900;text-transform:uppercase;color:var(--white);font-size:19px}
 footer p{margin-top:6px}
 footer a{color:var(--white);font-weight:700;text-decoration:none;display:inline-block;padding:8px 0}
-footer a:hover{text-decoration:underline;outline:none}
 
 /* ============ DESKTOP ============ */
 @media (min-width:760px){
@@ -200,7 +213,8 @@ footer a:hover{text-decoration:underline;outline:none}
   .hero-actions .btn{padding:14px 30px}
   .rates{padding:96px 0 40px}
   .rates-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
-  .board{margin-top:8px}
+  .board{margin-top:8px;grid-column:2;grid-row:1 / span 2}
+  .rates-grid .asks{grid-column:1;grid-row:2;margin-top:0}
   .route{padding:22px 26px}
   .route .where{font-size:26px}
   .pack{padding:88px 0 92px}
@@ -209,11 +223,12 @@ footer a:hover{text-decoration:underline;outline:none}
   .how{padding:96px 0 64px}
   .steps{grid-template-columns:repeat(4,1fr);gap:22px;margin-top:70px}
   .steps::before{left:-40px;right:-40px;top:auto;bottom:-34px;width:auto;height:6px;background:repeating-linear-gradient(90deg,var(--lane) 0 34px,transparent 34px 68px)}
+  .steps::before{animation-name:laneX}
+  @keyframes laneX{to{background-position:68px 0}}
   .steps .sign{margin-left:0;height:100%}
   .quote{padding:96px 0 88px}
   .quote-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
   .quote form{margin-top:8px;padding:38px 36px}
-  .chips{grid-template-columns:repeat(4,1fr)}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   .form-foot{grid-template-columns:auto 1fr;align-items:center;gap:22px}
   .faq{padding:96px 0 72px}
@@ -227,9 +242,20 @@ footer a:hover{text-decoration:underline;outline:none}
 @media (min-width:1100px){
   .hero h1{font-size:6rem}
 }
+@media (max-height:500px) and (orientation:landscape){
+  .hero{min-height:560px}
+  .hero-copy{padding-top:84px}
+}
+@keyframes pick{50%{transform:scale(1.04)}}
+@supports (interpolate-size:allow-keywords){
+  :root{interpolate-size:allow-keywords}
+  .faq details::details-content{transition:height .3s cubic-bezier(.16,1,.3,1),content-visibility .3s allow-discrete;height:0;overflow:clip}
+  .faq details[open]::details-content{height:auto}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .btn,.route .go,.faq summary svg{transition:none}
+  .steps::before,.chip input:checked + span{animation:none!important}
 }
 </style>
 </head>
@@ -272,9 +298,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero" aria-labelledby="h1">
     <canvas id="road" aria-hidden="true"></canvas>
+    <div class="hero-drag" id="heroDrag" aria-hidden="true"></div>
     <div class="wrap hero-copy" id="heroCopy">
       <h1 id="h1"><span>One rate.</span> <span class="yl">No surprises.</span></h1>
-      <p class="promise">You fly. I'll drive your car between New&nbsp;Jersey and Florida.</p>
+      <p class="promise">You fly. I'm Ed, and I'll drive your car between New&nbsp;Jersey and Florida.</p>
       <div class="hero-actions">
         <a class="btn btn-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></a>
         <a class="btn btn-line" href="#quote">Get my rate<svg aria-hidden="true"><use href="#i-down"/></svg></a>
@@ -287,25 +314,26 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap rates-grid">
       <div>
         <h2 id="rates-h">One flat rate per trip.</h2>
-        <p class="lead">You hear the whole number before I take the keys. It's the number you pay.</p>
-        <div class="asks">
-          <h3>Before you say yes, I'll tell you:</h3>
-          <ul>
-            <li>Who pays for gas</li>
-            <li>Who pays the tolls</li>
-            <li>How I get back home</li>
-            <li>Your pickup &amp; drop-off days</li>
-          </ul>
-          <p class="after">No fine print. Ask me anything on the phone and you get a straight answer.</p>
-        </div>
+        <p class="lead">You hear the whole number on the phone, before you book.</p>
       </div>
       <div class="sign board">
         <ul>
-          <!-- RATES: when Ed confirms, replace each "Ask for the flat rate" with his number, e.g. "$___ flat". -->
-          <li><a class="route" href="#quote" data-trip="New Jersey to Florida"><span class="where">New&nbsp;Jersey <svg aria-hidden="true"><use href="#i-arrow"/></svg> Florida</span><span class="rate">Ask for the flat rate</span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="route" href="#quote" data-trip="Florida to New Jersey"><span class="where">Florida <svg aria-hidden="true"><use href="#i-arrow"/></svg> New&nbsp;Jersey</span><span class="rate">Ask for the flat rate</span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="route" href="#quote" data-trip="Florida airport"><span class="where">Airport runs, anywhere in Florida</span><span class="rate">Ask for the flat rate</span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-          <li><a class="route" href="#quote" data-trip="Local trip"><span class="where">Local &amp; long distance</span><span class="rate">Ask for the flat rate</span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <!-- RATES: when Ed confirms, add his number under each route: <span class="rate">$___ flat</span>, and drop the board-note. -->
+          <li><a class="route" href="#quote" data-trip="New Jersey to Florida"><span class="where">New&nbsp;Jersey <span class="to"><svg aria-hidden="true"><use href="#i-arrow"/></svg>&nbsp;Florida</span></span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="route" href="#quote" data-trip="Florida to New Jersey"><span class="where">Florida <span class="to"><svg aria-hidden="true"><use href="#i-arrow"/></svg>&nbsp;New&nbsp;Jersey</span></span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="route" href="#quote" data-trip="Florida airport"><span class="where">Florida airport runs</span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+          <li><a class="route" href="#quote" data-trip="Other trip (local or long distance)"><span class="where">Local &amp; long distance</span><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+        </ul>
+        <p class="board-note">Tap your route to get my flat rate.</p>
+      </div>
+      <div class="asks">
+        <!-- CONFIRM with Ed: once he says what a rate includes, turn this into an included / not included list. -->
+        <h3>Before you say yes, I'll tell you:</h3>
+        <ul>
+          <li>Who pays for gas</li>
+          <li>Who pays the tolls</li>
+          <li>How I get back home</li>
+          <li>Your pickup &amp; drop-off days</li>
         </ul>
       </div>
     </div>
@@ -318,7 +346,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <div>
         <h2 id="pack-h">Pack the car full.</h2>
-        <p>Your winter things ride down inside your own car. <strong>Truck carriers make you empty it. I don't.</strong></p>
+        <p>Your winter things ride down inside your own car. <strong>Trailer shippers make you empty it. I don't.</strong></p>
       </div>
       <ul class="manifest" aria-label="What can ride along">
         <li>Winter clothes</li>
@@ -336,7 +364,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <h2 id="how-h">How the trip goes</h2>
       <ol class="steps">
-        <li class="sign"><span class="exit-tab">Exit 1</span><h3>Call me</h3><p>Your route, your dates, your car.</p></li>
+        <li class="sign"><span class="exit-tab">Exit 1</span><h3>Call or text me</h3><p>Your route, your dates, your car.</p></li>
         <li class="sign"><span class="exit-tab">Exit 2</span><h3>Hear the rate</h3><p>One number for the whole trip.</p></li>
         <li class="sign"><span class="exit-tab">Exit 3</span><h3>You fly, I drive</h3><p>Pack it, hand me the keys, catch your flight.</p></li>
         <li class="sign"><span class="exit-tab">Exit 4</span><h3>Your car's there</h3><p>With everything you packed in it.</p></li>
@@ -349,42 +377,43 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap quote-grid">
       <div>
         <h2 id="quote-h">Get my rate</h2>
-        <p class="lead">Four answers and it goes to my phone as a text. I'll get back to you with the number.</p>
+        <p class="lead">Answer four questions and your phone opens a text to me, already written. Hit send and I'll get back to you with the number.</p>
+        <p class="alt">Rather talk? <a href="tel:+17323003835">Call 732-300-3835</a></p>
       </div>
       <form class="sign" id="quoteForm" novalidate>
-        <fieldset class="chips-wrap" id="tripSet">
+        <fieldset class="chips-wrap" id="tripSet" aria-describedby="tripErr">
           <legend>Trip</legend>
           <div class="chips">
             <label class="chip"><input type="radio" name="trip" value="New Jersey to Florida"><span>NJ to Florida</span></label>
             <label class="chip"><input type="radio" name="trip" value="Florida to New Jersey"><span>Florida to NJ</span></label>
             <label class="chip"><input type="radio" name="trip" value="Florida airport"><span>Florida airport</span></label>
-            <label class="chip"><input type="radio" name="trip" value="Local trip"><span>Local / other</span></label>
+            <label class="chip"><input type="radio" name="trip" value="Other trip (local or long distance)"><span>Other trip</span></label>
           </div>
           <p class="err" id="tripErr">Pick the trip so I know the route.</p>
         </fieldset>
         <div class="row2">
           <div class="field" id="whenF">
             <label class="lbl" for="when">When</label>
-            <input type="text" id="when" name="when" placeholder="Early November" autocomplete="off">
-            <p class="err">Roughly when? A week or a month is fine.</p>
+            <input type="text" id="when" name="when" placeholder="e.g. early November" autocomplete="off" maxlength="80" enterkeyhint="next" aria-describedby="whenErr">
+            <p class="err" id="whenErr">Roughly when? A week or a month is fine.</p>
           </div>
           <div class="field" id="carF">
             <label class="lbl" for="car">Your car</label>
-            <input type="text" id="car" name="car" placeholder="2019 Toyota Camry" autocomplete="off">
-            <p class="err">Year, make and model, as best you know.</p>
+            <input type="text" id="car" name="car" placeholder="e.g. 2019 Toyota Camry" autocomplete="off" maxlength="80" enterkeyhint="next" aria-describedby="carErr">
+            <p class="err" id="carErr">Year, make and model, as best you know.</p>
           </div>
         </div>
         <div class="field" id="nameF">
-          <label class="lbl" for="name">Your name</label>
-          <input type="text" id="name" name="name" placeholder="First name is fine" autocomplete="given-name">
-          <p class="err">Your name, so I know who's texting.</p>
+          <label class="lbl" for="name">Your name <span class="opt">(first name is fine)</span></label>
+          <input type="text" id="name" name="name" placeholder="e.g. Mary" autocomplete="given-name" maxlength="80" enterkeyhint="send" aria-describedby="nameErr">
+          <p class="err" id="nameErr">Your name, so I know who's texting.</p>
         </div>
         <div class="form-foot">
           <button class="btn btn-call" type="submit"><svg aria-hidden="true"><use href="#i-sms"/></svg>Text it to Ed</button>
-          <p class="note">Opens your phone's messages, ready to send. Rather talk? <a href="tel:+17323003835">Call 732-300-3835</a></p>
+          <noscript><p class="note">Text or call 732-300-3835 with your route, dates and car.</p></noscript>
         </div>
         <div class="sent" id="sent" role="status" aria-live="polite">
-          <strong>If your messages didn't open,</strong> text this to 732-300-3835:
+          <strong>Messages didn't open?</strong> Text this to 732-300-3835, or call me:
           <pre id="sentBody"></pre>
         </div>
       </form>
@@ -430,9 +459,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <svg class="mark" viewBox="-32 -32 64 64" aria-hidden="true"><g fill="#f7fbf8" color="#f7fbf8" transform="translate(-1 1)"><use href="#shamrock"/></g></svg>
         <h2 id="close-h">Shamrock Transportation</h2>
         <p class="fly">You fly. I'll drive.</p>
-        <p class="ed">I'm Ed Brannagan. I own Shamrock Transportation, and I'm the one driving your car.</p>
+        <p class="ed">I'm Ed Brannagan, owner and driver of Shamrock Transportation.</p>
         <a class="btn btn-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></a>
-        <p class="tag">Life is a highway&hellip; drive it all night long</p>
+        <p class="tag">&ldquo;Life is a Highway&hellip; Drive it All Night Long&rdquo;</p>
       </div>
     </div>
   </section>
@@ -506,9 +535,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var HALF = 2.3;          /* road half-width, world units (two lanes) */
   var Z_FAR = 70, STRIPS_PHONE = 70, STRIPS_DESK = 110;
 
-  var hero = document.getElementById('hero'), cv = document.getElementById('road'),
+  var hero = document.getElementById('hero'), cv = document.getElementById('road'), drag = document.getElementById('heroDrag'),
       copy = document.getElementById('heroCopy');
-  var ctx = cv.getContext('2d');
+  /* the snowbird season: north April to August, south the rest of the year */
+  var MON = new Date().getMonth(), SIGN = (MON >= 3 && MON <= 7) ? ['I-95 NORTH', 'NEW JERSEY'] : ['I-95 SOUTH', 'FLORIDA'];
+  var ctx = cv.getContext('2d'), FONT = getComputedStyle(document.body).fontFamily;
   var W = 0, H = 0, dpr = 1, horizon = 0, travel = 0, time = 0;
   var curve = 0, cv_ = 0, hill = 0, hv = 0, camX = 0, sway = 0;
   var lastInput = -99, steering = false, trees = [];
@@ -518,17 +549,19 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var w = Math.round(r.width), h = Math.round(r.height);
     var cr = copy.getBoundingClientRect();
     horizon = Math.max(cr.bottom - r.top + 34, h * 0.42);
+    drag.style.top = Math.round(horizon - 20) + 'px';   /* only the road takes drags; the text above scrolls the page */
     if (w === W && h === H) return;   /* phones fire resize when the address bar moves; don't rebuild */
-    W = w; H = h; dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = w; H = h; dpr = Math.min(W < 700 ? 1.5 : 2, window.devicePixelRatio || 1);
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    trees = []; var x = -60;
-    while (x < W + 60){ var s = 6 + Math.random() * 12; trees.push({x:x, h:s * (1.1 + Math.random()), w:s * .55}); x += s * (.45 + Math.random() * .5); }
+    trees = []; var x = -60, seed = 7;
+    function rnd(){ seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    while (x < W + 60){ var s = 6 + rnd() * 12; trees.push({x:x, h:s * (1.1 + rnd()), w:s * .55}); x += s * (.45 + rnd() * .5); }
   }
 
   function mix(a, b, t){ return [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t, a[2]+(b[2]-a[2])*t]; }
   function rgb(c){ return 'rgb(' + (c[0]|0) + ',' + (c[1]|0) + ',' + (c[2]|0) + ')'; }
-  var HAZE = [104, 112, 128], VERGE_A = [26, 61, 44], VERGE_B = [31, 69, 50], ASPH = [46, 54, 63], ASPH_B = [50, 58, 67];
+  var HAZE = [92, 110, 116], VERGE_A = [26, 61, 44], VERGE_B = [31, 69, 50], ASPH = [46, 54, 63], ASPH_B = [50, 58, 67];
 
   /* Project a world point (x lateral, e elevation, z depth) to the screen. */
   var R, S;
@@ -538,7 +571,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   function input(dt){
     var P = window.Ptr, r = cv.getBoundingClientRect();       /* rect read every frame: the page scrolls under the finger */
-    var inside = P.x >= r.left && P.x <= r.right && P.y >= r.top + horizon - 40 && P.y <= r.bottom;
+    var inside = P.x >= r.left && P.x <= r.right && P.y >= r.top + horizon - 20 && P.y <= r.bottom;
     var mouseOver = !P.touch && P.x >= r.left && P.x <= r.right && P.y >= r.top && P.y <= r.bottom;
     var fresh = performance.now() - P.t < 120;
     var tc, th;
@@ -565,18 +598,19 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   }
 
   var dragging = false;
-  cv.addEventListener('pointerdown', function(e){ dragging = true; if (e.pointerType !== 'mouse') e.preventDefault(); });
+  drag.addEventListener('pointerdown', function(e){ dragging = true; if (e.pointerType !== 'mouse') e.preventDefault(); });
   window.addEventListener('pointerup', function(){ dragging = false; });
   window.addEventListener('pointercancel', function(){ dragging = false; });
-  cv.addEventListener('touchstart', function(e){ dragging = true; e.preventDefault(); }, {passive:false});
-  cv.addEventListener('touchmove', function(e){ e.preventDefault(); }, {passive:false});
-  cv.addEventListener('touchend', function(){ dragging = false; });
+  drag.addEventListener('touchstart', function(e){ dragging = true; e.preventDefault(); }, {passive:false});
+  drag.addEventListener('touchmove', function(e){ e.preventDefault(); }, {passive:false});
+  drag.addEventListener('touchend', function(){ dragging = false; });
 
   function quad(x1, y1, w1, x2, y2, w2, fill){
     ctx.fillStyle = fill; ctx.beginPath();
     ctx.moveTo(x1 - w1, y1 - .4); ctx.lineTo(x1 + w1, y1 - .4); ctx.lineTo(x2 + w2, y2 + .4); ctx.lineTo(x2 - w2, y2 + .4); ctx.closePath(); ctx.fill();
   }
   var rowsRef = [];
+  function visAt(z){ for (var i = 1; i < rowsRef.length; i++) if (rowsRef[i].z <= z) return rowsRef[i].vis; return false; }
   function minAt(z){ var m = 1e9; for (var i = rowsRef.length - 1; i >= 0 && rowsRef[i].z < z; i--) m = Math.min(m, rowsRef[i].y); return m; }
   function strip(a, b, k, fill){ quad(a.x, a.y, a.w * k, b.x, b.y, b.w * k, fill); }
   function line(a, b, at, lw, fill){ quad(a.x + a.w * at, a.y, lw * S / a.z, b.x + b.w * at, b.y, lw * S / b.z, fill); }
@@ -594,7 +628,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     ctx.fillStyle = sg; ctx.fillRect(-sr, -sr, sr * 2, sr); ctx.restore();
     /* ground haze under the horizon */
     var fg = ctx.createLinearGradient(0, horizon, 0, H);
-    fg.addColorStop(0, rgb(HAZE)); fg.addColorStop(.12, rgb(mix(VERGE_B, HAZE, .55))); fg.addColorStop(.5, rgb(mix(VERGE_A, HAZE, .2))); fg.addColorStop(1, rgb(VERGE_A));
+    fg.addColorStop(0, rgb(mix(VERGE_B, HAZE, .7))); fg.addColorStop(.12, rgb(mix(VERGE_B, HAZE, .55))); fg.addColorStop(.5, rgb(mix(VERGE_A, HAZE, .2))); fg.addColorStop(1, rgb(VERGE_A));
     ctx.fillStyle = fg; ctx.fillRect(0, horizon, W, H - horizon);
     /* pine treeline, far away */
     ctx.fillStyle = '#20384a';
@@ -652,7 +686,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     items.sort(function(a, b){ return b.z - a.z; });
     items.forEach(function(it){
       var z = it.z, fog = Math.pow(Math.min(1, z / Z_FAR), .55);
-      if (py(0, z) > minAt(z) + 1) return;   /* behind the crest */
+      if (!visAt(z)) return;   /* behind the crest */
       if (it.sign){
         var x1 = px(HALF + 1.4, z), x2 = px(HALF + 4.6, z), yb = py(.12, z), yt = py(.92, z);
         var w = x2 - x1, h = yb - yt;
@@ -663,10 +697,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           ctx.strokeStyle = rgb(mix([247, 251, 248], HAZE, fog)); ctx.lineWidth = Math.max(1, w * .015);
           roundRect(x1 + w * .035, yt + w * .035, w - w * .07, h - w * .07, w * .035); ctx.stroke();
           ctx.fillStyle = ctx.strokeStyle; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-          ctx.font = '800 ' + (h * .26) + 'px ' + getComputedStyle(document.body).fontFamily;
-          ctx.fillText('I-95 SOUTH', x1 + w / 2, yt + h * .32);
-          ctx.font = '900 ' + (h * .34) + 'px ' + getComputedStyle(document.body).fontFamily;
-          ctx.fillText('FLORIDA', x1 + w / 2, yt + h * .7);
+          ctx.font = '800 ' + (h * .26) + 'px ' + FONT;
+          ctx.fillText(SIGN[0], x1 + w / 2, yt + h * .32);
+          var fs = h * .34; ctx.font = '900 ' + fs + 'px ' + FONT;
+          var mw = ctx.measureText(SIGN[1]).width; if (mw > w * .86){ fs *= w * .86 / mw; ctx.font = '900 ' + fs + 'px ' + FONT; }
+          ctx.fillText(SIGN[1], x1 + w / 2, yt + h * .7);
         }
       } else {
         var bx = px(HALF + .55, z), top = py(.55, z), bot = py(0, z), pw = Math.max(1, .09 * S / z);
@@ -706,7 +741,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     function size(){
       var r = cv.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height);
       if (w === W && h === H) return;
-      W = w; H = h; dpr = Math.min(2, window.devicePixelRatio || 1);
+      W = w; H = h; dpr = Math.min(W < 700 ? 1.5 : 2, window.devicePixelRatio || 1);
       cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       pts = []; for (var x = -STEP * 2; x <= W + STEP * 2; x += STEP) pts.push({x:x, o:0, v:0});
     }
@@ -780,7 +815,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var PHONE = '+17323003835';
   var f = document.getElementById('quoteForm');
   function val(id){ return document.getElementById(id).value.trim(); }
-  function mark(el, bad){ el.classList.toggle('bad', bad); }
+  function mark(el, bad){ el.classList.toggle('bad', bad); el.querySelectorAll('input').forEach(function(i){ i.setAttribute('aria-invalid', bad ? 'true' : 'false'); }); }
   ['when', 'car', 'name'].forEach(function(id){
     document.getElementById(id).addEventListener('input', function(){ mark(document.getElementById(id + 'F'), false); });
   });
@@ -791,7 +826,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var bad = [];
     mark(document.getElementById('tripSet'), !trip); if (!trip) bad.push(f.querySelector('input[name=trip]'));
     ['when', 'car', 'name'].forEach(function(id){ var b = !val(id); mark(document.getElementById(id + 'F'), b); if (b) bad.push(document.getElementById(id)); });
-    if (bad.length){ bad[0].focus(); return; }
+    if (bad.length){ bad[0].closest('fieldset, .field').scrollIntoView({block:'center'}); bad[0].focus({preventScroll:true}); return; }
     var body = "Hi Ed, I'd like your flat rate.\nTrip: " + trip.value + "\nWhen: " + val('when') + "\nCar: " + val('car') + "\nName: " + val('name');
     document.getElementById('sentBody').textContent = body;
     document.getElementById('sent').classList.add('show');

@@ -1,0 +1,29 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "#132849",
+        "createdAt": "2026-10-14T14:07:33.912Z",
+        "reason": "pitch-site finishing-rules.md (Ellie): text over the scene may use a soft glow in the ground color for legibility; this is the dusk-sky navy behind the hero text"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-14T14:07:33.983Z",
+        "reason": "domain-literal: the how-it-works spine is a painted lane-dash line in the highway world, not decoration"
+      },
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-10-14T14:09:50.079Z",
+        "reason": "Ellie's pitch-site house style (ellie-taste.md) mandates the system font stack; Roboto is only the Android fallback in it"
+      }
+    ]
+  }
+}
