@@ -23,6 +23,114 @@
         "value": "roboto",
         "createdAt": "2026-10-14T14:09:50.079Z",
         "reason": "Ellie's pitch-site house style (ellie-taste.md) mandates the system font stack; Roboto is only the Android fallback in it"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "9px",
+        "createdAt": "2026-10-14T14:51:23.947Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "8px",
+        "createdAt": "2026-10-14T14:51:24.015Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "2px",
+        "createdAt": "2026-10-14T14:51:24.083Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "3px",
+        "createdAt": "2026-10-14T14:51:24.152Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "6px",
+        "createdAt": "2026-10-14T14:51:24.220Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0,0,0,.45)",
+        "createdAt": "2026-10-14T14:51:24.288Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning (hero CSS fallback / label halo)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#5d4f63",
+        "createdAt": "2026-10-14T14:51:24.355Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning (hero CSS fallback / label halo)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#284638",
+        "createdAt": "2026-10-14T14:51:24.421Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning (hero CSS fallback / label halo)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#1a3d2c",
+        "createdAt": "2026-10-14T14:51:24.490Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning (hero CSS fallback / label halo)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(19px,5.2vw,20px)",
+        "createdAt": "2026-10-14T14:51:24.557Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(1.4rem,6vw,2rem)",
+        "createdAt": "2026-10-14T14:51:24.623Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "21px",
+        "createdAt": "2026-10-14T14:51:24.691Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(2.6rem,12vw,5.4rem)",
+        "createdAt": "2026-10-14T14:51:24.758Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(22px,6.4vw,30px)",
+        "createdAt": "2026-10-14T14:51:24.825Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(1.9rem,8.6vw,3.4rem)",
+        "createdAt": "2026-10-14T14:51:24.892Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(20px,5.6vw,26px)",
+        "createdAt": "2026-10-14T14:51:24.959Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(4.4rem,8.4vw,6rem)",
+        "createdAt": "2026-10-14T14:51:25.026Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "27px",
+        "createdAt": "2026-10-14T14:51:25.096Z",
+        "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
       }
     ]
   }
