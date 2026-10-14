@@ -98,7 +98,7 @@ section{position:relative}
 .board ul{list-style:none;margin:0;padding:0}
 .board li + li{border-top:2px solid rgba(247,251,248,.22)}
 .route{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 14px;padding:18px 16px;text-decoration:none;border-radius:10px;min-height:76px}
-.route .where{font-size:23px;font-weight:800;line-height:1.15}
+.route .where{font-size:23px;font-weight:800;line-height:1.3}
 .route .to{white-space:nowrap}
 .route .where svg{display:inline-block;width:.9em;height:.9em;vertical-align:-.08em;margin:0 .12em}
 .route .rate{grid-column:1;font-size:19px;font-weight:800;color:var(--lane)}
@@ -117,7 +117,7 @@ section{position:relative}
 .pack h2{font-size:clamp(2.6rem,12vw,5.4rem);line-height:.95}
 .pack p{margin-top:20px;font-size:20px;max-width:34ch;color:var(--concrete-soft)}
 .pack p strong{color:var(--concrete-ink)}
-.manifest{margin:30px 0 0;padding:0;list-style:none;font-size:clamp(22px,6.4vw,30px);font-weight:900;text-transform:uppercase;line-height:1.25}
+.manifest{margin:30px 0 0;padding:0;list-style:none;font-size:clamp(22px,6.4vw,30px);font-weight:900;text-transform:uppercase;line-height:1.32}
 .manifest li{display:flex;align-items:baseline;gap:14px}
 .manifest li::before{content:"";flex:none;width:22px;height:6px;border-radius:2px;background:var(--sign);transform:translateY(-.3em)}
 
@@ -125,7 +125,7 @@ section{position:relative}
 .how{padding:60px 0 40px}
 .steps{list-style:none;margin:56px 0 0;padding:0;display:grid;gap:52px;position:relative}
 .steps::before{content:"";position:absolute;left:12px;top:-24px;bottom:-24px;width:30px;border-radius:3px;background:repeating-linear-gradient(180deg,#eef1ed 0 16px,transparent 16px 46px) center top / 3px 46px repeat-y,linear-gradient(90deg,#59626b 0 2px,#f5c242 2px 5px,#2e3740 5px calc(100% - 5px),#eef1ed calc(100% - 5px) calc(100% - 2px),#59626b calc(100% - 2px))}
-.steps::before{animation:lane 1.4s linear infinite}
+.steps::before{animation:lane 1.4s linear infinite;-webkit-mask-image:linear-gradient(180deg,transparent,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(180deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
 @keyframes lane{from{background-position:center 0,0 0}to{background-position:center 46px,0 0}}
 .steps .sign{margin-left:58px;padding:22px 22px 24px}
 .steps h3{font-size:24px;line-height:1.08}
@@ -155,7 +155,7 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
   .route:hover{outline:3px solid var(--focus);outline-offset:-3px}
   .chip:hover span{outline:3px solid var(--focus);outline-offset:2px}
   input[type=text]:hover,input[type=tel]:hover,textarea:hover{outline:3px solid var(--focus);outline-offset:2px}
-  .faq summary:hover{outline:3px solid #1f6fa8;outline-offset:-2px}
+  .faq summary:hover{outline:3px solid var(--focus);outline-offset:2px;box-shadow:0 0 0 2px var(--ground)}
   footer a:hover,.note a:hover,.alt a:hover,.brand:hover{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
 }
 @media (forced-colors:active){.chip input:checked + span{outline:3px solid Highlight}}
@@ -179,7 +179,7 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
 .faq details:first-of-type{margin-top:28px;border-top:2px solid rgba(12,58,42,.18)}
 .faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;font-size:21px;font-weight:800;line-height:1.35;border-radius:8px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary:focus-visible{outline-color:#1f6fa8}
+.faq summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px;box-shadow:0 0 0 2px var(--ground)}
 .faq summary svg{flex:none;width:28px;height:28px;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
 .faq details[open] summary svg{transform:rotate(45deg)}
 .faq .ans{padding:0 4px 22px;font-size:19px;color:var(--concrete-soft);max-width:60ch}
@@ -225,7 +225,7 @@ footer a{color:var(--white);font-weight:700;text-decoration:none;display:inline-
   .how{padding:96px 0 96px}
   .steps{grid-template-columns:repeat(4,1fr);gap:22px;margin-top:70px}
   .steps::before{left:0;right:0;top:auto;bottom:-48px;width:auto;height:30px;background:repeating-linear-gradient(90deg,#eef1ed 0 16px,transparent 16px 46px) left center / 46px 3px repeat-x,linear-gradient(180deg,#59626b 0 2px,#f5c242 2px 5px,#2e3740 5px calc(100% - 5px),#eef1ed calc(100% - 5px) calc(100% - 2px),#59626b calc(100% - 2px))}
-  .steps::before{animation-name:laneX}
+  .steps::before{animation-name:laneX;-webkit-mask-image:none;mask-image:none}
   @keyframes laneX{from{background-position:0 center,0 0}to{background-position:46px center,0 0}}
   .steps .sign{margin-left:0;height:100%}
   .quote{padding:96px 0 88px}

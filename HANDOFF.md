@@ -22,6 +22,8 @@
 - **First-person voice as Ed.** The tone is plain-spoken, from the brief's notes; no social presence exists to match.
 - **The manifest ("Winter clothes / Golf clubs / The good pans / Whatever fits") is illustrative**, not something Ed said.
 - **The hero sign reads "I-95"**: assumed route.
+- **The hero names New Jersey and Florida.** The finishing rules keep service areas out of the hero, but here the route is the product. Cut it if you disagree.
+- **One outline color (#8fd6ff) everywhere.** On the light concrete FAQ it sits on a 2px deep-green ring so it still shows up.
 
 ## Placeholders and gaps
 - **Rates (critical, Ed confirms Thursday).** When he does, add one `<span class="rate">$___ flat</span>` under each route's name in the rate board and delete the `board-note` line. The HTML comment above the list says exactly this, and the CSS for `.rate` is already there.
