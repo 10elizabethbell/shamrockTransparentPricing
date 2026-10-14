@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T14:50:19.308758+00:00",
+  "title": "Design System: Shamrock Transportation",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Roadside Green",
+        "canonical": "#0c3a2a",
+        "tonalRamp": [
+          "#0d3f2e",
+          "#177051",
+          "#21a074",
+          "#2bd097",
+          "#59ddaf",
+          "#89e7c6",
+          "#baf1dd",
+          "#eafbf5"
+        ]
+      },
+      "ground-deep": {
+        "role": "neutral",
+        "displayName": "Night Verge",
+        "canonical": "#082a1e",
+        "tonalRamp": [
+          "#0c402e",
+          "#167151",
+          "#1fa274",
+          "#28d397",
+          "#57dfaf",
+          "#88e8c6",
+          "#b9f2dd",
+          "#eafbf5"
+        ]
+      },
+      "sign-green": {
+        "role": "secondary",
+        "displayName": "Guide-Sign Green",
+        "canonical": "#0d6a43",
+        "tonalRamp": [
+          "#08442b",
+          "#0f784c",
+          "#15ac6d",
+          "#1be08e",
+          "#4de9a7",
+          "#80efc1",
+          "#b4f6da",
+          "#e8fcf4"
+        ]
+      },
+      "sign-white": {
+        "role": "secondary",
+        "displayName": "Retroreflective White",
+        "canonical": "#f7fbf8",
+        "tonalRamp": [
+          "#1a3320",
+          "#2d5a38",
+          "#408150",
+          "#54a869",
+          "#79bc8a",
+          "#a0d0ac",
+          "#c7e3ce",
+          "#eef6f0"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Sign Ink",
+        "canonical": "#cfe5d9",
+        "tonalRamp": [
+          "#1b3225",
+          "#2f5742",
+          "#447d5e",
+          "#58a37a",
+          "#7db998",
+          "#a3cdb6",
+          "#c9e2d4",
+          "#eef6f2"
+        ]
+      },
+      "lane-yellow": {
+        "role": "primary",
+        "displayName": "Lane-Line Yellow",
+        "canonical": "#f5c242",
+        "tonalRamp": [
+          "#493504",
+          "#805d07",
+          "#b7860a",
+          "#efae0d",
+          "#f5c241",
+          "#f8d378",
+          "#fbe5af",
+          "#fef7e7"
+        ]
+      },
+      "lane-ink": {
+        "role": "primary",
+        "displayName": "Lane Ink",
+        "canonical": "#132a1f",
+        "tonalRamp": [
+          "#183527",
+          "#2a5d44",
+          "#3c8562",
+          "#4ead80",
+          "#75c19c",
+          "#9dd3b9",
+          "#c5e5d6",
+          "#edf7f2"
+        ]
+      },
+      "concrete": {
+        "role": "neutral",
+        "displayName": "Highway Concrete",
+        "canonical": "#e4e9e6",
+        "tonalRamp": [
+          "#222a25",
+          "#3d4a42",
+          "#576a5f",
+          "#718b7b",
+          "#91a599",
+          "#b1bfb7",
+          "#d1d9d4",
+          "#f1f4f2"
+        ]
+      },
+      "concrete-ink": {
+        "role": "neutral",
+        "displayName": "Concrete Ink",
+        "canonical": "#0c3a2a",
+        "tonalRamp": [
+          "#0d3f2e",
+          "#177051",
+          "#21a074",
+          "#2bd097",
+          "#59ddaf",
+          "#89e7c6",
+          "#baf1dd",
+          "#eafbf5"
+        ]
+      },
+      "concrete-soft": {
+        "role": "neutral",
+        "displayName": "Concrete Soft",
+        "canonical": "#33584a",
+        "tonalRamp": [
+          "#1c3029",
+          "#315548",
+          "#477a67",
+          "#5c9f86",
+          "#80b5a1",
+          "#a5cbbd",
+          "#cae0d8",
+          "#eff6f3"
+        ]
+      },
+      "focus-sky": {
+        "role": "primary",
+        "displayName": "Focus Sky",
+        "canonical": "#8fd6ff",
+        "tonalRamp": [
+          "#00304c",
+          "#005587",
+          "#007ac1",
+          "#009ffb",
+          "#37b6ff",
+          "#71cbff",
+          "#abe0ff",
+          "#e6f6ff"
+        ]
+      },
+      "dusk-top": {
+        "role": "tertiary",
+        "displayName": "Dusk Navy",
+        "canonical": "#132849",
+        "tonalRamp": [
+          "#10213d",
+          "#1c3b6b",
+          "#285499",
+          "#346dc7",
+          "#608ed6",
+          "#8eafe2",
+          "#bdd0ee",
+          "#ebf1fa"
+        ]
+      },
+      "dusk-mid": {
+        "role": "tertiary",
+        "displayName": "Dusk Blue",
+        "canonical": "#2c4770",
+        "tonalRamp": [
+          "#162337",
+          "#263d61",
+          "#36588b",
+          "#4772b4",
+          "#6f92c6",
+          "#99b2d7",
+          "#c3d1e7",
+          "#edf1f8"
+        ]
+      },
+      "road-asphalt": {
+        "role": "tertiary",
+        "displayName": "Road Asphalt",
+        "canonical": "#2e3740",
+        "tonalRamp": [
+          "#20262d",
+          "#38434e",
+          "#516170",
+          "#697e92",
+          "#8a9bab",
+          "#acb8c4",
+          "#ced5dc",
+          "#f0f2f4"
+        ]
+      },
+      "road-shoulder": {
+        "role": "tertiary",
+        "displayName": "Road Shoulder",
+        "canonical": "#59626b",
+        "tonalRamp": [
+          "#23262a",
+          "#3d434a",
+          "#586169",
+          "#727e89",
+          "#929ba4",
+          "#b1b8be",
+          "#d1d5d9",
+          "#f1f2f3"
+        ]
+      },
+      "road-paint": {
+        "role": "tertiary",
+        "displayName": "Road Paint",
+        "canonical": "#eef1ed",
+        "tonalRamp": [
+          "#242b21",
+          "#3f4c3b",
+          "#5b6d54",
+          "#768d6e",
+          "#95a78e",
+          "#b4c1af",
+          "#d2dad0",
+          "#f1f4f1"
+        ]
+      },
+      "field-ink": {
+        "role": "neutral",
+        "displayName": "Field Ink",
+        "canonical": "#10261c",
+        "tonalRamp": [
+          "#173628",
+          "#285f46",
+          "#398864",
+          "#4ab182",
+          "#72c49f",
+          "#9bd5bb",
+          "#c4e6d7",
+          "#edf7f3"
+        ]
+      },
+      "field-placeholder": {
+        "role": "neutral",
+        "displayName": "Field Placeholder",
+        "canonical": "#6f897d",
+        "tonalRamp": [
+          "#222a27",
+          "#3c4a44",
+          "#566b61",
+          "#718b7f",
+          "#90a59c",
+          "#b1bfb9",
+          "#d1d9d5",
+          "#f1f4f2"
+        ]
+      },
+      "error-stroke": {
+        "role": "neutral",
+        "displayName": "Warning Peach",
+        "canonical": "#ffb199",
+        "tonalRamp": [
+          "#4c1200",
+          "#872000",
+          "#c12d00",
+          "#fb3b00",
+          "#ff6637",
+          "#ff9271",
+          "#ffbfab",
+          "#ffece6"
+        ]
+      },
+      "error-text": {
+        "role": "neutral",
+        "displayName": "Warning Peach Text",
+        "canonical": "#ffd0c2",
+        "tonalRamp": [
+          "#4c1200",
+          "#871f00",
+          "#c12c00",
+          "#fb3a00",
+          "#ff6537",
+          "#ff9271",
+          "#ffbeab",
+          "#ffebe6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; uppercase, two lines, second in lane yellow."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2, uppercase; concrete sections may push to poster size (to 5.4rem)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3 inside sign panels."
+      },
+      "sign-line": {
+        "displayName": "Sign Line",
+        "purpose": "Rate-board destinations; 27px on desktop."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Sentence under an h2, ink-soft."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form legends/labels, uppercase; button sub-lines."
+      },
+      "exit-tab": {
+        "displayName": "Exit Tab",
+        "purpose": "Only inside exit tabs; the sole text under 17px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sign-mount",
+        "value": "inset 0 0 0 7px #0d6a43, inset 0 0 0 10px #f7fbf8, 0 18px 40px -18px rgba(0,0,0,.6)",
+        "purpose": "Every sign panel: inset white rule plus soft drop."
+      },
+      {
+        "name": "button-lift",
+        "value": "0 8px 22px -8px rgba(0,0,0,.55)",
+        "purpose": "Yellow call button."
+      },
+      {
+        "name": "sky-legibility",
+        "value": "text-shadow: 0 2px 18px rgba(0,0,0,.28)",
+        "purpose": "Hero text over the dusk gradient."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #8fd6ff; outline-offset: 2-3px",
+        "purpose": "Every hover and focus."
+      },
+      {
+        "name": "focus-ring-concrete",
+        "value": "outline: 3px solid #8fd6ff; outline-offset: 2px; box-shadow: 0 0 0 2px #0c3a2a",
+        "purpose": "Hover/focus on concrete sections."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-press",
+        "value": "cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Button press, FAQ plus rotation (.2-.25s)."
+      },
+      {
+        "name": "ease-disclose",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "FAQ height reveal (.3s) where interpolate-size is supported."
+      },
+      {
+        "name": "chip-pick",
+        "value": "scale 1.04 at 50%, .25s ease-out",
+        "purpose": "Chip selection pop."
+      },
+      {
+        "name": "lane-flow",
+        "value": "46px per 1.4s linear",
+        "purpose": "Step lane dashes."
+      },
+      {
+        "name": "road-spring",
+        "value": "spring 38, damping 6.5",
+        "purpose": "Hero road and dividers spring back after a drag; hero autopilot resumes after 2.2s."
+      },
+      {
+        "name": "divider-flow",
+        "value": "70px/s",
+        "purpose": "Divider dash speed."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Freeze roads, lane and chip pop; smooth scroll off."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desk",
+        "value": "760px"
+      },
+      {
+        "name": "wide",
+        "value": "1100px"
+      },
+      {
+        "name": "short-landscape",
+        "value": "max-height: 500px and landscape"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Call Button",
+      "kind": "button",
+      "refersTo": "button-call",
+      "description": "The one yellow action: call Ed, number on the second line.",
+      "html": "<a class=\"ds-btn-call\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z\"/></svg><span class=\"ds-stack\">Call Ed<small>732-300-3835</small></span></a>",
+      "css": ".ds-btn-call{display:inline-flex;align-items:center;gap:12px;min-height:76px;padding:14px 30px;border-radius:14px;border:3px solid var(--lane,#f5c242);background:var(--lane,#f5c242);color:var(--lane-ink,#132a1f);font-family:var(--font,system-ui);font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;box-shadow:0 8px 22px -8px rgba(0,0,0,.55);transition:transform .2s cubic-bezier(.2,.8,.2,1)}.ds-stack{display:flex;flex-direction:column}.ds-stack small{font-size:17px;font-weight:700}.ds-btn-call:hover,.ds-btn-call:focus-visible{outline:3px solid var(--focus,#8fd6ff);outline-offset:3px}.ds-btn-call:active{transform:translateY(1px) scale(.99)}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Hero-only secondary beside the call button.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">Get my rate <svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 4v15M6 13l6 6 6-6\"/></svg></a>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;gap:12px;min-height:76px;padding:14px 30px;border-radius:14px;border:3px solid var(--white,#f7fbf8);background:rgba(19,40,73,.22);color:var(--white,#f7fbf8);text-shadow:0 1px 8px rgba(0,0,0,.45);font-family:var(--font,system-ui);font-size:20px;font-weight:800;text-decoration:none;transition:transform .2s cubic-bezier(.2,.8,.2,1)}.ds-btn-line:hover,.ds-btn-line:focus-visible{outline:3px solid var(--focus,#8fd6ff);outline-offset:3px}.ds-btn-line:active{transform:translateY(1px) scale(.99)}"
+    },
+    {
+      "name": "Sign Panel with Exit Tab",
+      "kind": "card",
+      "refersTo": "sign-panel",
+      "description": "Mounted guide sign; the exit tab numbers a step.",
+      "html": "<div class=\"ds-sign\"><span class=\"ds-exit\">Exit 2</span><h3 class=\"ds-sign-h\">Hear the rate</h3><p class=\"ds-sign-p\">One number for the whole trip.</p></div>",
+      "css": ".ds-sign{position:relative;margin-top:30px;background:var(--sign,#0d6a43);color:var(--white,#f7fbf8);border-radius:16px;box-shadow:inset 0 0 0 7px var(--sign,#0d6a43),inset 0 0 0 10px var(--white,#f7fbf8),0 18px 40px -18px rgba(0,0,0,.6);padding:22px 22px 24px;font-family:var(--font,system-ui)}.ds-exit{position:absolute;top:-28px;left:18px;background:var(--sign,#0d6a43);font-weight:900;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px 6px;border-radius:9px 9px 0 0;border:2px solid var(--white,#f7fbf8);border-bottom:0;line-height:1.1}.ds-sign-h{margin:0;font-size:24px;font-weight:900;text-transform:uppercase;line-height:1.08}.ds-sign-p{margin:8px 0 0;font-size:18px;color:var(--ink-soft,#cfe5d9)}"
+    },
+    {
+      "name": "Route Row",
+      "kind": "custom",
+      "refersTo": "route-row",
+      "description": "Rate-board destination link; circled arrow fills yellow on hover/focus.",
+      "html": "<div class=\"ds-board\"><a class=\"ds-route\" href=\"#\"><span class=\"ds-where\">New Jersey &rarr; Florida</span><span class=\"ds-go\">&#x2192;</span></a></div>",
+      "css": ".ds-board{background:var(--sign,#0d6a43);border-radius:16px;padding:12px 10px;box-shadow:inset 0 0 0 7px var(--sign,#0d6a43),inset 0 0 0 10px var(--white,#f7fbf8)}.ds-route{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;min-height:76px;padding:18px 16px;border-radius:10px;color:var(--white,#f7fbf8);text-decoration:none;font-family:var(--font,system-ui)}.ds-where{font-size:23px;font-weight:800;line-height:1.3}.ds-go{width:40px;height:40px;border-radius:50%;border:2px solid rgba(247,251,248,.55);display:grid;place-items:center;font-weight:900;transition:background .2s,border-color .2s,color .2s}.ds-route:hover,.ds-route:focus-visible{outline:3px solid var(--focus,#8fd6ff);outline-offset:-3px}.ds-route:hover .ds-go,.ds-route:focus-visible .ds-go{background:var(--lane,#f5c242);border-color:var(--lane,#f5c242);color:var(--lane-ink,#132a1f)}"
+    },
+    {
+      "name": "Trip Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Radio chip; selected fills lane yellow.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-t\" checked><span>NJ to Florida</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-t\"><span>Florida to NJ</span></label></div>",
+      "css": ".ds-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--sign,#0d6a43);padding:16px;font-family:var(--font,system-ui)}.ds-chip{position:relative;display:block}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px}.ds-chip span{display:flex;align-items:center;min-height:58px;padding:10px 14px;border:2px solid rgba(247,251,248,.7);border-radius:12px;color:var(--white,#f7fbf8);font-size:17px;font-weight:800;cursor:pointer;transition:background .15s,color .15s,border-color .15s}.ds-chip:hover span,.ds-chip input:focus-visible+span{outline:3px solid var(--focus,#8fd6ff);outline-offset:2px}.ds-chip input:checked+span{background:var(--lane,#f5c242);border-color:var(--lane,#f5c242);color:var(--lane-ink,#132a1f)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "text-field",
+      "description": "White field on a sign panel with uppercase label.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-lbl\" for=\"ds-car\">Your car</label><input class=\"ds-input\" id=\"ds-car\" placeholder=\"e.g. 2019 Toyota Camry\"></div>",
+      "css": ".ds-field{background:var(--sign,#0d6a43);padding:16px;font-family:var(--font,system-ui)}.ds-lbl{display:block;color:var(--white,#f7fbf8);font-weight:800;text-transform:uppercase;font-size:17px;letter-spacing:.04em;margin-bottom:10px}.ds-input{width:100%;box-sizing:border-box;min-height:58px;padding:14px 16px;font:inherit;font-size:19px;color:#10261c;background:var(--white,#f7fbf8);border:2px solid var(--white,#f7fbf8);border-radius:12px;caret-color:var(--sign,#0d6a43)}.ds-input::placeholder{color:#6f897d}.ds-input:hover,.ds-input:focus{outline:3px solid var(--focus,#8fd6ff);outline-offset:2px}"
+    },
+    {
+      "name": "FAQ Row on Concrete",
+      "kind": "custom",
+      "description": "Disclosure on a concrete section; focus ring carries the 2px ground ring.",
+      "html": "<div class=\"ds-faq\"><details><summary>Do you do airport runs? <span aria-hidden=\"true\">+</span></summary><div class=\"ds-ans\">Yes, anywhere in Florida.</div></details></div>",
+      "css": ".ds-faq{background:var(--concrete,#e4e9e6);color:var(--concrete-ink,#0c3a2a);padding:16px;font-family:var(--font,system-ui)}.ds-faq details{border-top:2px solid rgba(12,58,42,.18);border-bottom:2px solid rgba(12,58,42,.18)}.ds-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:20px 4px;font-size:21px;font-weight:800;border-radius:8px}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary span{font-size:28px;line-height:1;transition:transform .25s cubic-bezier(.2,.8,.2,1)}.ds-faq details[open] summary span{transform:rotate(45deg)}.ds-faq summary:hover,.ds-faq summary:focus-visible{outline:3px solid var(--focus,#8fd6ff);outline-offset:2px;box-shadow:0 0 0 2px var(--ground,#0c3a2a)}.ds-ans{padding:0 4px 22px;font-size:19px;color:var(--concrete-soft,#33584a)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Posted Rate on I-95",
+    "overview": "The whole page is the interstate at dusk. Information is posted the way a highway posts it: on guide-sign green panels with an inset white border, in heavy retroreflective-white uppercase, readable at 65 mph and therefore readable by a 60-plus reader on a phone. The road itself is the page's one unbroken line. It starts as a steerable first-person drive into a pine horizon in the hero, then returns between sections as top-down asphalt ribbons with a yellow left edge and white dashes, and runs as a live lane under the four exit-numbered steps.\n\nDensity is low and the type is big. Every section is one claim plus one proof, never a wall. The ground is deep roadside green, never black; light sections are highway concrete, so the page alternates green and concrete like driving from asphalt onto a bridge deck. Lane-line yellow is the one action color. A sky-blue outline is the one hover/focus voice.\n\nRejected by the build and the owner: stock truck photos, a quote-form wall, fine print, black grounds, webfonts, sticky bottom bars, email links.",
+    "keyCharacteristics": [
+      "Guide-sign panels (green, inset white rule, rounded 16px corners) carry every structured list: rates, steps, the form, the close.",
+      "One yellow for action; one sky-blue outline for hover and focus.",
+      "System font stack only, set heavy (800 to 900) and uppercase for headings.",
+      "The road recurs as the connective tissue: hero canvas, section dividers, step lane.",
+      "Phone-first, big targets (60px controls, 76px hero buttons and route rows), 17px text floor."
+    ],
+    "rules": [
+      {
+        "name": "The Never-Black Rule",
+        "body": "The darkest surface is ground-deep. No section, card or overlay uses black or near-neutral charcoal as a ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Yellow Rule",
+        "body": "Lane yellow marks the action and the promise. A yellow surface is always a control (call button, selected chip). Yellow text on green is either a link or the headline promise; plain instructions (like the note under the rate board) stay in soft white.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Outline Rule",
+        "body": "Hover and focus on every control is a 3px focus-sky outline (offset 2-3px). On concrete sections it gains a 2px ground ring between control and outline so the pale blue still reads. No other hover color or glow.",
+        "section": "colors"
+      },
+      {
+        "name": "The 65 MPH Rule",
+        "body": "Nothing a reader must act on is under 17px or lighter than 700. Body is 18px; buttons are 20px/800.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Webfont Rule",
+        "body": "The system stack is mandatory. Canvas lettering (the hero's overhead sign) reads the computed body font so drawn text matches the page.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mounted Sign Rule",
+        "body": "The only raised object is a sign panel (or the yellow button on it). Lists on the open ground stay flat and use rules or dashes, not cards.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put every structured list (rates, steps, the estimate form, the closing card) on a sign panel with the Sign Mount treatment.",
+      "**Do** keep one yellow action per view; the call button is yellow, with the phone number on its second line.",
+      "**Do** use the 3px #8fd6ff outline for every hover and focus, adding the 2px ground ring on concrete.",
+      "**Do** join a green section to a concrete section with a road divider whose halves match both grounds.",
+      "**Do** keep controls at 58px or taller and interactive text at 17px/700 or heavier.",
+      "**Do** honor prefers-reduced-motion by freezing the road, the lane and the chip pop."
+    ],
+    "donts": [
+      "**Don't** use black or neutral charcoal as any ground; the darkest is ground-deep.",
+      "**Don't** load a webfont; the system stack is the brand type.",
+      "**Don't** add a sticky header or sticky bottom call bar.",
+      "**Don't** put more than two contact buttons in the hero, or make the second anything but the outline.",
+      "**Don't** add email links or mailto actions.",
+      "**Don't** style non-clickable things as clickable: no yellow fills, circled arrows or bordered pills on anything that isn't a control.",
+      "**Don't** use exit tabs as section eyebrows above headings; they only number steps on a sign panel.",
+      "**Don't** place lane-yellow on concrete; on light sections the accent is sign-green.",
+      "**Don't** use hard offset shadows; depth is the soft sign mount."
+    ]
+  }
+}
