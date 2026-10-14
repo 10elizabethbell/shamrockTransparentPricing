@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T22:34:21.167285+00:00",
+  "generatedAt": "2026-10-14T23:36:01.031222+00:00",
   "title": "Design System: Shamrock Transportation",
   "extensions": {
     "colorMeta": {
@@ -9,14 +9,14 @@
         "displayName": "Lane-Line Yellow",
         "canonical": "#f5c242",
         "tonalRamp": [
-          "#473406",
-          "#7d5c0a",
-          "#b3840e",
-          "#e9ac13",
-          "#f0bf46",
-          "#f4d27c",
-          "#f9e4b1",
-          "#fdf7e7"
+          "#43330a",
+          "#745811",
+          "#a57d18",
+          "#d6a21f",
+          "#e6ba4c",
+          "#edcd7e",
+          "#f4e2b3",
+          "#fcf6e9"
         ]
       },
       "lane-ink": {
@@ -25,12 +25,12 @@
         "canonical": "#132a1f",
         "tonalRamp": [
           "#183527",
-          "#2a5d44",
-          "#3c8562",
-          "#4ead80",
-          "#75c19c",
-          "#9dd3b9",
-          "#c5e5d6",
+          "#295b43",
+          "#3b8260",
+          "#4ca97c",
+          "#73bf9b",
+          "#99d1b6",
+          "#c3e4d4",
           "#edf7f2"
         ]
       },
@@ -39,14 +39,14 @@
         "displayName": "Focus Sky",
         "canonical": "#8fd6ff",
         "tonalRamp": [
-          "#062f47",
-          "#0a537d",
-          "#0e77b3",
-          "#139ae9",
-          "#46b2f0",
-          "#7cc8f4",
-          "#b1dff9",
-          "#e7f5fd"
+          "#0a2e43",
+          "#115074",
+          "#1871a5",
+          "#1f93d6",
+          "#4cade6",
+          "#7ec4ed",
+          "#b3dcf4",
+          "#e9f5fc"
         ]
       },
       "sign-green": {
@@ -54,14 +54,14 @@
         "displayName": "Guide-Sign Green",
         "canonical": "#0d6a43",
         "tonalRamp": [
-          "#08442b",
-          "#0f784c",
-          "#15ac6d",
-          "#1be08e",
-          "#4de9a7",
-          "#80efc1",
-          "#b4f6da",
-          "#e8fcf4"
+          "#0a432b",
+          "#11744a",
+          "#18a56a",
+          "#1fd689",
+          "#4ce6a5",
+          "#7eedbe",
+          "#b3f4d9",
+          "#e9fcf4"
         ]
       },
       "sign-white": {
@@ -70,12 +70,12 @@
         "canonical": "#f7fbf8",
         "tonalRamp": [
           "#1a3320",
-          "#2d5a38",
-          "#408150",
-          "#54a869",
-          "#79bc8a",
-          "#a0d0ac",
-          "#c7e3ce",
+          "#2c5837",
+          "#3f7e4f",
+          "#52a366",
+          "#77bb88",
+          "#9ccea9",
+          "#c5e2cc",
           "#eef6f0"
         ]
       },
@@ -85,12 +85,12 @@
         "canonical": "#132849",
         "tonalRamp": [
           "#10213d",
-          "#1c3b6b",
-          "#285499",
-          "#346dc7",
-          "#608ed6",
-          "#8eafe2",
-          "#bdd0ee",
+          "#1b3a69",
+          "#275296",
+          "#336ac2",
+          "#5d8cd5",
+          "#8aabe0",
+          "#baceed",
           "#ebf1fa"
         ]
       },
@@ -100,43 +100,178 @@
         "canonical": "#2c4770",
         "tonalRamp": [
           "#162337",
-          "#263d61",
-          "#36588b",
-          "#4772b4",
-          "#6f92c6",
-          "#99b2d7",
-          "#c3d1e7",
+          "#253c5f",
+          "#355687",
+          "#456fb0",
+          "#6d90c5",
+          "#95aed5",
+          "#c1d0e7",
           "#edf1f8"
         ]
       },
-      "strip-paint": {
+      "dusk-veil": {
         "role": "tertiary",
-        "displayName": "Strip Paint",
-        "canonical": "#eef1ed",
+        "displayName": "Dusk Veil",
+        "canonical": "rgba(19,40,73,.22)",
         "tonalRamp": [
-          "#262b21",
-          "#434c3a",
-          "#616d54",
-          "#7e8e6d",
-          "#9ba88d",
-          "#b8c1ae",
-          "#d5dbd0",
-          "#f2f4f1"
+          "#10213d",
+          "#1b3a69",
+          "#275296",
+          "#336ac2",
+          "#5d8cd5",
+          "#8aabe0",
+          "#baceed",
+          "#ebf1fa"
         ]
       },
-      "strip-asphalt": {
+      "dusk-mauve": {
         "role": "tertiary",
-        "displayName": "Strip Asphalt",
-        "canonical": "#2e3740",
+        "displayName": "Dusk Mauve",
+        "canonical": "#5d4f63",
+        "tonalRamp": [
+          "#28222b",
+          "#453b4a",
+          "#635469",
+          "#806d88",
+          "#9e8ea4",
+          "#b8adbd",
+          "#d6cfd9",
+          "#f3f1f4"
+        ]
+      },
+      "dusk-rose": {
+        "role": "tertiary",
+        "displayName": "Dusk Rose",
+        "canonical": "#8d6c72",
+        "tonalRamp": [
+          "#2b2123",
+          "#4b3a3d",
+          "#6b5256",
+          "#8b6a70",
+          "#a78b90",
+          "#bfabaf",
+          "#d9ced0",
+          "#f4f1f1"
+        ]
+      },
+      "horizon-peach": {
+        "role": "tertiary",
+        "displayName": "Horizon Peach",
+        "canonical": "#eaa064",
+        "tonalRamp": [
+          "#43230a",
+          "#743d11",
+          "#a55718",
+          "#d6711f",
+          "#e6914c",
+          "#edaf7e",
+          "#f4d0b3",
+          "#fcf1e9"
+        ]
+      },
+      "sun-glow": {
+        "role": "tertiary",
+        "displayName": "Low Sun Glow",
+        "canonical": "rgba(255,190,120,.6)",
+        "tonalRamp": [
+          "#43270a",
+          "#744411",
+          "#a56118",
+          "#d67e1f",
+          "#e69c4c",
+          "#edb77e",
+          "#f4d5b3",
+          "#fcf3e9"
+        ]
+      },
+      "pine-far": {
+        "role": "tertiary",
+        "displayName": "Far Pines",
+        "canonical": "#2f4a5c",
+        "tonalRamp": [
+          "#1a2933",
+          "#2d4758",
+          "#40647d",
+          "#5382a2",
+          "#78a0ba",
+          "#9dbacd",
+          "#c6d6e2",
+          "#eef3f6"
+        ]
+      },
+      "pine-near": {
+        "role": "tertiary",
+        "displayName": "Near Pines",
+        "canonical": "#1d3445",
+        "tonalRamp": [
+          "#172936",
+          "#27465d",
+          "#386485",
+          "#4882ac",
+          "#6f9fc3",
+          "#97bad3",
+          "#c2d6e5",
+          "#edf3f7"
+        ]
+      },
+      "verge-far": {
+        "role": "tertiary",
+        "displayName": "Far Verge",
+        "canonical": "#284638",
+        "tonalRamp": [
+          "#1c3127",
+          "#305444",
+          "#457860",
+          "#599c7d",
+          "#7db59b",
+          "#a1c9b6",
+          "#c8dfd4",
+          "#eff6f2"
+        ]
+      },
+      "verge-near": {
+        "role": "tertiary",
+        "displayName": "Near Verge",
+        "canonical": "#1a3d2c",
+        "tonalRamp": [
+          "#173627",
+          "#285d43",
+          "#38845f",
+          "#49ac7c",
+          "#70c29a",
+          "#97d3b6",
+          "#c2e5d4",
+          "#edf7f2"
+        ]
+      },
+      "road-asphalt": {
+        "role": "tertiary",
+        "displayName": "Dusk Asphalt",
+        "canonical": "#2e363f",
         "tonalRamp": [
           "#20262c",
-          "#39434e",
-          "#516070",
-          "#6a7d91",
-          "#8b9aaa",
-          "#adb7c3",
-          "#cfd5dc",
+          "#38424d",
+          "#505d6d",
+          "#67798d",
+          "#8998a9",
+          "#aab4c1",
+          "#cdd3da",
           "#f0f2f4"
+        ]
+      },
+      "road-haze": {
+        "role": "tertiary",
+        "displayName": "Road Haze",
+        "canonical": "#5c6e74",
+        "tonalRamp": [
+          "#22282b",
+          "#3b464a",
+          "#536469",
+          "#6c8189",
+          "#8d9fa5",
+          "#adb9be",
+          "#cfd6d9",
+          "#f1f3f4"
         ]
       },
       "ground": {
@@ -145,12 +280,12 @@
         "canonical": "#0c3a2a",
         "tonalRamp": [
           "#0d3f2e",
-          "#177051",
-          "#21a074",
-          "#2bd097",
-          "#59ddaf",
-          "#89e7c6",
-          "#baf1dd",
+          "#176e50",
+          "#209c71",
+          "#2acb93",
+          "#56dcad",
+          "#84e6c4",
+          "#b7f0dc",
           "#eafbf5"
         ]
       },
@@ -160,12 +295,12 @@
         "canonical": "#082a1e",
         "tonalRamp": [
           "#0c402e",
-          "#167151",
-          "#1fa274",
-          "#28d397",
-          "#57dfaf",
-          "#88e8c6",
-          "#b9f2dd",
+          "#156f50",
+          "#1e9f71",
+          "#27ce93",
+          "#54dead",
+          "#83e7c4",
+          "#b6f1dc",
           "#eafbf5"
         ]
       },
@@ -175,12 +310,12 @@
         "canonical": "#cfe5d9",
         "tonalRamp": [
           "#1b3225",
-          "#2f5742",
-          "#447d5e",
-          "#58a37a",
-          "#7db998",
-          "#a3cdb6",
-          "#c9e2d4",
+          "#2f5641",
+          "#427a5c",
+          "#569f77",
+          "#7bb796",
+          "#9fcbb3",
+          "#c7e1d2",
           "#eef6f2"
         ]
       },
@@ -190,12 +325,12 @@
         "canonical": "#e4e9e6",
         "tonalRamp": [
           "#222a25",
-          "#3d4a42",
-          "#576a5f",
-          "#718b7b",
-          "#91a599",
-          "#b1bfb7",
-          "#d1d9d4",
+          "#3c4941",
+          "#55685c",
+          "#6e8778",
+          "#8fa397",
+          "#aebdb4",
+          "#cfd8d3",
           "#f1f4f2"
         ]
       },
@@ -205,12 +340,12 @@
         "canonical": "#0c3a2a",
         "tonalRamp": [
           "#0d3f2e",
-          "#177051",
-          "#21a074",
-          "#2bd097",
-          "#59ddaf",
-          "#89e7c6",
-          "#baf1dd",
+          "#176e50",
+          "#209c71",
+          "#2acb93",
+          "#56dcad",
+          "#84e6c4",
+          "#b7f0dc",
           "#eafbf5"
         ]
       },
@@ -220,12 +355,12 @@
         "canonical": "#33584a",
         "tonalRamp": [
           "#1c3029",
-          "#315548",
-          "#477a67",
-          "#5c9f86",
-          "#80b5a1",
-          "#a5cbbd",
-          "#cae0d8",
+          "#315447",
+          "#457764",
+          "#5a9b82",
+          "#7eb4a0",
+          "#a1c9ba",
+          "#c8dfd6",
           "#eff6f3"
         ]
       },
@@ -235,12 +370,12 @@
         "canonical": "#10261c",
         "tonalRamp": [
           "#173628",
-          "#285f46",
-          "#398864",
-          "#4ab182",
-          "#72c49f",
-          "#9bd5bb",
-          "#c4e6d7",
+          "#275d45",
+          "#388562",
+          "#49ac7f",
+          "#6fc39d",
+          "#97d3b8",
+          "#c2e5d5",
           "#edf7f3"
         ]
       },
@@ -250,28 +385,28 @@
         "canonical": "#6f897d",
         "tonalRamp": [
           "#222a27",
-          "#3c4a44",
-          "#566b61",
-          "#718b7f",
-          "#90a59c",
-          "#b1bfb9",
-          "#d1d9d5",
+          "#3b4943",
+          "#54685f",
+          "#6e877b",
+          "#8ea49a",
+          "#adbdb6",
+          "#cfd8d4",
           "#f1f4f2"
         ]
       },
       "error-stroke": {
         "role": "neutral",
-        "displayName": "Warning Peach",
+        "displayName": "Warning Peach Stroke",
         "canonical": "#ffb199",
         "tonalRamp": [
-          "#471506",
-          "#7d250a",
-          "#b3350e",
-          "#e94513",
-          "#f06e46",
-          "#f4987c",
-          "#f9c2b1",
-          "#fdede7"
+          "#43170a",
+          "#742811",
+          "#a53918",
+          "#d64a1f",
+          "#e6704c",
+          "#ed987e",
+          "#f4c2b3",
+          "#fcede9"
         ]
       },
       "error-text": {
@@ -279,43 +414,28 @@
         "displayName": "Warning Peach Text",
         "canonical": "#ffd0c2",
         "tonalRamp": [
-          "#471506",
-          "#7d240a",
-          "#b3340e",
-          "#e94413",
-          "#f06d46",
-          "#f4977c",
-          "#f9c2b1",
-          "#fdece7"
-        ]
-      },
-      "rule-route": {
-        "role": "neutral",
-        "displayName": "Route Rule",
-        "canonical": "rgba(247,251,248,.5)",
-        "tonalRamp": [
-          "#1a3320",
-          "#2d5a38",
-          "#408150",
-          "#54a869",
-          "#79bc8a",
-          "#a0d0ac",
-          "#c7e3ce",
-          "#eef6f0"
+          "#43170a",
+          "#742711",
+          "#a53818",
+          "#d6491f",
+          "#e6704c",
+          "#ed977e",
+          "#f4c2b3",
+          "#fcede9"
         ]
       },
       "stroke-row": {
         "role": "neutral",
-        "displayName": "Trip-Row Stroke",
+        "displayName": "Row Stroke",
         "canonical": "rgba(247,251,248,.7)",
         "tonalRamp": [
           "#1a3320",
-          "#2d5a38",
-          "#408150",
-          "#54a869",
-          "#79bc8a",
-          "#a0d0ac",
-          "#c7e3ce",
+          "#2c5837",
+          "#3f7e4f",
+          "#52a366",
+          "#77bb88",
+          "#9ccea9",
+          "#c5e2cc",
           "#eef6f0"
         ]
       },
@@ -325,12 +445,12 @@
         "canonical": "rgba(247,251,248,.15)",
         "tonalRamp": [
           "#1a3320",
-          "#2d5a38",
-          "#408150",
-          "#54a869",
-          "#79bc8a",
-          "#a0d0ac",
-          "#c7e3ce",
+          "#2c5837",
+          "#3f7e4f",
+          "#52a366",
+          "#77bb88",
+          "#9ccea9",
+          "#c5e2cc",
           "#eef6f0"
         ]
       },
@@ -340,27 +460,27 @@
         "canonical": "rgba(12,58,42,.18)",
         "tonalRamp": [
           "#0d3f2e",
-          "#177051",
-          "#21a074",
-          "#2bd097",
-          "#59ddaf",
-          "#89e7c6",
-          "#baf1dd",
+          "#176e50",
+          "#209c71",
+          "#2acb93",
+          "#56dcad",
+          "#84e6c4",
+          "#b7f0dc",
           "#eafbf5"
         ]
       },
       "tint-sent": {
         "role": "neutral",
-        "displayName": "Sent-Box Tint",
+        "displayName": "Sent Tint",
         "canonical": "rgba(8,42,30,.55)",
         "tonalRamp": [
           "#0c402e",
-          "#167151",
-          "#1fa274",
-          "#28d397",
-          "#57dfaf",
-          "#88e8c6",
-          "#b9f2dd",
+          "#156f50",
+          "#1e9f71",
+          "#27ce93",
+          "#54dead",
+          "#83e7c4",
+          "#b6f1dc",
           "#eafbf5"
         ]
       }
@@ -368,31 +488,31 @@
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero h1 only, sentence case, inside the hero sign."
+        "purpose": "Hero h1 on phones: uppercase, two block lines, second line lane yellow."
+      },
+      "display-wide": {
+        "displayName": "Display Wide",
+        "purpose": "Hero h1 from 760px; 6rem fixed from 1100px."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section h2, sentence case."
+        "purpose": "Section h2."
       },
       "headline-close": {
         "displayName": "Headline Close",
-        "purpose": "Footer close headline \"You fly. I'll drive.\""
+        "purpose": "Footer close headline."
       },
-      "route": {
-        "displayName": "Route",
-        "purpose": "Uppercase \"New Jersey ⇄ Florida\" line under the h1."
+      "promise": {
+        "displayName": "Promise",
+        "purpose": "The line under the hero h1."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Step titles, FAQ questions, \"Rather talk?\" line; step digits at 900."
+        "purpose": "Step titles, FAQ questions, Rather talk line, step digits."
       },
       "control": {
         "displayName": "Control",
-        "purpose": "Buttons, hero text link, legends, labels, trip rows; header phone 17/18/22px."
-      },
-      "lead": {
-        "displayName": "Lead",
-        "purpose": "Hero promise (22px from 760px) and the sentence under an h2."
+        "purpose": "Buttons, legends, labels, trip rows."
       },
       "answer": {
         "displayName": "Answer",
@@ -404,40 +524,18 @@
       },
       "small": {
         "displayName": "Small",
-        "purpose": "Button number line, footer text; the text floor."
+        "purpose": "Button second line, footer text."
       },
       "brand": {
         "displayName": "Brand",
-        "purpose": "Uppercase wordmark; 20px from 760px; 14px under 430px is the one recorded floor exception."
-      }
-    },
-    "roundedMeta": {
-      "link-focus": {
-        "canonical": "6px",
-        "role": "Text-link hover/focus outline corners"
-      },
-      "field": {
-        "canonical": "12px",
-        "role": "Trip rows, fields, sent box"
-      },
-      "button": {
-        "canonical": "14px",
-        "role": "Call buttons"
-      },
-      "sign": {
-        "canonical": "16px",
-        "role": "Sign panels"
-      },
-      "dot": {
-        "canonical": "50%",
-        "role": "Step-number discs, radio rings"
+        "purpose": "Two-line uppercase wordmark; 14px under 430px is the single floor exception."
       }
     },
     "shadows": [
       {
         "name": "sign-mount",
         "value": "inset 0 0 0 7px #0d6a43, inset 0 0 0 10px #f7fbf8, 0 18px 40px -18px rgba(0,0,0,.6)",
-        "purpose": "Both sign panels: inset white rule plus soft drop."
+        "purpose": "The form sign panel."
       },
       {
         "name": "button-lift",
@@ -445,59 +543,58 @@
         "purpose": "Yellow call buttons."
       },
       {
-        "name": "dusk-legibility",
-        "value": "text-shadow: 0 1px 8px rgba(0,0,0,.45)",
-        "purpose": "Header phone link over the dusk."
+        "name": "headline-halo",
+        "value": "0 2px 18px rgba(0,0,0,.28)",
+        "purpose": "text-shadow on the hero h1."
       },
       {
-        "name": "focus-ring",
-        "value": "outline: 3px solid #8fd6ff; outline-offset: 2-3px",
-        "purpose": "Every hover and focus."
+        "name": "promise-halo",
+        "value": "0 1px 10px rgba(0,0,0,.4)",
+        "purpose": "text-shadow on the promise line."
+      },
+      {
+        "name": "dusk-legibility",
+        "value": "0 1px 8px rgba(0,0,0,.45)",
+        "purpose": "text-shadow on the header phone link and the line button label."
       }
     ],
     "motion": [
       {
-        "name": "still-page",
-        "value": "none",
-        "purpose": "Nothing animates: no canvas, no scroll or entrance effects."
-      },
-      {
-        "name": "ease-press",
+        "name": "press",
         "value": "transform .2s cubic-bezier(.2,.8,.2,1)",
-        "purpose": "Button press: translateY(1px) scale(.99)."
+        "purpose": "Button press (translateY 1px, scale .99). Off under reduced motion."
       },
       {
-        "name": "outline-color",
-        "value": "outline-color .15s, box-shadow .2s",
-        "purpose": "Button hover/focus outline."
+        "name": "outline",
+        "value": "outline-color .15s",
+        "purpose": "Focus-sky outline on hover/focus."
       },
       {
         "name": "row-select",
-        "value": "background, color, border-color .15s",
-        "purpose": "Trip-row selection color change; no pop."
-      },
-      {
-        "name": "reduced-motion",
-        "value": "prefers-reduced-motion: reduce",
-        "purpose": "Smooth scroll and control transitions off."
+        "value": "background .15s, color .15s, border-color .15s",
+        "purpose": "Trip row selection. Off under reduced motion."
       }
     ],
     "breakpoints": [
+      {
+        "name": "tiny",
+        "value": "max-width: 339px"
+      },
+      {
+        "name": "narrow",
+        "value": "max-width: 379px"
+      },
+      {
+        "name": "phone-small",
+        "value": "max-width: 429px"
+      },
       {
         "name": "desk",
         "value": "760px"
       },
       {
-        "name": "narrow-phone",
-        "value": "max-width: 429px"
-      },
-      {
-        "name": "tiny-phone",
-        "value": "max-width: 379px"
-      },
-      {
-        "name": "micro-phone",
-        "value": "max-width: 339px"
+        "name": "wide",
+        "value": "1100px"
       },
       {
         "name": "short-landscape",
@@ -507,70 +604,78 @@
   },
   "components": [
     {
-      "name": "Hero Sign",
-      "kind": "custom",
-      "refersTo": "hero-sign",
-      "description": "Still dusk gradient, one guide sign with the h1 and route line, the promise, one call button and a yellow text link.",
-      "html": "<section class=\"ds-hero\"><div class=\"ds-hsign\"><h1>I'll drive your car. You fly.</h1><p class=\"ds-route\">New Jersey<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 8h17M16 4l4 4-4 4M21 16H4M8 12l-4 4 4 4\"/></svg>Florida</p></div><p class=\"ds-promise\">One flat rate, said up front. I'm Ed Brannagan, owner and driver.</p><a class=\"ds-tlink\" href=\"#\">or text me for a rate</a></section>",
-      "css": ".ds-hero{position:relative;padding:40px 20px 56px;background:linear-gradient(180deg,#132849 0%,#2c4770 55%,#0c3a2a 100%);color:#f7fbf8;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif);text-align:center}.ds-hero::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:22px;background:repeating-linear-gradient(90deg,#eef1ed 0 34px,transparent 34px 80px) 0 50% / 100% 3px no-repeat,linear-gradient(180deg,#f5c242 0 3px,#2e3740 3px calc(100% - 3px),#eef1ed calc(100% - 3px))}.ds-hsign{background:#0d6a43;border-radius:16px;box-shadow:inset 0 0 0 7px #0d6a43,inset 0 0 0 10px #f7fbf8,0 18px 40px -18px rgba(0,0,0,.6);padding:36px 40px 32px;max-width:640px;margin:0 auto}.ds-hsign h1{margin:0;font-size:clamp(2.3rem,10vw,3.6rem);font-weight:900;line-height:1.1;letter-spacing:-.02em}.ds-route{display:flex;justify-content:center;align-items:center;gap:12px;margin:20px 0 0;padding-top:18px;border-top:2px solid rgba(247,251,248,.5);font-size:clamp(19px,5.4vw,24px);font-weight:900;text-transform:uppercase;letter-spacing:.03em}.ds-route svg{width:30px;height:30px;color:#f5c242}.ds-promise{margin:24px 0 0;font-size:22px;line-height:1.5}.ds-tlink{display:inline-flex;align-items:center;min-height:48px;margin-top:14px;font-size:20px;font-weight:800;color:#f5c242;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}.ds-tlink:hover,.ds-tlink:focus-visible{outline:3px solid #8fd6ff;outline-offset:3px;border-radius:6px}"
-    },
-    {
       "name": "Call Button",
       "kind": "button",
       "refersTo": "button-call-hero",
-      "description": "The one yellow action: call Ed, number on the second line.",
+      "description": "The yellow call action: hero (76px), form submit and footer (60px).",
       "html": "<a class=\"ds-btn-call\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z\"/></svg><span class=\"ds-stack\">Call Ed<small>732-300-3835</small></span></a>",
-      "css": ".ds-btn-call{display:inline-flex;align-items:center;gap:12px;min-height:76px;padding:14px 34px;border-radius:14px;border:3px solid var(--lane,#f5c242);background:var(--lane,#f5c242);color:var(--lane-ink,#132a1f);font-family:var(--font,system-ui);font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;box-shadow:0 8px 22px -8px rgba(0,0,0,.55);transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s}.ds-stack{display:flex;flex-direction:column}.ds-stack small{font-size:17px;font-weight:700}.ds-btn-call:hover,.ds-btn-call:focus-visible{outline:3px solid var(--focus,#8fd6ff);outline-offset:3px}.ds-btn-call:active{transform:translateY(1px) scale(.99)}"
+      "css": ".ds-btn-call{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:76px;padding:14px 30px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;border:3px solid transparent;cursor:pointer;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s;background:#f5c242;color:#132a1f;border-color:#f5c242;box-shadow:0 8px 22px -8px rgba(0,0,0,.55)} .ds-btn-call:hover,.ds-btn-call:focus-visible{outline:3px solid #8fd6ff;outline-offset:3px;} .ds-btn-call:active{transform:translateY(1px) scale(.99)} .ds-stack{display:flex;flex-direction:column;align-items:flex-start} .ds-stack small{font-size:17px;font-weight:700}"
     },
     {
-      "name": "How It Works Steps",
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "The hero's second path, \"Get a rate by text\", outlined white over the dusk.",
+      "html": "<div class=\"ds-dusk\"><a class=\"ds-btn-line\" href=\"#\">Get a rate by text<svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 4v15M6 13l6 6 6-6\"/></svg></a></div>",
+      "css": ".ds-dusk{background:linear-gradient(180deg,#132849,#2c4770);padding:24px} .ds-btn-line{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:76px;padding:14px 30px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;border:3px solid transparent;cursor:pointer;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s;background:rgba(19,40,73,.22);color:#f7fbf8;border-color:#f7fbf8;text-shadow:0 1px 8px rgba(0,0,0,.45)} .ds-btn-line:hover,.ds-btn-line:focus-visible{outline:3px solid #8fd6ff;outline-offset:3px;} .ds-btn-line:active{transform:translateY(1px) scale(.99)}"
+    },
+    {
+      "name": "Hero Headline",
       "kind": "custom",
-      "refersTo": "step-number",
-      "description": "Three static numbered steps; yellow disc, title, soft line.",
-      "html": "<ol class=\"ds-how\"><li><h3>Call or text me</h3><p>Tell me your route, your dates and your car.</p></li><li><h3>Set your pickup</h3><p>We agree on the day and the place.</p></li><li><h3>Fly. Your car follows.</h3><p>I drive it to where you're going.</p></li></ol>",
-      "css": ".ds-how{list-style:none;margin:0;padding:20px;display:grid;gap:22px;counter-reset:s;background:#0c3a2a;color:#f7fbf8;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif)}.ds-how li{display:grid;grid-template-columns:48px 1fr;gap:4px 16px;counter-increment:s}.ds-how li::before{content:counter(s);grid-row:1 / span 2;width:48px;height:48px;border-radius:50%;background:#f5c242;color:#132a1f;display:grid;place-items:center;font-size:22px;font-weight:900}.ds-how h3{margin:0;font-size:22px;font-weight:800;line-height:1.3;padding-top:8px}.ds-how p{margin:0;font-size:19px;line-height:1.55;color:#cfe5d9}"
+      "refersTo": "display",
+      "description": "Uppercase two-line h1 over the still dusk road; second line lane yellow.",
+      "html": "<div class=\"ds-hero\"><h1 class=\"ds-h1\"><span>One rate.</span><span class=\"ds-yl\">No surprises.</span></h1><p class=\"ds-promise\">You fly. I'm Ed, and I'll drive your car between New Jersey and Florida.</p></div>",
+      "css": ".ds-hero{background:linear-gradient(180deg,#132849 0%,#2c4770 62%,#8d6c72 90%,#eaa064 100%);padding:40px 20px;color:#f7fbf8;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-h1{margin:0;text-transform:uppercase;font-size:clamp(3rem,14.5vw,6rem);font-weight:900;line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 18px rgba(0,0,0,.28)} .ds-h1 span{display:block} .ds-yl{color:#f5c242} .ds-promise{margin:18px 0 0;font-size:20px;line-height:1.4;max-width:32ch;text-shadow:0 1px 10px rgba(0,0,0,.4)}"
     },
     {
-      "name": "Sign Panel with Trip Rows",
+      "name": "Sign Panel",
+      "kind": "card",
+      "refersTo": "sign-panel",
+      "description": "Guide-sign green panel with inset white rule; holds the rate form.",
+      "html": "<div class=\"ds-sign\"><p class=\"ds-legend\">Your trip</p><p class=\"ds-note\">This opens a text message on your phone, already written.</p></div>",
+      "css": ".ds-sign{background:#0d6a43;color:#f7fbf8;border-radius:16px;padding:38px 36px;box-shadow:inset 0 0 0 7px #0d6a43,inset 0 0 0 10px #f7fbf8,0 18px 40px -18px rgba(0,0,0,.6);font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-legend{margin:0 0 10px;font-size:20px;font-weight:800} .ds-note{margin:0;font-size:18px;color:#cfe5d9}"
+    },
+    {
+      "name": "Trip Row",
       "kind": "chip",
       "refersTo": "trip-row",
-      "description": "The rate form sign panel; large single-column radio rows, selected fills lane yellow.",
-      "html": "<fieldset class=\"ds-sign\"><legend class=\"ds-legend\">Your trip</legend><label class=\"ds-row\"><input type=\"radio\" name=\"ds-t\" checked><span>New Jersey to Florida</span></label><label class=\"ds-row\"><input type=\"radio\" name=\"ds-t\"><span>Florida to New Jersey</span></label></fieldset>",
-      "css": ".ds-sign{margin:0;border:0;display:grid;gap:10px;background:var(--sign,#0d6a43);color:var(--white,#f7fbf8);border-radius:16px;box-shadow:inset 0 0 0 7px var(--sign,#0d6a43),inset 0 0 0 10px var(--white,#f7fbf8),0 18px 40px -18px rgba(0,0,0,.6);padding:30px 22px 28px;font-family:var(--font,system-ui)}.ds-legend{float:left;width:100%;font-size:20px;font-weight:800;margin-bottom:10px;padding:0}.ds-row{position:relative;display:block}.ds-row input{position:absolute;opacity:0;width:1px;height:1px}.ds-row span{display:flex;align-items:center;gap:12px;min-height:64px;padding:10px 18px;border:2px solid rgba(247,251,248,.7);border-radius:12px;font-size:20px;font-weight:800;line-height:1.2;cursor:pointer;transition:background .15s,color .15s,border-color .15s}.ds-row span::before{content:\"\";flex:none;width:22px;height:22px;border-radius:50%;border:2px solid currentColor;box-sizing:border-box}.ds-row input:checked+span::before{border-width:7px}.ds-row input:checked+span{background:var(--lane,#f5c242);border-color:var(--lane,#f5c242);color:var(--lane-ink,#132a1f)}.ds-row:hover span,.ds-row input:focus-visible+span{outline:3px solid var(--focus,#8fd6ff);outline-offset:2px}"
+      "description": "Large radio row on the sign panel; selected fills lane yellow.",
+      "html": "<div class=\"ds-rows\"><label class=\"ds-row\"><input type=\"radio\" name=\"ds-trip\" checked><span>New Jersey to Florida</span></label><label class=\"ds-row\"><input type=\"radio\" name=\"ds-trip\"><span>Florida to New Jersey</span></label></div>",
+      "css": ".ds-rows{display:grid;gap:10px;background:#0d6a43;padding:22px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-row input{position:absolute;opacity:0} .ds-row span{display:flex;align-items:center;gap:12px;min-height:64px;padding:10px 18px;border:2px solid rgba(247,251,248,.7);border-radius:12px;color:#f7fbf8;font-size:20px;font-weight:800;cursor:pointer;transition:background .15s,color .15s,border-color .15s} .ds-row span::before{content:\"\";width:22px;height:22px;border-radius:50%;border:2px solid currentColor;box-sizing:border-box} .ds-row input:checked+span{background:#f5c242;border-color:#f5c242;color:#132a1f} .ds-row input:checked+span::before{border-width:7px} .ds-row:hover span,.ds-row input:focus-visible+span{outline:3px solid #8fd6ff;outline-offset:2px}"
     },
     {
       "name": "Text Field",
       "kind": "input",
       "refersTo": "text-field",
-      "description": "White field on the sign panel with a sentence-case label.",
-      "html": "<div class=\"ds-field\"><label class=\"ds-lbl\" for=\"ds-car\">Your car</label><input class=\"ds-input\" id=\"ds-car\" placeholder=\"e.g. 2019 Toyota Camry\"></div>",
-      "css": ".ds-field{background:var(--sign,#0d6a43);padding:16px;font-family:var(--font,system-ui)}.ds-lbl{display:block;color:var(--white,#f7fbf8);font-weight:800;font-size:20px;margin-bottom:10px}.ds-input{width:100%;box-sizing:border-box;min-height:58px;padding:14px 16px;font:inherit;font-size:19px;color:#10261c;background:var(--white,#f7fbf8);border:2px solid var(--white,#f7fbf8);border-radius:12px;caret-color:var(--sign,#0d6a43)}.ds-input::placeholder{color:#6f897d}.ds-input:hover,.ds-input:focus{outline:3px solid var(--focus,#8fd6ff);outline-offset:2px}"
+      "description": "White field on the sign panel, 58px tall.",
+      "html": "<div class=\"ds-fieldwrap\"><label class=\"ds-lbl\" for=\"ds-car\">Your car</label><input class=\"ds-input\" id=\"ds-car\" placeholder=\"e.g. 2019 Toyota Camry\"></div>",
+      "css": ".ds-fieldwrap{background:#0d6a43;padding:22px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-lbl{display:block;margin-bottom:10px;color:#f7fbf8;font-size:20px;font-weight:800} .ds-input{width:100%;box-sizing:border-box;min-height:58px;padding:14px 16px;font:inherit;font-size:19px;color:#10261c;background:#f7fbf8;border:2px solid #f7fbf8;border-radius:12px;caret-color:#0d6a43} .ds-input::placeholder{color:#6f897d} .ds-input:hover,.ds-input:focus{outline:3px solid #8fd6ff;outline-offset:2px}"
     },
     {
-      "name": "FAQ Item on Concrete",
+      "name": "Step",
+      "kind": "custom",
+      "refersTo": "step-number",
+      "description": "Numbered step: yellow disc, title, one soft line. No card.",
+      "html": "<div class=\"ds-step\"><span class=\"ds-num\">1</span><h3>Call or text me</h3><p>Tell me your route, your dates and your car.</p></div>",
+      "css": ".ds-step{display:grid;grid-template-columns:48px 1fr;gap:4px 16px;background:#0c3a2a;color:#f7fbf8;padding:22px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-num{grid-row:1 / span 2;width:48px;height:48px;border-radius:50%;background:#f5c242;color:#132a1f;display:grid;place-items:center;font-size:22px;font-weight:900} .ds-step h3{margin:0;padding-top:8px;font-size:22px;font-weight:800;line-height:1.3} .ds-step p{margin:0;font-size:19px;color:#cfe5d9}"
+    },
+    {
+      "name": "FAQ Item",
       "kind": "custom",
       "refersTo": "faq-item",
-      "description": "Always-open question and answer; nothing collapses.",
-      "html": "<div class=\"ds-qa\"><div><h3>Do you do airport runs?</h3><p>Yes, anywhere in Florida.</p></div><div><h3>Can I pack the car full?</h3><p>Yes. Your winter things ride along inside your own car.</p></div></div>",
-      "css": ".ds-qa{background:var(--concrete,#e4e9e6);color:var(--concrete-ink,#0c3a2a);padding:16px;font-family:var(--font,system-ui)}.ds-qa>div{padding:20px 0;border-top:2px solid rgba(12,58,42,.18)}.ds-qa h3{margin:0;font-size:22px;font-weight:800;line-height:1.3}.ds-qa p{margin:8px 0 0;font-size:19px;line-height:1.55;color:var(--concrete-soft,#33584a);max-width:60ch}"
-    },
-    {
-      "name": "Footer Close",
-      "kind": "custom",
-      "refersTo": "footer-close",
-      "description": "The close: shamrock, headline, Ed line, call button, tagline.",
-      "html": "<footer class=\"ds-foot\"><h2>You fly. I'll drive.</h2><p class=\"ds-ed\">I'm Ed Brannagan, owner and driver of Shamrock Transportation.</p><p class=\"ds-tag\">&ldquo;Life is a Highway&hellip; Drive it All Night Long&rdquo;</p></footer>",
-      "css": ".ds-foot{background:var(--ground-deep,#082a1e);color:var(--ink-soft,#cfe5d9);text-align:center;padding:56px 20px 44px;font-family:var(--font,system-ui);font-size:17px}.ds-foot h2{margin:0;font-size:clamp(1.7rem,7.6vw,2.8rem);font-weight:900;letter-spacing:-.01em;line-height:1.1;color:var(--white,#f7fbf8)}.ds-ed{margin:14px auto 0;max-width:30ch;font-size:19px;color:var(--white,#f7fbf8)}.ds-tag{margin-top:20px;font-style:italic}"
+      "description": "Always-open question and answer on concrete.",
+      "html": "<div class=\"ds-faq\"><div class=\"ds-qa\"><h3>Can I pack the car full?</h3><p>Yes. Your winter things ride along inside your own car.</p></div></div>",
+      "css": ".ds-faq{background:#e4e9e6;color:#0c3a2a;padding:24px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-qa{padding:20px 0;border-top:2px solid rgba(12,58,42,.18)} .ds-qa h3{margin:0;font-size:22px;font-weight:800;line-height:1.3} .ds-qa p{margin:8px 0 0;font-size:19px;color:#33584a;max-width:60ch}"
     }
   ],
   "narrative": {
-    "northStar": "The Posted Sign on I-95",
-    "overview": "The page is the interstate at dusk, posted the way a highway posts things: one guide-sign green panel with an inset white rule, heavy retroreflective-white lettering, plain enough to read at 65 mph and therefore easy for a 40-to-70 reader on a phone. It is short, still and calm: a dusk hero with one sign, three numbered steps, a rate form on a second sign panel, five always-open answers on concrete, and a dark footer that carries the close.\n\nDensity is low and the type is big. The ground is deep roadside green, never black; the one light section is highway concrete. Lane-line yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing on the page moves.\n\nRejected by the build and the owner: stock truck photos, a quote-form wall, fine print, black grounds, webfonts, sticky bars, email links, accordions, animation, anything a reader has to figure out.",
+    "northStar": "One Still Frame of I-95 at Dusk",
+    "overview": "**Creative North Star: \"One Still Frame of I-95 at Dusk\"**\n\nThe page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, \"One rate. / No surprises.\", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: three numbered steps, the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.\n\nDensity is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.",
     "keyCharacteristics": [
-      "Two sign panels (green, inset white rule, 16px corners): the hero sign and the rate form.",
+      "A still canvas road at dusk behind an uppercase two-line headline and two buttons (yellow call, white outline).",
+      "One sign panel (green, inset white rule, 16px corners) holds the rate form; the road's own sign repeats that grammar.",
       "One yellow for action; one sky-blue outline for hover and focus.",
-      "System font stack only, 800 to 900 for headings, sentence case everywhere except the route line and the wordmark.",
-      "No animation, no canvas; only brief color and press transitions on controls.",
+      "One system font stack worked by weight: 900 headings, 800 controls, 400 talk.",
       "Phone-first, big targets (48px links, 58 to 76px controls), 17px text floor."
     ],
     "rules": [
@@ -581,7 +686,7 @@
       },
       {
         "name": "The One Yellow Rule",
-        "body": "Lane yellow marks action. A yellow rectangle is always a control (call button, selected trip row); the only non-control yellow fills are the round step-number discs and the painted edge line of the highway strip. Yellow on green is a link, the route arrow, or a step number; headlines, instructions and body copy stay white or soft white.",
+        "body": "In the interface, a yellow rectangle is always a control; the only non-control yellow fills are the round step-number discs. Yellow type is reserved for the headline's second line, links and icons. The road picture paints yellow where a real road has it (edge line, reflectors).",
         "section": "colors"
       },
       {
@@ -591,43 +696,37 @@
       },
       {
         "name": "The 65 MPH Rule",
-        "body": "No text is under 17px (the narrow-phone wordmark is the single recorded exception), and nothing a reader acts on is lighter than 700.",
+        "body": "No text under 17px (the narrow-phone wordmark is the single exception), and nothing a reader acts on is lighter than 700.",
         "section": "typography"
-      },
-      {
-        "name": "The No Webfont Rule",
-        "body": "The system stack is mandatory.",
-        "section": "typography"
-      },
-      {
-        "name": "The Mounted Sign Rule",
-        "body": "The only raised surfaces are sign panels and the yellow button. Steps, FAQ answers and footer content stay flat, divided by space or rules, never cards.",
-        "section": "elevation"
       },
       {
         "name": "The Still Page Rule",
-        "body": "Nothing animates: no canvas, no scroll effects, no entrance motion. The only transitions are on controls: button press, outline color and trip-row color change. Under prefers-reduced-motion smooth scroll and transitions are off.",
+        "body": "Nothing animates. The road is drawn once as a still picture and redrawn only when the hero's size changes; no loop, no parallax, no scroll or entrance effects. The only transitions are on controls: button press (translateY 1px, scale .99 over .2s cubic-bezier(.2,.8,.2,1)), outline color (.15s), trip-row color (.15s). The jump to the form scrolls smoothly; under prefers-reduced-motion it jumps and transitions are off.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Mounted Sign Rule",
+        "body": "The only raised surfaces are the sign panel and the yellow call button. Steps, answers and footer content stay flat, divided by space or rules, never cards.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** keep the page still; transitions only on controls, only color and press.",
-      "**Do** put the headline and the rate form on sign panels with the Sign Mount.",
-      "**Do** use the 3px focus-sky outline for every hover and focus.",
-      "**Do** keep controls 58px or taller, links 48px, answer choices as large rows, and text at 17px or larger.",
-      "**Do** show answers in full; a question and its answer sit together.",
-      "**Do** center the hero from 760px and left-align it on phones."
+      "Do keep the page still: draw the road once, redraw only on resize, transitions only on controls.",
+      "Do keep the hero to the two-line uppercase headline, the promise, and two buttons: yellow call first, white outline second.",
+      "Do put the rate form on the sign panel with the Sign Mount.",
+      "Do use the 3px focus-sky outline for every hover and focus.",
+      "Do keep controls 58px or taller, links 48px, answer choices as large rows, text at 17px or larger.",
+      "Do show answers in full; a question and its answer sit together."
     ],
     "donts": [
-      "**Don't** animate anything: no canvas, moving road, parallax, scroll reveals or entrance effects.",
-      "**Don't** use accordions, tabs, carousels or other hide-and-reveal patterns.",
-      "**Don't** use black or neutral charcoal as any ground; the darkest is ground-deep.",
-      "**Don't** load a webfont; the system stack is the brand type.",
-      "**Don't** add a sticky header or sticky call bar, or email links.",
-      "**Don't** put more than one button in the hero; the second path is a yellow text link, never a second button.",
-      "**Don't** put yellow fills on non-controls beyond the round step-number discs and the strip's edge line, or yellow text on green beyond links, the route arrow and step numbers.",
-      "**Don't** place lane-yellow on concrete.",
-      "**Don't** use hard offset shadows; depth is the soft sign mount."
+      "Don't animate anything: no drive loop, moving road, parallax, scroll reveals or entrance effects.",
+      "Don't use accordions, tabs, carousels or other hide-and-reveal patterns.",
+      "Don't use black or neutral charcoal as any ground; the darkest is ground-deep.",
+      "Don't add a sticky header or sticky call bar, or email links.",
+      "Don't add a third hero action or a second yellow button in the hero.",
+      "Don't put yellow fills on interface non-controls beyond the step discs.",
+      "Don't place lane-yellow on concrete.",
+      "Don't use hard offset shadows; depth is soft."
     ]
   }
 }
