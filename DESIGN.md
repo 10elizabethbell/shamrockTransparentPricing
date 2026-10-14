@@ -204,7 +204,7 @@ components:
 
 **Creative North Star: "The Posted Rate on I-95"**
 
-The page is the interstate at dusk, posted the way a highway posts things: a guide-sign green panel with an inset white rule, heavy retroreflective-white uppercase, readable at 65 mph and therefore readable by a 40-to-70 reader on a phone. It is short and calm on purpose: a hero with a self-driving road, one rate form on a sign panel, four always-open answers on concrete, and a dark footer that carries the close.
+The page is the interstate at dusk, posted the way a highway posts things: a guide-sign green panel with an inset white rule, heavy retroreflective-white uppercase, readable at 65 mph and therefore readable by a 40-to-70 reader on a phone. It is short and calm on purpose: a hero with a self-driving road, three static numbered steps, one rate form on a sign panel, five always-open answers on concrete, and a dark footer that carries the close.
 
 Density is low and the type is big. The ground is deep roadside green, never black; the one light section is highway concrete. Lane-line yellow is the one action color; a sky-blue outline is the one hover/focus voice. The hero road is the only thing on the page that moves.
 
@@ -213,7 +213,7 @@ Rejected by the build and the owner: stock truck photos, a quote-form wall, fine
 **Key Characteristics:**
 - One sign panel (green, inset white rule, 16px corners) holds the rate form.
 - One yellow for action; one sky-blue outline for hover and focus.
-- System font stack only, 800 to 900 and uppercase for headings; questions and controls in sentence case.
+- System font stack only, 800 to 900 for headings. Only the hero h1 (and the wordmark) is uppercase; section headings, questions and controls are sentence case, which reads more easily for a 40-70 audience.
 - One moving element: the hero road, driving itself slowly with gentle bends.
 - Phone-first, big targets (58 to 76px controls), 17px text floor.
 
@@ -261,14 +261,14 @@ A two-ground highway palette: roadside green and pale concrete, a sign-green pan
 
 ### Hierarchy
 - **Display** (900, 0.94): the hero h1 only, two stacked uppercase lines, second in lane yellow. Phone clamp, desktop clamp from 760px, locked at 6rem from 1100px.
-- **Headline** (900, 1.02, uppercase): section h2, held to about 14ch on the form. The footer's "You fly. I'll drive." uses the smaller close size.
+- **Headline** (900, 1.1, sentence case, clamp(2rem,7.4vw,3rem)): section h2, held to about 14ch on the form. The footer's "You fly. I'll drive." uses the smaller close size.
 - **Promise** (400, 1.4): the hero sentence under the h1, white with a soft shadow.
 - **Question / Call Line** (800, 22px; 1.3 and 1.55): FAQ questions in sentence case; the "Rather talk?" line beside the form.
 - **Control** (800, 20px): button text, form legends and labels, trip rows.
 - **Lead** (400, 20px): the sentence under an h2, ink-soft, 36ch.
 - **Answer** (400, 19px): FAQ answers (60ch), the footer Ed line, field text.
 - **Body** (400, 18px, 1.55): running copy, notes, error sentences (700).
-- **Small** (17px): the phone number on a button's second line (700), footer text; **Brand** (900, 17px, 20px from 760px, uppercase): the wordmark.
+- **Small** (17px): the phone number on a button's second line (700), footer text; **Brand** (900, 17px, 20px from 760px, uppercase): the wordmark, which shrinks to 14px under 430px wide so the header number fits (a recorded detector exception).
 
 ### Named Rules
 **The 65 MPH Rule.** No text on the page is under 17px, and nothing a reader acts on is lighter than 700.
@@ -319,13 +319,17 @@ Heavy, wide, unmistakable.
 - **Error:** warning-peach stroke and a 18px/700 sentence in Ed's voice below.
 
 ### FAQ (always open)
-On concrete: uppercase headline left, Q&A list right. Each item is a 22px/800 sentence-case question with its 19px concrete-soft answer directly beneath, separated by 2px rule-concrete lines. Nothing collapses; nothing is clickable.
+On concrete: headline left, Q&A list right. Each item is a 22px/800 sentence-case question with its 19px concrete-soft answer directly beneath, separated by 2px rule-concrete lines. Nothing collapses; nothing is clickable.
 
 ### Footer (the close)
 Night Verge ground, centered: 64px white shamrock, "You fly. I'll drive." in the close headline size, the Ed line in white, one call button, the card tagline in italic, then fine print in ink-soft.
 
 ### Navigation
-No nav bar. The brand (shamrock in a guide-sign tile plus a two-line uppercase wordmark) sits top-left over the hero, scrolls away, and links back to top.
+No nav bar. The brand (shamrock in a guide-sign tile plus a two-line uppercase wordmark) sits top-left over the hero and links back to top. The full phone number (lane-yellow phone icon, white 800 number; 18px phone, 22px desktop) sits top-right as a `tel:` link; it scrolls away with the hero.
+
+### How it works
+
+Three static numbered steps on the green ground: a 48px lane-yellow circle with the number, a 22px sentence-case step title, a 19px ink-soft line. One column on phones, three across from 760px. No animation, no signs, no cards.
 
 ### The Road (signature)
 A canvas first-person two-lane I-95 at dusk, the only moving element. It drives itself at an easy pace (8 units/s) along slow, layered, gentle bends (max 0.7), flat with no hills, under an overhead sign reading I-95 SOUTH / FLORIDA (I-95 NORTH / NEW JERSEY April to August). It ignores touch and pointer, ticks only while the hero is on screen, and shows one still frame under prefers-reduced-motion.

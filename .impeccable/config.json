@@ -131,6 +131,12 @@
         "value": "27px",
         "createdAt": "2026-10-14T14:51:25.096Z",
         "reason": "build decision: DESIGN.md was derived from this finished, reviewed page and canonized only its main scale; this is one of the page's existing one-off values, left for Ellie's 60%-to-100% tuning"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14px",
+        "createdAt": "2026-10-14T22:21:47.589Z",
+        "reason": "sanctioned exception: the Shamrock Transportation wordmark in the header shrinks to 14px under 430px wide so the full phone number fits beside it (40-70 research brief: number in the header)"
       }
     ]
   }

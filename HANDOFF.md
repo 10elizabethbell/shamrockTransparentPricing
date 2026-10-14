@@ -5,10 +5,13 @@
 ## What's built
 - One short page, single `index.html`, no images in the page itself, ~35KB. The world is an interstate at dusk: guide-sign green panels with an inset white border, lane-line yellow for the call buttons, highway-concrete light section, dusk sky. The page ground is deep roadside green, not black.
 - **Simplified 2026-10-14 for a 40-70 audience (Ellie):** one moving thing on the page, nothing to figure out, sections with little detail cut. Removed: the moving road dividers, the separate rate board, the "before you say yes" list, "Pack the car full", "How the trip goes", and the closing sign (its content now lives in the footer).
-- **Hero:** "One rate. No surprises." and "You fly. I'm Ed, and I'll drive your car between New Jersey and Florida." Two buttons: Call Ed (filled yellow, `tel:`) and Get my rate (outlined, scrolls to the form).
+- **Applied Ellie's 40-70 research brief (2026-10-14, `~/Downloads/NJ_Florida_Vehicle_Delivery_Website_Research_and_Design_Brief_Ages_40_to_70.pdf`):** full phone number in the header, a static three-step "How it works", mixed-case section headings (hero stays sign caps), "When" made optional in the form, and a "Who will I be dealing with?" answer naming Ed.
+- **Header:** shamrock and name on the left, the full number 732-300-3835 on the right (tap to call). On phones under 430px the name shrinks to 14px so the number fits; under 340px only the shamrock shows.
+- **Hero:** "One rate. No surprises." and "You fly. I'm Ed, and I'll drive your car between New Jersey and Florida." Two buttons: Call Ed (filled yellow, `tel:`) and Get a rate by text (outlined, scrolls to the form).
 - **The one moving element:** an I-95 at dusk seen from the driver's seat. It drives itself at an easy pace with slow, gentle bends: lane dashes, reflector posts, a pine treeline, a low sun. Every so often a green sign passes ("I-95 SOUTH / FLORIDA" from September to March, "I-95 NORTH / NEW JERSEY" from April to August). It doesn't react to touch, so a swipe anywhere scrolls the page. Reduced-motion visitors see a still frame.
-- **One flat rate per trip** (the form, on a guide sign): four big trip choices (New Jersey to Florida, Florida to New Jersey, Florida airport run, Somewhere else), then when, car and name. "Text this to Ed" opens a pre-written text to 732-300-3835, with a line under the button explaining exactly that. A fallback box shows the text if Messages doesn't open. There's also a "Call 732-300-3835" link beside the form.
-- **Straight answers:** four questions with the answers always showing (no tapping to open): packing the car full, airport runs, other routes, and when a truck carrier is the better call.
+- **How it works:** three plain numbered steps, no animation: call or text me / set your pickup / fly, your car follows.
+- **One flat rate per trip** (the form, on a guide sign): four big trip choices (New Jersey to Florida, Florida to New Jersey, Florida airport run, Somewhere else), then when (optional), car and name. "Text this to Ed" opens a pre-written text to 732-300-3835, with a line under the button explaining exactly that. A fallback box shows the text if Messages doesn't open. There's also a "Call 732-300-3835" link beside the form.
+- **Straight answers:** five questions with the answers always showing (no tapping to open): who you'll be dealing with (Ed), packing the car full, airport runs, other routes, and when a truck carrier is the better call.
 - **Footer as the close:** shamrock, "You fly. I'll drive.", "I'm Ed Brannagan, owner and driver", a Call Ed button, the card tagline, and the services line.
 - Favicon and iPhone icon: a shamrock on a guide-sign green tile. og:image is the hero at 1200x630.
 
@@ -31,20 +34,29 @@
 - **No photos at all.** A photo of Ed with his car (or the card) would do more for trust than anything else on the page.
 
 ## Questions for the owner
-1. Your flat rates: NJ → FL, FL → NJ, Florida airport runs, local / long distance.
-2. Does the rate include gas, tolls and your trip home? How do you get back?
-3. Can your number take texts? (The estimate form sends a text; call is the main button.)
-4. Can customers pack the car full? Any limits?
-5. Are you insured for driving customers' cars? What should the page say?
-6. Which months do you run south and north? Do you have set dates or go whenever someone books?
-7. Can we use the shamrock from your card, and a photo of you?
-8. Do you want youflyilldrive.com registered and pointed here? (It was unregistered as of 2026-10-13.)
+1. Is it only you who drives customers' cars? (The page says customers deal with you; it doesn't say you're the only driver.)
+2. Your flat rates: NJ → FL, FL → NJ, Florida airport runs, local / long distance.
+3. Does the rate include gas, tolls and your trip home? How do you get back?
+4. Can your number take texts? (The estimate form sends a text; call is the main button.)
+5. Can customers pack the car full? Any limits?
+6. Are you insured for driving customers' cars? What should the page say?
+7. Which months do you run south and north? Do you have set dates or go whenever someone books?
+8. Can we use the shamrock from your card, and a photo of you (ideally you beside a car)? How long have you been doing this?
+9. Do you want youflyilldrive.com registered and pointed here? (It was unregistered as of 2026-10-13.)
+
+## From the research brief, not done (needs Ed or your call)
+- **Photo of Ed ("Meet your driver").** The brief's top trust signal. No photo exists, so no section and no placeholder. With a photo, put it in the hero or as a short "Meet your driver" block above How it works.
+- **Insurance, years of experience, reviews, credentials.** The brief wants them; none are confirmed, so none are on the page. Its FAQ list (insurance, mileage, timing, what happens if there's a problem) needs Ed's answers first.
+- **Sticky mobile Call button.** The brief recommends one; your finishing rules ban sticky bars. I kept your rule and put the number in the header instead. Say if you want the brief's version.
+- **Warm-white background and Inter / Atkinson Hyperlegible fonts.** Skipped to keep the dusk-highway look you asked to keep and the system-font house style. Atkinson Hyperlegible would be the one to try if you want it.
+- **Eyebrow line above the headline** ("PERSONAL VEHICLE DELIVERY | NJ & FL"). Skipped: the hero already says it in the promise line, and Impeccable bans eyebrows.
+- **"Call for a Free Quote" as the button label.** Kept "Call Ed" since "free" isn't confirmed; it's a one-word change if Ed agrees.
+- **Usability test with 5-6 people aged 40-70** (the brief's section 10). Worth doing before handing it to Ed.
 
 ## Ideas not built (yours to pick)
 - **Brought back if wanted:** the cut sections are in git history (commit before "Simplify for a 40-70 audience"): the steerable hero road, the moving road dividers, the rate board, "Pack the car full" with its list, and the four exit-sign steps.
 - **Runner-up world:** an AAA TripTik strip map, with the route as flip-strips from NJ to FL and the rate per strip. Very familiar to this audience.
 - **Highway Gothic look:** Overpass (a free Highway Gothic cousin) for the headings. I kept the system font stack per house style.
-- **Mixed-case headings.** The all-caps headings are the sign look, but mixed case reads more easily for older eyes. Worth trying on the section headings and keeping caps only on the hero.
 - **When rates exist,** show the flat number the moment a trip is picked, before texting.
 - **Tuning:** `SPEED` and `BEND` at the top of the hero script.
 
