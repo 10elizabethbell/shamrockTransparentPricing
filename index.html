@@ -62,11 +62,11 @@ section{position:relative}
 /* ============ TOP BAR ============ */
 .top{position:absolute;inset:0 0 auto 0;z-index:3}
 .top .wrap{display:flex;align-items:center;gap:12px;height:72px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:17px;line-height:1.05}
+.brand{display:flex;align-items:center;gap:12px;min-height:48px;text-decoration:none;font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:17px;line-height:1.05}
 .brand svg{width:44px;height:44px;flex:none}
 .top-call{margin-left:auto;display:flex;align-items:center;gap:8px;min-height:48px;padding:0 4px;font-size:18px;font-weight:800;color:var(--white);text-decoration:none;white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.45)}
 .top-call svg{width:20px;height:20px;flex:none;color:var(--lane)}
-@media (max-width:429px){
+@media (max-width:479px){
   .top .wrap{gap:8px;padding:0 14px}
   .brand{gap:9px;font-size:14px;letter-spacing:0}
   .brand svg{width:40px;height:40px}
@@ -74,7 +74,7 @@ section{position:relative}
   .top-call svg{width:18px;height:18px}
 }
 @media (max-width:379px){.top-call svg{display:none}}
-@media (max-width:339px){.brand span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
+@media (max-width:339px){.brand{min-width:48px}.brand span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
 
 /* ============ HERO (dusk + the road, one still frame) ============ */
 .hero{min-height:max(640px,min(100svh,1000px));background:linear-gradient(180deg,var(--dusk-top) 0%,var(--dusk-mid) 40%,#5d4f63 56%,#284638 57%,#1a3d2c 100%);overflow:hidden;display:flex;flex-direction:column}
@@ -175,18 +175,22 @@ footer .fine p + p{margin-top:6px}
   .how ol{grid-template-columns:repeat(3,1fr);gap:32px}
   .quote{padding:88px 0 88px}
   .chips{grid-template-columns:1fr 1fr}
-  .quote-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
-  .quote form{margin-top:8px;padding:38px 36px}
-  .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .form-foot{grid-template-columns:auto 1fr;align-items:center;gap:22px}
+  .quote form{padding:38px 36px;max-width:680px}
   .faq{padding:88px 0 72px}
-  .faq .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px}
-  .qa{margin-top:0}
-  .qa > div:first-child{padding-top:0;border-top:0}
   footer{padding:80px 0 48px}
 }
 @media (min-width:1100px){
   .hero h1{font-size:6rem}
+}
+/* two columns only where there's real room (not landscape phones or small tablets) */
+@media (min-width:1024px){
+  .quote-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+  .quote form{margin-top:8px;max-width:none}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:end}
+  .form-foot{grid-template-columns:auto 1fr;align-items:center;gap:22px}
+  .faq .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px}
+  .qa{margin-top:0}
+  .qa > div:first-child{padding-top:0;border-top:0}
 }
 @media (max-height:500px) and (orientation:landscape){
   .hero{min-height:560px}
@@ -382,8 +386,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var w = Math.round(r.width), h = Math.round(r.height);
     var cr = copy.getBoundingClientRect();
     horizon = Math.max(cr.bottom - r.top + 48, h * 0.42);
-    if (w === W && h === H) return;   /* phones fire resize when the address bar moves; don't rebuild */
-    W = w; H = h; dpr = Math.min(W < 700 ? 1.5 : 2, window.devicePixelRatio || 1);
+    if (w === W && h === H) return false;   /* phones fire resize when the address bar moves; don't rebuild */
+    /* drawn once, so use the screen's full sharpness, capped to keep the canvas within phone memory limits */
+    W = w; H = h; dpr = Math.min(3, window.devicePixelRatio || 1, Math.sqrt(8e6 / (W * H)));
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     trees = []; var seed = 7;
@@ -535,7 +540,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   /* the frame: a gentle right-hand bend with an I-95 sign coming up */
   time = FRAME_TIME; travel = FRAME_TRAVEL;
-  function render(){ size(); drive(0); camX = curve * .15; draw(); }
+  function render(){ if (size() === false) return; drive(0); camX = curve * .15; draw(); }
   render();
   window.addEventListener('resize', render);
 })();

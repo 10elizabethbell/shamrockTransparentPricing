@@ -257,11 +257,11 @@ Roadside green and concrete for the page, guide-sign green for the panel, lane y
 - **Headline** (900, 2rem to 3rem, 1.1, sentence case): section h2, held to 14ch on the form. The footer's "You fly. I'll drive." uses **Headline Close** (1.7rem to 2.8rem).
 - **Promise** (400, 19px to 20px, 1.4, max 32ch on phones): the white line under the h1, with a soft text-shadow.
 - **Title** (800, 22px, 1.3): step titles, FAQ questions, the "Rather talk?" line; the step digit is 22px at 900.
-- **Control** (800, 20px): button text, form legends, labels, trip rows. The header phone link is 800 at 18px (17px under 430px, 22px from 760px).
+- **Control** (800, 20px): button text, form legends, labels, trip rows. The header phone link is 800 at 18px (17px under 480px, 22px from 760px).
 - **Answer** (400, 19px): FAQ answers (60ch), step lines, the footer Ed line, field text.
 - **Body** (400, 18px, 1.55): running copy, notes, error sentences (700).
 - **Small** (17px): a button's second line (700, centered under the first line), footer text.
-- **Brand** (900, 17px, uppercase two-line wordmark; 20px from 760px). Under 430px it drops to 14px with no tracking so the full header number fits; that is the one recorded exception to the floor. Under 340px the words go visually hidden and the tile remains.
+- **Brand** (900, 17px, uppercase two-line wordmark; 20px from 760px). Under 480px it drops to 14px with no tracking so the full header number fits; that is the one recorded exception to the floor. Under 340px the words go visually hidden and the tile remains.
 
 The road sign's lettering is drawn in the same stack at 800 (route) and 900 (destination), sized to the sign.
 
@@ -270,11 +270,11 @@ The road sign's lettering is drawn in the same stack at 800 (route) and 900 (des
 
 ## Layout
 
-Phone-first single column, 20px gutters in a 1160px container (40px from 760px; 14px in the header under 430px). Sections run 56 to 64px vertical padding on phones, 88px on desktop.
+Phone-first single column, 20px gutters in a 1160px container (40px from 760px; 14px in the header under 480px). Sections run 56 to 64px vertical padding on phones, 88px on desktop.
 
 The hero is a tall stage, `max(640px, min(100svh, 1000px))` (560px in short landscape), left-aligned at every width. Copy starts 96px down (132px from 760px, 84px in short landscape): h1, promise 18px below, actions 24px below. On phones the two buttons stack full width at 76px with a 12px gap; from 760px they sit side by side at their own width with a 16px gap. The canvas fills the hero; its horizon sits 48px below the copy or at 42% of the height, whichever is lower, so the road always shows under the buttons.
 
-The header is absolutely placed over the hero, not sticky: brand top-left, full phone number top-right, 72px tall (88px from 760px). How it works is a 48px number column beside title and line, stacked 22px apart on phones, three across with 32px gaps from 760px. From 760px the form and FAQ split 5fr / 7fr with a 56px gap; trip rows pair into two columns and When / Your car share a row. The footer is centered with one call button (max 420px). Breakpoints: 760px, 1100px; max-width 429px, 379px (header phone icon hides), 339px; max-height 500px landscape.
+The header is absolutely placed over the hero, not sticky: brand top-left, full phone number top-right, 72px tall (88px from 760px). How it works is a 48px number column beside title and line, stacked 22px apart on phones, three across with 32px gaps from 760px. From 760px trip rows pair into two columns. Only from 1024px do the form and FAQ split 5fr / 7fr with a 56px gap and When / Your car share a row (landscape phones and small tablets stay single-column, so the form never squeezes). The footer is centered with one call button (max 420px). Breakpoints: 760px, 1024px, 1100px; max-width 479px, 379px (header phone icon hides), 339px; max-height 500px landscape.
 
 ## Elevation & Depth
 
@@ -311,7 +311,7 @@ A full-bleed canvas behind the copy, decorative and hidden from assistive tech: 
 Three static numbered steps: a 48px lane-yellow disc with a 22px/900 digit, a 22px title, a 19px ink-soft line. No cards, no icons.
 
 ### Sign Panel (the rate form)
-Sign-green, Sign Mount, 30px 22px 28px padding (38px 36px from 760px). Holds the trip rows, When / Your car / Your name fields, the yellow "Text this to Ed" button and a soft-white note.
+Sign-green, Sign Mount, 30px 22px 28px padding (38px 36px from 760px, max 680px wide until 1024px). Holds the trip rows, When / Your car / Your name fields, the yellow "Text this to Ed" button and a soft-white note.
 
 ### Trip Rows (radio)
 64px rows, 2px stroke-row border, 20px/800 sentence-case text led by a 22px radio ring. Selected: lane-yellow fill, lane-ink text, thick ring; color change only. Forced-colors mode adds a Highlight outline.
@@ -320,7 +320,7 @@ Sign-green, Sign Mount, 30px 22px 28px padding (38px 36px from 760px). Holds the
 Sign-white fill and stroke, field-ink 19px text, 12px radius, 58px tall, sign-green caret; labels 20px/800, the "optional" hint 600 in ink-soft. Error: warning-peach stroke and an 18px/700 sentence in Ed's voice below.
 
 ### FAQ (always open)
-On concrete: headline left, answers right from 760px. Each 22px/800 question has its 19px concrete-soft answer directly beneath, separated by 2px rule-concrete lines. Nothing collapses.
+On concrete: headline left, answers right from 1024px. Each 22px/800 question has its 19px concrete-soft answer directly beneath, separated by 2px rule-concrete lines. Nothing collapses.
 
 ### Header
 No nav bar. The brand (shamrock sign tile plus two-line uppercase wordmark) links to top; the full phone number with a yellow phone icon sits top-right as a `tel:` link. It scrolls away with the hero.
