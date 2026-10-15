@@ -115,6 +115,10 @@ main{overflow-x:clip}   /* sign structures reach out to the road shoulders, past
 .rig-right .arm{left:30%;right:calc(50% - var(--sh))}
 .rig .brace{top:-62px;height:30px;width:90px;background:linear-gradient(to bottom right,transparent calc(50% - 3px),#6c757b calc(50% - 3px) calc(50% + 3px),transparent calc(50% + 3px))}
 .rig-right .brace{right:calc(50% - var(--sh) + var(--pw) / 2)}
+/* mirror for signs on the left shoulder */
+.rig-left .post{left:calc(50% - var(--sh) - var(--pw) / 2)}
+.rig-left .arm{right:30%;left:calc(50% - var(--sh))}
+.rig-left .brace{left:calc(50% - var(--sh) + var(--pw) / 2);transform:scaleX(-1)}
 /* span: a post on each shoulder and a lattice truss across the road, the sign mounted on its face */
 .rig-span .post{left:calc(50% - var(--sh) - var(--pw) / 2)}
 .rig-span .post.r{left:calc(50% + var(--sh) - var(--pw) / 2)}
@@ -168,9 +172,13 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
 /* ============ FAQ: a roadside assembly of small plates on one post ============ */
 .faq .wrap{display:grid;gap:150px}
 .assembly{display:grid;gap:14px;width:calc(100% - 34px);max-width:560px}
-.assembly.right{margin-left:auto}
-.assembly.left{margin-right:auto}
-.mast{position:absolute;left:50%;width:var(--pw);margin-left:calc(var(--pw) / -2);top:20px;bottom:calc(-1 * var(--foot));background:var(--steel)}
+.assembly.rig-right{margin-left:auto}
+/* roadside answer signs: two arms behind the plates reach out to the shoulder post; no brace */
+.assembly .rig .arm{top:22%;height:8px}
+.assembly .rig .arm.low{top:72%}
+.assembly .rig .brace{display:none}
+.assembly .rig .post{top:12%}
+.assembly.rig-left{margin-right:auto}
 .plate{position:relative;display:block;margin:0;padding:22px 24px;background:var(--sign);border:4px solid var(--white);border-radius:12px;color:var(--white)}
 .plate::after{content:"";position:absolute;left:50%;top:6px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#c9d2cd}   /* mounting bolt */
 .plate h3{font-size:22px;font-weight:800;line-height:1.3;letter-spacing:0}
@@ -221,6 +229,7 @@ footer .fine p + p{margin-top:6px}
   .gantry > .sign{padding:38px 36px}
   .rig .post{top:-86px}
   .rig .arm{top:-44px;height:14px}
+  .assembly .rig .arm{top:22%;height:10px}
   .rig .brace{top:-80px;height:36px;width:150px}
   .rig-span .truss{top:-70px;height:96px}
   .chips{grid-template-columns:1fr 1fr}
@@ -369,30 +378,30 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="faq stop" aria-labelledby="faq-h">
     <div class="wrap">
      <!-- roadside signs off to the side, one question per sign, each on its own post, alternating sides (Ellie, 2026-10-15) -->
-     <div class="gantry assembly right">
-      <i class="mast" aria-hidden="true"></i>
+     <div class="gantry assembly rig-right">
+      <div class="rig" aria-hidden="true"><i class="post"></i><i class="arm"></i><i class="arm low"></i><i class="brace"></i></div>
       <h2 class="plate keystone" id="faq-h">Straight answers</h2>
       <div class="plate oct">
         <h3>Can I pack the car full?</h3>
         <p>Yes. Your winter things ride along inside your own car. Trailer shippers make you empty it. I don't.</p>
       </div>
      </div>
-     <div class="gantry assembly left">
-      <i class="mast" aria-hidden="true"></i>
+     <div class="gantry assembly rig-left">
+      <div class="rig" aria-hidden="true"><i class="post"></i><i class="arm"></i><i class="arm low"></i><i class="brace"></i></div>
       <div class="plate">
         <h3>Do you do airport runs?</h3>
         <p>Yes, anywhere in Florida.</p>
       </div>
      </div>
-     <div class="gantry assembly right">
-      <i class="mast" aria-hidden="true"></i>
+     <div class="gantry assembly rig-right">
+      <div class="rig" aria-hidden="true"><i class="post"></i><i class="arm"></i><i class="arm low"></i><i class="brace"></i></div>
       <div class="plate cut">
         <h3>Only New Jersey and Florida?</h3>
         <p>That's the main run, both ways. I also do local and long distance trips. Call and tell me where.</p>
       </div>
      </div>
-     <div class="gantry assembly left">
-      <i class="mast" aria-hidden="true"></i>
+     <div class="gantry assembly rig-left">
+      <div class="rig" aria-hidden="true"><i class="post"></i><i class="arm"></i><i class="arm low"></i><i class="brace"></i></div>
       <div class="plate">
         <h3>When is a truck carrier the better call?</h3>
         <ul>
@@ -439,6 +448,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   var cv = document.getElementById('road'), copy = document.getElementById('heroCopy'),
       signs = [].slice.call(document.querySelectorAll('.gantry'));
+  signs.forEach(function(g){ g._side = g.classList.contains('assembly') ? (g.classList.contains('rig-left') ? -1 : 1) : 0; });
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   /* the snowbird season: north April to August, south the rest of the year */
   var MON = new Date().getMonth(), SIGN = (MON >= 3 && MON <= 7) ? ['I-95 NORTH', 'NEW JERSEY'] : ['I-95 SOUTH', 'FLORIDA'];
@@ -627,13 +637,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
        shrinking with distance, and back again on the way up. The posts sit on the shoulders. */
     var z0 = RFIX / L, x0 = px(0, z0), sh = (HALF + .7) * S / z0;
     signs.forEach(function(g){
-      if (g._sh !== Math.round(sh)){ g._sh = Math.round(sh); g.style.setProperty('--sh', g._sh + 'px'); }
       /* the sign's untransformed box, from layout offsets (several signs can share one wrapper) */
       var wr = g.parentNode.getBoundingClientRect(), top = wr.top + g.offsetTop - g.parentNode.offsetTop;
+      var cx = wr.left + g.offsetLeft - g.parentNode.offsetLeft + g.offsetWidth / 2;
+      /* --sh: from the sign's center out to its shoulder post. Overhead signs sit on the road center;
+         the roadside answer signs sit off to one side, so their post distance is measured from their own center */
+      var off = g._side ? (g._side > 0 ? x0 + sh - cx : cx - (x0 - sh)) : sh;
+      if (g._sh !== Math.round(off)){ g._sh = Math.round(off); g.style.setProperty('--sh', g._sh + 'px'); }
       var foot = top + g.offsetHeight + (g._foot || (g._foot = parseFloat(getComputedStyle(g).getPropertyValue('--foot')) || 92));
       if (still || foot >= H){ if (g._s !== 1){ g.style.transform = ''; g.style.opacity = ''; g._s = 1; } return; }
       /* it keeps its place across the road: its offset from the road center shrinks with distance */
-      var cx = wr.left + g.offsetLeft - g.parentNode.offsetLeft + g.offsetWidth / 2;
       var u = H - foot, k = 1 / (1 + u / L), fv = horizon + L * k, dx = px(0, z0 / k) + (cx - x0) * k - cx;
       g.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + (fv - foot).toFixed(1) + 'px,0) scale(' + k.toFixed(4) + ')';
       g.style.opacity = Math.max(0, Math.min(1, (k - .08) / .25)).toFixed(3);
