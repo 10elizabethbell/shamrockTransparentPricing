@@ -624,7 +624,7 @@
       "kind": "custom",
       "refersTo": "display",
       "description": "Uppercase two-line h1 over the still dusk road; second line lane yellow.",
-      "html": "<div class=\"ds-hero\"><h1 class=\"ds-h1\"><span>One rate.</span><span class=\"ds-yl\">No surprises.</span></h1><p class=\"ds-promise\">You fly. I'm Ed, and I'll drive your car between New Jersey and Florida.</p></div>",
+      "html": "<div class=\"ds-hero\"><h1 class=\"ds-h1\"><span>You fly,</span><span class=\"ds-yl\">I'll drive.</span></h1><p class=\"ds-promise\">I'm Ed, and I take your car between New Jersey and Florida for $1 a mile.</p></div>",
       "css": ".ds-hero{background:linear-gradient(180deg,#132849 0%,#2c4770 62%,#8d6c72 90%,#eaa064 100%);padding:40px 20px;color:#f7fbf8;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-h1{margin:0;text-transform:uppercase;font-size:clamp(3rem,14.5vw,6rem);font-weight:900;line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 18px rgba(0,0,0,.28)} .ds-h1 span{display:block} .ds-yl{color:#f5c242} .ds-promise{margin:18px 0 0;font-size:20px;line-height:1.4;max-width:32ch;text-shadow:0 1px 10px rgba(0,0,0,.4)}"
     },
     {
@@ -670,7 +670,7 @@
   ],
   "narrative": {
     "northStar": "One Still Frame of I-95 at Dusk",
-    "overview": "**Creative North Star: \"One Still Frame of I-95 at Dusk\"**\n\nThe page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, \"One rate. / No surprises.\", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.\n\nDensity is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.",
+    "overview": "**Creative North Star: \"One Still Frame of I-95 at Dusk\"**\n\nThe page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, \"You fly, / I'll drive.\", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.\n\nDensity is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.",
     "keyCharacteristics": [
       "A still canvas road at dusk behind an uppercase two-line headline and two buttons (yellow call, white outline).",
       "One sign panel (green, inset white rule, 16px corners) holds the rate form; the road's own sign repeats that grammar.",

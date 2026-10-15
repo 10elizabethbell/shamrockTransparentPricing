@@ -201,7 +201,7 @@ components:
 
 **Creative North Star: "One Still Frame of I-95 at Dusk"**
 
-The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, "One rate. / No surprises.", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.
+The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, "You fly, / I'll drive.", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.
 
 Density is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.
 
@@ -217,7 +217,7 @@ Density is low and type is big for a 40-to-70 reader on a phone. The ground is d
 Roadside green and concrete for the page, guide-sign green for the panel, lane yellow for action, and a dusk palette that lives only in the hero picture.
 
 ### Primary
-- **Lane-Line Yellow** (lane-yellow): call buttons, the selected trip row, step-number discs, "No surprises.", the "Call 732-300-3835" link beside the form, the header phone icon, text selection. In the road picture it is the left edge line and the left posts' reflectors. Never on concrete.
+- **Lane-Line Yellow** (lane-yellow): call buttons, the selected trip row, step-number discs, "I'll drive." in the headline, the "Call 732-300-3835" link beside the form, the header phone icon, text selection. In the road picture it is the left edge line and the left posts' reflectors. Never on concrete.
 - **Lane Ink** (lane-ink): text and icons on yellow.
 - **Focus Sky** (focus-sky): the hover and focus outline, nothing else.
 
