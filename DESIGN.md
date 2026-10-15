@@ -226,7 +226,7 @@ Roadside green for the page, guide-sign green for every section, lane yellow for
 - **Focus Sky** (focus-sky): the hover and focus outline, nothing else.
 
 ### Secondary
-- **Guide-Sign Green** (sign-green): every section's sign panel and its 7px inset margin, the brand tile, the road's I-95 sign, the input caret.
+- **Guide-Sign Green** (sign-green): every section's sign panel and its 7px inset margin, the road's I-95 sign, the input caret.
 - **Retroreflective White** (sign-white): text on green and dusk, the sign's inset rule, field fill, the edge lines. At reduced alpha: unselected trip-row stroke (stroke-row), the FAQ dividers on the sign (rule-sign) and the footer hairline (rule-footer).
 - **Post Steel / Post Shadow** (post-steel, post-shadow): the sign structures: posts as a horizontal gradient shadow to steel at 45% and back, like a galvanized round post; arms as a vertical steel-to-shadow gradient; truss chords #7d868c and lacing and braces #6c757b; the light rail and its lamps in post-shadow.
 
@@ -299,7 +299,7 @@ Flat, with mounted signs and lifted call buttons. Depth comes from the road pict
 
 ## Shapes
 
-Softly rounded rectangles stepping down with size: sign panel 16px, buttons 14px, trip rows, fields, the photo frame and the sent box 12px, text-link outlines 6px. Circles only for each trip row's 22px radio ring (7px stroke when selected). Sign posts are square-ended bars (12px wide, 96px tall; 16px and 120px from 760px) at 12% in from each side of the sign. Icons are inline stroked SVG (2.4 to 2.6 stroke, round caps): 24px in buttons, 20px in the header. The shamrock sits in a 44 to 52px rounded sign tile in the header and alone at 64px in the footer. In the picture, the guide sign is a rounded green panel with an inset white rule on two posts; the reflector posts are thin white bars with a colored reflector near the top.
+Softly rounded rectangles stepping down with size: sign panel 16px, buttons 14px, trip rows, fields, the photo frame and the sent box 12px, text-link outlines 6px. Circles only for each trip row's 22px radio ring (7px stroke when selected). Sign posts are square-ended bars (12px wide, 96px tall; 16px and 120px from 760px) at 12% in from each side of the sign. Icons are inline stroked SVG (2.4 to 2.6 stroke, round caps): 24px in buttons, 20px in the header. The shamrock is Ellie's engraved line mark, used as exact files from brand/ (the small file at 40-48px in the header, the display file at 72px in the footer), white, never in a tile, frame or glow. In the picture, the guide sign is a rounded green panel with an inset white rule on two posts; the reflector posts are thin white bars with a colored reflector near the top.
 
 ## Components
 
@@ -335,7 +335,7 @@ Sign-white fill and stroke, field-ink 19px text, 12px radius, 58px tall, sign-gr
 "Straight answers" on the third sign: headline left, answers right from 1024px. Each 22px/800 white question has its 19px ink-soft answer directly beneath, separated by 2px rule-sign lines (the first has none from 1024px). Nothing collapses.
 
 ### Header
-No nav bar. The brand (shamrock sign tile plus two-line uppercase wordmark) links to top; the full phone number with a yellow phone icon sits top-right as a `tel:` link. It scrolls away with the hero.
+No nav bar. The brand (the engraved line shamrock, 44px, no tile, plus two-line uppercase wordmark) links to top; the full phone number with a yellow phone icon sits top-right as a `tel:` link. It scrolls away with the hero.
 
 ### Footer (the close)
 Solid Night Verge ground that ends the road, centered: 64px white shamrock, the close headline, the Ed line, one Shamrock Green call button, the italic tagline, then fine print under a rule-footer hairline.
@@ -345,6 +345,7 @@ Solid Night Verge ground that ends the road, centered: 64px white shamrock, the 
 ### Do:
 - **Do** let only the reader's scroll move the road and the signs; keep it a still frame under reduced motion.
 - **Do** keep the hero to the two-line uppercase headline, the promise, and one yellow button to the form; the call lives in the header.
+- **Don't** redraw, thicken or frame the shamrock; use the files in brand/ and change only their color attribute.
 - **Do** hang every section after the hero on a real structure (cantilever or span truss), alternating sides down the page, never floating on bare posts.
 - **Do** use the 3px focus-sky outline for every hover and focus.
 - **Do** keep controls 58px or taller, links 48px, answer choices as large rows, text at 17px or larger.

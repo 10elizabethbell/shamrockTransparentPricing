@@ -63,13 +63,14 @@ section{position:relative}
 .top{position:absolute;inset:0 0 auto 0;z-index:3}
 .top .wrap{display:flex;align-items:center;gap:12px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;min-height:48px;text-decoration:none;font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:17px;line-height:1.05}
-.brand svg{width:44px;height:44px;flex:none}
+/* the logo files in brand/ are Ellie's exact drawing (from shamrockElegant): no tile or frame on the page; the small file below 64px */
+.brand img{width:44px;height:44px;flex:none}
 .top-call{margin-left:auto;display:flex;align-items:center;gap:8px;min-height:48px;padding:0 4px;font-size:18px;font-weight:800;color:var(--white);text-decoration:none;white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.45)}
 .top-call svg{width:20px;height:20px;flex:none;color:var(--lane)}
 @media (max-width:479px){
   .top .wrap{gap:8px;padding:0 14px}
   .brand{gap:9px;font-size:14px;letter-spacing:0}
-  .brand svg{width:40px;height:40px}
+  .brand img{width:40px;height:40px}
   .top-call{font-size:17px;gap:6px;padding:0}
   .top-call svg{width:18px;height:18px}
 }
@@ -190,7 +191,7 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
 
 /* ============ FOOTER (the close) ============ */
 footer{background:var(--ground-deep);padding:56px 0 calc(44px + env(safe-area-inset-bottom));font-size:17px;color:var(--ink-soft);text-align:center}
-footer .mark{width:64px;height:64px}
+footer .mark{display:block;margin:0 auto;width:72px;height:72px}
 footer h2{margin-top:10px;font-size:clamp(1.7rem,7.6vw,2.8rem);color:var(--white)}
 footer .ed{margin:14px auto 0;max-width:30ch;font-size:19px;color:var(--white)}
 footer .btn{margin:26px auto 0;max-width:420px}
@@ -205,7 +206,7 @@ footer .fine p + p{margin-top:6px}
   .top .wrap{height:88px}
   .brand{font-size:20px}
   .top-call{font-size:22px}
-  .brand svg{width:52px;height:52px}
+  .brand img{width:48px;height:48px}
   .hero-copy{padding-top:132px}
   .hero h1{font-size:clamp(4.4rem,8.4vw,6rem)}
   .promise{max-width:none}
@@ -256,30 +257,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <!-- the shamrock, engraved (Ellie's pick for every Shamrock site, 2026-10-15, from shamrockElegant):
-         one fine outline of three heart leaves and a stem tucked behind the lower leaf, a vein in each leaf; drawn in currentColor.
-         Line weight goes up as the mark gets smaller: #shamrock for the 64px footer mark, #shamrock-sm for the 44px header tile. -->
-    <path id="lf" d="M50 51C45 46 32 40 30.5 28 29.5 19 35 13.5 41 13.5 45.5 13.5 49 16.5 50 21 51 16.5 54.5 13.5 59 13.5 65 13.5 70.5 19 69.5 28 68 40 55 46 50 51Z"/>
-    <path id="vein" d="M50 47V25"/>
-    <g id="sham-shape">
-      <use href="#lf"/><use href="#lf" transform="rotate(120 50 52)"/><use href="#lf" transform="rotate(-120 50 52)"/>
-      <path id="sham-stem" d="M47.6 54C48.2 67 51.6 80.5 59.6 93.4c1.2 1.9 4.2.9 3.6-1.3C59.5 79.2 55.8 66.6 53.6 53.6Z"/>
-      <circle cx="50" cy="52" r="4.6"/>
-    </g>
-    <filter id="sham-line" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceGraphic" operator="dilate" radius="2.4" result="d"/><feComposite in="d" in2="SourceAlpha" operator="out"/></filter>
-    <g id="shamrock">
-      <g filter="url(#sham-line)" fill="currentColor"><use href="#sham-shape"/></g>
-      <mask id="sham-under" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><use href="#sham-stem" fill="#fff"/><circle cx="50" cy="52" r="5.2" fill="#000"/></mask>
-      <g mask="url(#sham-under)"><g filter="url(#sham-line)" fill="currentColor"><use href="#lf" transform="rotate(120 50 52)"/><use href="#lf" transform="rotate(-120 50 52)"/></g></g>
-      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity=".75"><use href="#vein"/><use href="#vein" transform="rotate(120 50 52)"/><use href="#vein" transform="rotate(-120 50 52)"/></g>
-    </g>
-    <filter id="sham-line-sm" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceGraphic" operator="dilate" radius="3.4" result="d"/><feComposite in="d" in2="SourceAlpha" operator="out"/></filter>
-    <g id="shamrock-sm">
-      <g filter="url(#sham-line-sm)" fill="currentColor"><use href="#sham-shape"/></g>
-      <mask id="sham-under-sm" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><use href="#sham-stem" fill="#fff"/><circle cx="50" cy="52" r="5.2" fill="#000"/></mask>
-      <g mask="url(#sham-under-sm)"><g filter="url(#sham-line-sm)" fill="currentColor"><use href="#lf" transform="rotate(120 50 52)"/><use href="#lf" transform="rotate(-120 50 52)"/></g></g>
-      <g stroke="currentColor" stroke-width="3.2" stroke-linecap="round" fill="none" opacity=".75"><use href="#vein"/><use href="#vein" transform="rotate(120 50 52)"/><use href="#vein" transform="rotate(-120 50 52)"/></g>
-    </g>
     <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M12 4v15M6 13l6 6 6-6"/></symbol>
     <symbol id="i-sms" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
@@ -289,7 +266,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Shamrock Transportation, back to top">
-      <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#0d6a43"/><rect x="5.5" y="5.5" width="89" height="89" rx="17" fill="none" stroke="#f7fbf8" stroke-width="3.9"/><g color="#f7fbf8" transform="translate(16 14) scale(.68)"><use href="#shamrock-sm"/></g></svg>
+      <img src="brand/shamrock-small-white.svg" width="44" height="44" alt="">
       <span>Shamrock<br>Transportation</span>
     </a>
     <a class="top-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#i-phone"/></svg>732-300-3835</a>
@@ -420,7 +397,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <footer>
   <div class="wrap">
-    <svg class="mark" viewBox="0 0 100 100" aria-hidden="true" style="color:#f7fbf8"><use href="#shamrock"/></svg>
+    <img class="mark" src="brand/shamrock-white.svg" width="64" height="64" alt="">
     <h2>You fly. I'll drive.</h2>
     <p class="ed">I'm Ed Brannagan, owner and driver of Shamrock Transportation.</p>
     <a class="btn btn-call" href="tel:+17323003835"><span class="tel-row"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></span></a>
