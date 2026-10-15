@@ -10,6 +10,8 @@ colors:
   sign-white: "#f7fbf8"
   post-steel: "#8a9399"
   post-shadow: "#4a5157"
+  truss-chord: "#7d868c"
+  truss-lace: "#6c757b"
   dusk-top: "#132849"
   dusk-mid: "#2c4770"
   dusk-mauve: "#5d4f63"
@@ -109,6 +111,7 @@ typography:
     lineHeight: 1.05
     letterSpacing: "0.02em"
 rounded:
+  arm: "5px"
   link-focus: "6px"
   field: "12px"
   button: "14px"
