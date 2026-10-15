@@ -137,6 +137,18 @@
         "value": "14px",
         "createdAt": "2026-10-14T22:21:47.589Z",
         "reason": "sanctioned exception: the Shamrock Transportation wordmark in the header shrinks to 14px under 430px wide so the full phone number fits beside it (40-70 research brief: number in the header)"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "1.24x",
+        "createdAt": "2026-10-15T22:52:22.047Z",
+        "reason": "false positive: rendered check (Playwright, 390 and 1440) finds no text with line-height between 1.2x and 1.3x; the only sub-1.3 lines are single-line headings and button labels"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "1.27x",
+        "createdAt": "2026-10-15T22:52:22.120Z",
+        "reason": "false positive: rendered check (Playwright, 390 and 1440) finds no text with line-height between 1.2x and 1.3x; the only sub-1.3 lines are single-line headings and button labels"
       }
     ]
   }
