@@ -21,7 +21,7 @@
 - Favicon and iPhone icon: a shamrock on a guide-sign green tile. og:image is the hero at 1200x630.
 
 ## Assumptions I made
-- **The shamrock is mine, drawn in SVG.** I don't have the card photo, and the brief says to ask before using a card scan publicly. Swap in Ed's real emblem when Ellie clears it; it's used in the header, the close, the favicon and `apple-touch-icon.png`.
+- **The shamrock is the engraved line mark Ellie picked for every Shamrock site (2026-10-15)**, copied from the shamrockElegant build: one fine outline of three heart leaves, the stem tucked behind the lower leaf, a vein in each leaf. White on guide-sign green here. Heavier lines at small sizes (`#shamrock-sm` for the header tile, `favicon.svg`, `apple-touch-icon.png`). Still not Ed's own card emblem; swap that in if Ellie clears it.
 - **Green:** the brief said to sample the card's green, else use a deep Irish green. I used interstate guide-sign green (#0d6a43) because it is both. Re-sample it from the card.
 - **Footer close repeats "You fly. I'll drive."** now that it's also the headline. Left as a bookend; swap it if the repeat bothers you. The form section is now just the "$1 a mile. That's the rate." heading and the form: Ellie removed the intro line ("Tell me your trip and I'll tell you the miles and the total") and the "Rather talk? Call 732-300-3835" link on 2026-10-15.
 - **"Trailer shippers make you empty it. I don't."** The brief names "pack the car full" as the #1 differentiator. Ed hasn't confirmed his own packing policy or any weight limit.
