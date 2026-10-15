@@ -80,9 +80,10 @@ section{position:relative}
 @media (max-width:339px){.brand{min-width:48px}.brand span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
 
 /* ============ HERO (dusk + the road, one still frame) ============ */
-.hero{min-height:max(640px,min(100svh,1000px));background:linear-gradient(180deg,var(--dusk-top) 0%,var(--dusk-mid) 40%,#5d4f63 56%,#284638 57%,#1a3d2c 100%);overflow:hidden;display:flex;flex-direction:column}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(180deg,rgba(12,58,42,0),var(--ground));pointer-events:none;z-index:1}
-.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.hero{min-height:max(640px,min(100svh,1000px));display:flex;flex-direction:column}
+/* the road runs behind the whole page; scrolling drives it (see the script) */
+#road{position:fixed;left:0;top:0;width:100%;height:100vh;display:block;pointer-events:none;z-index:0;background:linear-gradient(180deg,var(--dusk-top) 0%,var(--dusk-mid) 30%,#5d4f63 42%,#284638 43%,#1a3d2c 100%)}
+main,footer{position:relative;z-index:1}
 .hero-copy{position:relative;z-index:2;padding-top:96px;pointer-events:none}
 .hero-copy .btn,.hero-copy a{pointer-events:auto}
 .hero h1{text-transform:uppercase;font-size:clamp(3rem,14.5vw,6rem);line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 18px rgba(0,0,0,.28)}
@@ -97,9 +98,15 @@ section{position:relative}
 /* ============ SIGN PANEL (guide-sign grammar) ============ */
 .sign{position:relative;background:var(--sign);border-radius:var(--radius);box-shadow:inset 0 0 0 7px var(--sign),inset 0 0 0 10px var(--white),0 18px 40px -18px rgba(0,0,0,.6);padding:26px 22px}
 
+/* ============ ROAD SIGNS (each section is an overhead sign on two posts) ============ */
+.stop{padding:40px 0 96px}
+.gantry{transform-origin:50% 100%}
+.gantry::before,.gantry::after{content:"";position:absolute;top:100%;width:12px;height:96px;background:linear-gradient(90deg,#4a5157,#8a9399 45%,#4a5157)}
+.gantry::before{left:12%}
+.gantry::after{right:12%}
+
 /* ============ MEET YOUR DRIVER ============ */
-.meet{padding:64px 0 0}
-.meet-photo{margin:26px 0 0;max-width:520px;aspect-ratio:4/3;display:grid;place-items:center;align-content:center;gap:10px;padding:22px;color:var(--ink-soft);font-size:18px;font-weight:700;text-align:center}
+.meet-photo{margin:26px 0 0;max-width:520px;aspect-ratio:4/3;display:grid;place-items:center;align-content:center;gap:10px;padding:22px;color:var(--ink-soft);font-size:18px;font-weight:700;text-align:center;background:rgba(8,42,30,.35);border:2px solid rgba(247,251,248,.35);border-radius:12px}
 .meet-photo svg{width:96px;height:96px}
 .meet-photo img{width:100%;height:100%;object-fit:cover;border-radius:12px}
 .meet-copy{margin-top:26px}
@@ -108,9 +115,8 @@ section{position:relative}
 .meet-copy .hi{font-size:22px;font-weight:800}
 
 /* ============ GET MY RATE ============ */
-.quote{padding:64px 0 60px}
 .quote h2{max-width:14ch}
-.quote form{margin-top:30px;padding:30px 22px 28px;display:grid;gap:22px}
+.quote form{margin-top:26px;display:grid;gap:22px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 legend,.lbl{display:block;font-weight:800;font-size:20px;margin-bottom:10px;padding:0}
 .chips{display:grid;gap:10px}
@@ -145,11 +151,10 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
 .sent pre{white-space:pre-wrap;font:inherit;margin:10px 0 0;color:var(--ink-soft)}
 
 /* ============ FAQ (answers always showing) ============ */
-.faq{padding:60px 0 48px;background:var(--concrete);color:var(--concrete-ink)}
 .qa{margin-top:24px}
-.qa > div{padding:20px 0;border-top:2px solid rgba(12,58,42,.18)}
+.qa > div{padding:20px 0;border-top:2px solid rgba(247,251,248,.22)}
 .qa h3{font-size:22px;font-weight:800;text-transform:none;letter-spacing:0;line-height:1.3}
-.qa p,.qa ul{margin-top:8px;font-size:19px;color:var(--concrete-soft);max-width:60ch}
+.qa p,.qa ul{margin-top:8px;font-size:19px;color:var(--ink-soft);max-width:60ch}
 .qa ul{padding-left:1.2em;margin-bottom:8px}
 .qa li{margin:4px 0}
 
@@ -176,11 +181,10 @@ footer .fine p + p{margin-top:6px}
   .promise{max-width:none}
   .hero-actions{grid-template-columns:auto;justify-content:start}
   .hero-actions .btn{padding:14px 30px}
-  .meet{padding:88px 0 0}
-  .quote{padding:88px 0 88px}
+  .stop{padding:56px 0 120px}
+  .gantry{padding:38px 36px}
+  .gantry::before,.gantry::after{height:120px;width:16px}
   .chips{grid-template-columns:1fr 1fr}
-  .quote form{padding:38px 36px;max-width:680px}
-  .faq{padding:88px 0 72px}
   footer{padding:80px 0 48px}
 }
 @media (min-width:1100px){
@@ -192,8 +196,8 @@ footer .fine p + p{margin-top:6px}
   .quote form{margin-top:8px;max-width:none}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:end}
   .form-foot{grid-template-columns:auto 1fr;align-items:center;gap:22px}
-  .faq .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px}
-  .meet .wrap{display:grid;grid-template-columns:5fr 7fr;gap:0 56px;align-items:center}
+  .faq-sign{display:grid;grid-template-columns:5fr 7fr;gap:56px}
+  .meet-sign{display:grid;grid-template-columns:5fr 7fr;gap:0 56px;align-items:center}
   .meet h2{grid-column:1 / -1}
   .meet-photo{aspect-ratio:1/1}
   .meet-copy{margin-top:26px}
@@ -243,10 +247,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
 </header>
 
+<canvas id="road" aria-hidden="true"></canvas>
 <main id="top">
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero" aria-labelledby="h1">
-    <canvas id="road" aria-hidden="true"></canvas>
     <div class="wrap hero-copy" id="heroCopy">
       <h1 id="h1"><span>You fly,</span> <span class="yl">I'll drive.</span></h1>
       <p class="promise">I'm Ed, and I take your car between New&nbsp;Jersey and Florida for <strong class="price">$1&nbsp;a&nbsp;mile</strong>.</p>
@@ -257,11 +261,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </section>
 
   <!-- ============ MEET YOUR DRIVER ============ -->
-  <section class="meet" aria-labelledby="meet-h">
+  <section class="meet stop" aria-labelledby="meet-h">
     <div class="wrap">
+     <div class="sign gantry meet-sign">
       <h2 id="meet-h">Meet your driver</h2>
       <!-- PHOTO: replace the placeholder's contents with <img src="ed.jpg" alt="Ed Brannagan beside a car"> once Ed sends one. -->
-      <figure class="meet-photo sign">
+      <figure class="meet-photo">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21c.8-4.2 4-6.5 8-6.5s7.2 2.3 8 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <figcaption>Photo of Ed coming soon</figcaption>
       </figure>
@@ -271,16 +276,18 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <p>It never goes on a truck. It doesn't sit on an open carrier in the weather or get winched on and off a trailer.</p>
         <p>And you're not handing your keys to a stranger. You'll have my own number, and you can ask me anything before you hand them over.</p>
       </div>
+     </div>
     </div>
   </section>
 
   <!-- ============ GET MY RATE ============ -->
-  <section class="quote" id="quote" aria-labelledby="quote-h">
-    <div class="wrap quote-grid">
+  <section class="quote stop" id="quote" aria-labelledby="quote-h">
+    <div class="wrap">
+     <div class="sign gantry quote-grid">
       <div>
         <h2 id="quote-h">$1 a mile. That's the rate.</h2>
       </div>
-      <form class="sign" id="quoteForm" novalidate>
+      <form id="quoteForm" novalidate>
         <fieldset class="chips-wrap" id="tripSet" aria-describedby="tripErr">
           <!-- RATES: Ed charges $1 per mile (Ellie, 2026-10-15). -->
           <legend>Your trip</legend>
@@ -318,12 +325,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <pre id="sentBody"></pre>
         </div>
       </form>
+     </div>
     </div>
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section class="faq" aria-labelledby="faq-h">
+  <section class="faq stop" aria-labelledby="faq-h">
     <div class="wrap">
+     <div class="sign gantry faq-sign">
       <h2 id="faq-h">Straight answers</h2>
       <div class="qa">
         <div>
@@ -348,6 +357,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <p>Otherwise your car, and everything in it, rides with me.</p>
         </div>
       </div>
+     </div>
     </div>
   </section>
 </main>
@@ -368,19 +378,22 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <script>
 /* ============================================================
-   HERO ROAD: I-95 at dusk, seen from the driver's seat.
-   Drawn once as a still picture (no animation, by Ellie's call
-   for a 40-70 audience); redrawn only when the size changes.
+   THE ROAD: I-95 at dusk, seen from the driver's seat, behind the
+   whole page. Nothing moves on its own; scrolling drives it (Ellie,
+   2026-10-15): scroll down and the road flows away, the hero sign
+   and each section's overhead sign shrink toward the horizon;
+   scroll up and they come back. Reduced motion: one still frame.
    ============================================================ */
 (function(){
   var FRAME_TIME = 8;      /* picks the bend: change to reshape the road */
-  var FRAME_TRAVEL = 68;   /* picks where the posts and the sign sit */
+  var FRAME_TRAVEL = 94;   /* picks where the posts and the sign sit (the I-95 sign is 10 units ahead) */
   var BEND = 0.7;          /* how far the road bends at most */
   var HALF = 2.3;          /* road half-width, world units (two lanes) */
   var Z_FAR = 70, STRIPS_PHONE = 70, STRIPS_DESK = 110;
 
-  var hero = document.getElementById('hero'), cv = document.getElementById('road'),
-      copy = document.getElementById('heroCopy');
+  var cv = document.getElementById('road'), copy = document.getElementById('heroCopy'),
+      signs = [].slice.call(document.querySelectorAll('.gantry'));
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   /* the snowbird season: north April to August, south the rest of the year */
   var MON = new Date().getMonth(), SIGN = (MON >= 3 && MON <= 7) ? ['I-95 NORTH', 'NEW JERSEY'] : ['I-95 SOUTH', 'FLORIDA'];
   var ctx = cv.getContext('2d'), FONT = getComputedStyle(document.body).fontFamily;
@@ -388,13 +401,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var curve = 0, hill = 0, camX = 0, sway = 0, trees = [];
 
   function size(){
-    var r = hero.getBoundingClientRect();
-    var w = Math.round(r.width), h = Math.round(r.height);
-    var cr = copy.getBoundingClientRect();
-    horizon = Math.max(cr.bottom - r.top + 48, h * 0.42);
+    var w = cv.clientWidth, h = cv.clientHeight;
     if (w === W && h === H) return false;   /* phones fire resize when the address bar moves; don't rebuild */
-    /* drawn once, so use the screen's full sharpness, capped to keep the canvas within phone memory limits */
-    W = w; H = h; dpr = Math.min(3, window.devicePixelRatio || 1, Math.sqrt(8e6 / (W * H)));
+    /* redrawn while scrolling, so cap sharpness at 2x to keep it smooth on phones */
+    W = w; H = h; dpr = Math.min(2, window.devicePixelRatio || 1);
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     trees = []; var seed = 7;
@@ -418,7 +428,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var HAZE = [92, 110, 116], VERGE_A = [26, 61, 44], VERGE_B = [31, 69, 50], ASPH = [46, 54, 63], ASPH_B = [50, 58, 67];
 
   /* Project a world point (x lateral, e elevation, z depth) to the screen. */
-  var R, S;
+  var R, S, RFIX = 400;
   function off(z){ var d = z - 1; return {x: curve * d * d * 0.018, y: hill * d * d * 0.0036}; }
   function px(x, z){ var o = off(z); return W / 2 + (x + o.x - camX) * S / z; }
   function py(e, z){ var o = off(z); return horizon + R * (1 - e) / z - o.y * R / z * 1; }
@@ -441,7 +451,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   function line(a, b, at, lw, fill){ quad(a.x + a.w * at, a.y, lw * S / a.z, b.x + b.w * at, b.y, lw * S / b.z, fill); }
 
   function draw(){
-    R = H - horizon; S = Math.min(W * .62, R * 1.55) / HALF;
+    R = RFIX; S = Math.min(W * .62, R * 1.55) / HALF;
     /* sky */
     var g = ctx.createLinearGradient(0, 0, 0, horizon);
     g.addColorStop(0, '#132849'); g.addColorStop(.62, '#2c4770'); g.addColorStop(.9, '#8d6c72'); g.addColorStop(1, '#eaa064');
@@ -483,7 +493,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     for (k = 1; k < rows.length; k++){
       var a = rows[k - 1], b = rows[k];
       if (b.y <= a.y) continue;
-      ctx.fillStyle = rgb(mix(Math.floor((b.z + travel) / 6) % 2 ? VERGE_A : VERGE_B, HAZE, b.fog));
+      ctx.fillStyle = rgb(mix((Math.floor((b.z + travel) / 6) % 2 + 2) % 2 ? VERGE_A : VERGE_B, HAZE, b.fog));
       ctx.fillRect(0, a.y, W, b.y - a.y + 1);
     }
     /* pass 2: shoulder and asphalt; pass 3: edge lines (white both sides) */
@@ -496,7 +506,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       line(a, b, .93, .07, rgb(mix([240, 242, 238], HAZE, b.fog * .8))); }
     /* yellow dashes between the lanes (Ellie, 2026-10-15): 1.2 on, 3.8 off, each one solid quad.
        DASH_SHIFT slides them toward the camera so one sits right in front (Ellie, 2026-10-15) */
-    var D = 5, DL = 1.2, DASH_SHIFT = 1.1, dt = travel + DASH_SHIFT, first = Math.floor((1 + dt) / D) * D;
+    var D = 5, DL = 1.2, DASH_SHIFT = .1, dt = travel + DASH_SHIFT, first = Math.floor((1 + dt) / D) * D;
     for (var dz = first; dz < dt + Z_FAR * .9; dz += D){
       var z1 = dz - dt + DL, z0 = dz - dt;
       if (z1 < .6) continue; z0 = Math.max(.6, z0);
@@ -508,7 +518,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     /* reflector posts and the odd guide sign along the right shoulder, far to near */
     var items = [];
     var postGap = 12, p0 = Math.ceil(travel / postGap) * postGap;
-    for (var d = p0 + Z_FAR * .8; d >= p0; d -= postGap){
+    for (var d = p0 + Z_FAR * .8; d > travel + 1.05; d -= postGap){
       var zz = d - travel; if (zz > 1.05) items.push({z:zz, sign:(Math.round(d / postGap) % 9 === 0)});
     }
     items.sort(function(a, b){ return b.z - a.z; });
@@ -545,11 +555,42 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   function roundRect(x, y, w, h, r){ ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
 
-  /* the frame: a gentle right-hand bend with an I-95 sign coming up */
-  time = FRAME_TIME; travel = FRAME_TRAVEL;
-  function render(){ if (size() === false) return; drive(0); camX = curve * .15; draw(); }
-  render();
-  window.addEventListener('resize', render);
+  /* Scroll drives the scene. The horizon rides just under the hero copy, then
+     settles near the top so the road fills the screen. Scrolling down backs the
+     camera away (travel falls), so the road, the I-95 sign and the section signs
+     recede toward the horizon; scrolling up brings them back. */
+  var TOP = .16;       /* where the horizon settles, as a share of the screen height */
+  var START = .3;      /* signs start receding once their foot rises above this share of the road */
+  time = FRAME_TIME; drive(0); camX = curve * .15;
+  function frame(){
+    queued = false;
+    size();
+    var y = still ? 0 : window.scrollY || 0;
+    var cb = copy.getBoundingClientRect().bottom + (still ? window.scrollY || 0 : 0);
+    horizon = Math.max(cb + 48, H * TOP, H * .42 - y);
+    /* the camera keeps the scale it has at the top of the page, so the road only
+       slides up as the horizon rises; it never zooms */
+    RFIX = Math.max(H - Math.max(cb + y + 48, H * .42), H * .45);
+    var K = 1 / (START * START * RFIX);            /* world units per scrolled pixel, matched to the signs below */
+    travel = FRAME_TRAVEL - y * K;
+    draw();
+    /* each section is an overhead sign standing on the road: once its foot rises
+       above the start line it shrinks into the distance along the road */
+    var R0 = RFIX, yref = horizon + START * R0, L = yref - horizon, x0 = px(0, R0 / L);
+    signs.forEach(function(g){
+      var yn = g.parentNode.getBoundingClientRect().bottom;
+      if (still || yn >= yref){ if (g._s !== 1){ g.style.transform = ''; g.style.opacity = ''; g._s = 1; } return; }
+      var u = yref - yn, k = 1 / (1 + u / L), yv = horizon + L * k, dx = px(0, R0 / (L * k)) - x0;
+      g.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + (yv - yn).toFixed(1) + 'px,0) scale(' + k.toFixed(4) + ')';
+      g.style.opacity = Math.max(0, Math.min(1, (k - .12) / .3)).toFixed(3);
+      g._s = k;
+    });
+  }
+  var queued = false;
+  function ask(){ if (!queued){ queued = true; requestAnimationFrame(frame); } }
+  frame();
+  window.addEventListener('resize', ask);
+  if (!still) window.addEventListener('scroll', ask, {passive: true});
 })();
 
 /* ============================================================
