@@ -6,6 +6,7 @@ colors:
   lane-ink: "#132a1f"
   focus-sky: "#8fd6ff"
   sign-green: "#0d6a43"
+  shamrock-green: "#178049"
   sign-white: "#f7fbf8"
   dusk-top: "#132849"
   dusk-mid: "#2c4770"
