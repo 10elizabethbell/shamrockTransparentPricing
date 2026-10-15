@@ -201,7 +201,7 @@ components:
 
 **Creative North Star: "One Still Frame of I-95 at Dusk"**
 
-The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, "One rate. / No surprises.", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: three numbered steps, the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.
+The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, "One rate. / No surprises.", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.
 
 Density is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.
 
@@ -274,7 +274,7 @@ Phone-first single column, 20px gutters in a 1160px container (40px from 760px; 
 
 The hero is a tall stage, `max(640px, min(100svh, 1000px))` (560px in short landscape), left-aligned at every width. Copy starts 96px down (132px from 760px, 84px in short landscape): h1, promise 18px below, actions 24px below. On phones the two buttons stack full width at 76px with a 12px gap; from 760px they sit side by side at their own width with a 16px gap. The canvas fills the hero; its horizon sits 48px below the copy or at 42% of the height, whichever is lower, so the road always shows under the buttons.
 
-The header is absolutely placed over the hero, not sticky: brand top-left, full phone number top-right, 72px tall (88px from 760px). How it works is a 48px number column beside title and line, stacked 22px apart on phones, three across with 32px gaps from 760px. From 760px trip rows pair into two columns. Only from 1024px do the form and FAQ split 5fr / 7fr with a 56px gap and When / Your car share a row (landscape phones and small tablets stay single-column, so the form never squeezes). The footer is centered with one call button (max 420px). Breakpoints: 760px, 1024px, 1100px; max-width 479px, 379px (header phone icon hides), 339px; max-height 500px landscape.
+The header is absolutely placed over the hero, not sticky: brand top-left, full phone number top-right, 72px tall (88px from 760px). From 760px trip rows pair into two columns. Only from 1024px do the form and FAQ split 5fr / 7fr with a 56px gap and When / Your car share a row (landscape phones and small tablets stay single-column, so the form never squeezes). The footer is centered with one call button (max 420px). Breakpoints: 760px, 1024px, 1100px; max-width 479px, 379px (header phone icon hides), 339px; max-height 500px landscape.
 
 ## Elevation & Depth
 
@@ -306,9 +306,6 @@ The second path: "Get a rate by text" with a trailing 24px down arrow, jumping t
 
 ### Hero Road (signature)
 A full-bleed canvas behind the copy, decorative and hidden from assistive tech: the dusk sky and sun glow, two rows of pines, mown verge bands, a two-lane road bending right with a yellow left edge, white right edge and white dashes, reflector posts (white-reflector right, yellow-reflector left) and one green guide sign on the right shoulder. The sign reads I-95 NORTH / NEW JERSEY from April through August and I-95 SOUTH / FLORIDA the rest of the year.
-
-### How It Works
-Three static numbered steps: a 48px lane-yellow disc with a 22px/900 digit, a 22px title, a 19px ink-soft line. No cards, no icons.
 
 ### Sign Panel (the rate form)
 Sign-green, Sign Mount, 30px 22px 28px padding (38px 36px from 760px, max 680px wide until 1024px). Holds the trip rows, When / Your car / Your name fields, the yellow "Text this to Ed" button and a soft-white note.
