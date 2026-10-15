@@ -166,7 +166,10 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
 .sent pre{white-space:pre-wrap;font:inherit;margin:10px 0 0;color:var(--ink-soft)}
 
 /* ============ FAQ: a roadside assembly of small plates on one post ============ */
-.assembly{display:grid;gap:14px;width:calc(100% - 34px);max-width:600px;margin-left:auto}
+.faq .wrap{display:grid;gap:150px}
+.assembly{display:grid;gap:14px;width:calc(100% - 34px);max-width:560px}
+.assembly.right{margin-left:auto}
+.assembly.left{margin-right:auto}
 .mast{position:absolute;left:50%;width:var(--pw);margin-left:calc(var(--pw) / -2);top:20px;bottom:calc(-1 * var(--foot));background:var(--steel)}
 .plate{position:relative;display:block;margin:0;padding:22px 24px;background:var(--sign);border:4px solid var(--white);border-radius:12px;color:var(--white)}
 .plate::after{content:"";position:absolute;left:50%;top:6px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#c9d2cd}   /* mounting bolt */
@@ -202,6 +205,7 @@ footer .fine p + p{margin-top:6px}
 
 
 @media (min-width:760px){
+  .faq .wrap{gap:180px}
   .wrap{padding:0 40px}
   .top .wrap{height:88px}
   .brand{font-size:20px}
@@ -364,22 +368,31 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <!-- ============ FAQ ============ -->
   <section class="faq stop" aria-labelledby="faq-h">
     <div class="wrap">
-     <!-- a roadside sign assembly off to the side: one post, a stack of small plates (Ellie, 2026-10-15) -->
-     <div class="gantry assembly">
+     <!-- roadside signs off to the side, one question per sign, each on its own post, alternating sides (Ellie, 2026-10-15) -->
+     <div class="gantry assembly right">
       <i class="mast" aria-hidden="true"></i>
       <h2 class="plate keystone" id="faq-h">Straight answers</h2>
       <div class="plate oct">
         <h3>Can I pack the car full?</h3>
         <p>Yes. Your winter things ride along inside your own car. Trailer shippers make you empty it. I don't.</p>
       </div>
+     </div>
+     <div class="gantry assembly left">
+      <i class="mast" aria-hidden="true"></i>
       <div class="plate">
         <h3>Do you do airport runs?</h3>
         <p>Yes, anywhere in Florida.</p>
       </div>
+     </div>
+     <div class="gantry assembly right">
+      <i class="mast" aria-hidden="true"></i>
       <div class="plate cut">
         <h3>Only New Jersey and Florida?</h3>
         <p>That's the main run, both ways. I also do local and long distance trips. Call and tell me where.</p>
       </div>
+     </div>
+     <div class="gantry assembly left">
+      <i class="mast" aria-hidden="true"></i>
       <div class="plate">
         <h3>When is a truck carrier the better call?</h3>
         <ul>
@@ -615,7 +628,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var z0 = RFIX / L, x0 = px(0, z0), sh = (HALF + .7) * S / z0;
     signs.forEach(function(g){
       if (g._sh !== Math.round(sh)){ g._sh = Math.round(sh); g.style.setProperty('--sh', g._sh + 'px'); }
-      var wr = g.parentNode.getBoundingClientRect(), foot = wr.bottom + (g._foot || (g._foot = parseFloat(getComputedStyle(g).getPropertyValue('--foot')) || 92));
+      /* the sign's untransformed box, from layout offsets (several signs can share one wrapper) */
+      var wr = g.parentNode.getBoundingClientRect(), top = wr.top + g.offsetTop - g.parentNode.offsetTop;
+      var foot = top + g.offsetHeight + (g._foot || (g._foot = parseFloat(getComputedStyle(g).getPropertyValue('--foot')) || 92));
       if (still || foot >= H){ if (g._s !== 1){ g.style.transform = ''; g.style.opacity = ''; g._s = 1; } return; }
       /* it keeps its place across the road: its offset from the road center shrinks with distance */
       var cx = wr.left + g.offsetLeft - g.parentNode.offsetLeft + g.offsetWidth / 2;
