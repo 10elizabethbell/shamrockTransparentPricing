@@ -202,7 +202,7 @@ components:
 
 **Creative North Star: "One Still Frame of I-95 at Dusk"**
 
-The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with a yellow left edge and white dashes bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, "You fly, / I'll drive.", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.
+The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with white edge lines and yellow center dashes (one big dash right in front) bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, "You fly, / I'll drive.", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.
 
 Density is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.
 
@@ -219,7 +219,7 @@ Roadside green and concrete for the page, guide-sign green for the panel, lane y
 
 ### Primary
 - **Shamrock Green** (#178049): the footer Call Ed button only, with white text (4.8:1). Ellie, 2026-10-15: yellow there felt out of place.
-- **Lane-Line Yellow** (lane-yellow): the hero "Get a rate by text" and "Text this to Ed" buttons, the selected trip row, "I'll drive." and "$1 a mile" in the hero, the header phone icon, text selection. In the road picture it is the left edge line and the left posts' reflectors. Never on concrete.
+- **Lane-Line Yellow** (lane-yellow): the hero "Get a rate by text" and "Text this to Ed" buttons, the selected trip row, "I'll drive." and "$1 a mile" in the hero, the header phone icon, text selection. In the road picture it is the center dashes and the left posts' reflectors; both edge lines are white. Never on concrete.
 - **Lane Ink** (lane-ink): text and icons on yellow.
 - **Focus Sky** (focus-sky): the hover and focus outline, nothing else.
 
@@ -304,7 +304,7 @@ Softly rounded rectangles stepping down with size: sign panel 16px, buttons 14px
 Heavy, wide, unmistakable. Lane-yellow fill and 3px border, lane-ink text, 14px radius, Button Lift, a leading 24px phone or SMS icon, the number as a second 17px line. 60px tall; 76px in the hero. Used in the hero, as "Text this to Ed" on the form, and in the footer.
 
 ### Hero Road (signature)
-A full-bleed canvas behind the copy, decorative and hidden from assistive tech: the dusk sky and sun glow, two rows of pines, mown verge bands, a two-lane road bending right with a yellow left edge, white right edge and white dashes, reflector posts (white-reflector right, yellow-reflector left) and one green guide sign on the right shoulder. The sign reads I-95 NORTH / NEW JERSEY from April through August and I-95 SOUTH / FLORIDA the rest of the year.
+A full-bleed canvas behind the copy, decorative and hidden from assistive tech: the dusk sky and sun glow, two rows of pines, mown verge bands, a two-lane road bending right with white edge lines on both sides and yellow center dashes (1.2 on, 3.8 off, one starting just in front of the camera), reflector posts (white-reflector right, yellow-reflector left) and one green guide sign on the right shoulder. The sign reads I-95 NORTH / NEW JERSEY from April through August and I-95 SOUTH / FLORIDA the rest of the year.
 
 ### Meet Your Driver
 Right after the hero on the deep-green ground. A photo frame built as a Sign Panel (4:3, max 520px on phones and tablets; square in a 5fr / 7fr split from 1024px) holding a 96px person outline and "Photo of Ed coming soon" in ink-soft, swapped for a cover-fit photo later. Beside or below it: a 22px/800 greeting and 20px lines, 36ch max.

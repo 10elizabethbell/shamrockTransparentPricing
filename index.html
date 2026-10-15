@@ -213,7 +213,7 @@ footer .fine p + p{margin-top:6px}
 <body>
 <!--
 THESIS: The interstate itself sells the trip: a still dusk view down I-95, and the rate request on a guide sign, plain enough to read at 65 mph. Refuses the auto-transport default of a stock truck photo, a quote form wall and fine print.
-OWN-WORLD: Guide-sign green panels with an inset white border, retroreflective white lettering, lane-line yellow for the one action, asphalt with yellow left edge and white dashes, dusk sky (navy to Florida-peach glow), highway-concrete light sections. Deep roadside green ground, never black.
+OWN-WORLD: Guide-sign green panels with an inset white border, retroreflective white lettering, lane-line yellow for the one action, asphalt with white edge lines and yellow center dashes, dusk sky (navy to Florida-peach glow), highway-concrete light sections. Deep roadside green ground, never black.
 STORY: Snowbird sees "You fly, I'll drive.", understands Ed drives their car while they fly, meets Ed, sees $1 a mile, picks their trip and texts (or calls) for the total, reads straight answers, and calls. Kept short, still and calm for a 40-70 audience: nothing moves, nothing to figure out.
 FIRST VIEWPORT: Phone: shamrock and name top-left, full number top-right; huge two-line headline; one-line promise; one yellow Get a rate by text button (full width), the call is the header number; below, a still picture of the road running to a pine horizon, with an I-95 sign ahead.
 FORM: Interstate guide signs + dusk highway, my list #1 (seed b9fde720 assigned #6 luggage tags; overridden by Ellie's pitch-site rule: brand + fluid touchable signature). No animation at all, by Ellie's decision (2026-10-14, audience 40-70): the hero road is one still frame. This overrides the pitch-site signature-motion rule for this site.
@@ -486,22 +486,23 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       ctx.fillStyle = rgb(mix(Math.floor((b.z + travel) / 6) % 2 ? VERGE_A : VERGE_B, HAZE, b.fog));
       ctx.fillRect(0, a.y, W, b.y - a.y + 1);
     }
-    /* pass 2: shoulder and asphalt; pass 3: edge lines (yellow left, white right) */
+    /* pass 2: shoulder and asphalt; pass 3: edge lines (white both sides) */
     for (k = 1; k < rows.length; k++){ a = rows[k - 1]; b = rows[k]; if (!b.vis) continue;
       strip(a, b, 1.09, rgb(mix([84, 90, 96], HAZE, b.fog))); }
     for (k = 1; k < rows.length; k++){ a = rows[k - 1]; b = rows[k]; if (!b.vis) continue;
       strip(a, b, 1, rgb(mix(ASPH, HAZE, b.fog * .9))); }
     for (k = 1; k < rows.length; k++){ a = rows[k - 1]; b = rows[k]; if (!b.vis) continue;
-      line(a, b, -.93, .07, rgb(mix([245, 194, 66], HAZE, b.fog * .8)));
+      line(a, b, -.93, .07, rgb(mix([240, 242, 238], HAZE, b.fog * .8)));
       line(a, b, .93, .07, rgb(mix([240, 242, 238], HAZE, b.fog * .8))); }
-    /* white dashes between the lanes: 2 on, 6 off, each one solid quad */
-    var D = 8, first = Math.floor((1 + travel) / D) * D;
-    for (var dz = first; dz < travel + Z_FAR * .9; dz += D){
-      var z1 = dz - travel + 2, z0 = dz - travel;
+    /* yellow dashes between the lanes (Ellie, 2026-10-15): 1.2 on, 3.8 off, each one solid quad.
+       DASH_SHIFT slides them toward the camera so one sits right in front (Ellie, 2026-10-15) */
+    var D = 5, DL = 1.2, DASH_SHIFT = 1.1, dt = travel + DASH_SHIFT, first = Math.floor((1 + dt) / D) * D;
+    for (var dz = first; dz < dt + Z_FAR * .9; dz += D){
+      var z1 = dz - dt + DL, z0 = dz - dt;
       if (z1 < .6) continue; z0 = Math.max(.6, z0);
       var A = {z:z1, y:py(0, z1), x:px(0, z1), w:HALF * S / z1}, B = {z:z0, y:py(0, z0), x:px(0, z0), w:HALF * S / z0};
       if (B.y <= A.y || A.y > minAt(z1) + .5) continue;
-      line(A, B, 0, .065, rgb(mix([240, 242, 238], HAZE, Math.pow(Math.min(1, z1 / Z_FAR), .55) * .8)));
+      line(A, B, 0, .065, rgb(mix([245, 194, 66], HAZE, Math.pow(Math.min(1, z1 / Z_FAR), .55) * .8)));
     }
 
     /* reflector posts and the odd guide sign along the right shoulder, far to near */
