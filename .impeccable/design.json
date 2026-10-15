@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T23:36:01.031222+00:00",
+  "generatedAt": "2026-10-15T23:22:45.403310+00:00",
   "title": "Design System: Shamrock Transportation",
   "extensions": {
     "colorMeta": {
@@ -49,6 +49,21 @@
           "#e9f5fc"
         ]
       },
+      "shamrock-green": {
+        "role": "primary",
+        "displayName": "Shamrock Green",
+        "canonical": "#178049",
+        "tonalRamp": [
+          "#0b2e1b",
+          "#114a2b",
+          "#16663b",
+          "#1c824b",
+          "#3fa36c",
+          "#6fbf93",
+          "#a8dbbd",
+          "#e6f5ec"
+        ]
+      },
       "sign-green": {
         "role": "secondary",
         "displayName": "Guide-Sign Green",
@@ -79,6 +94,36 @@
           "#eef6f0"
         ]
       },
+      "post-steel": {
+        "role": "secondary",
+        "displayName": "Post Steel",
+        "canonical": "#8a9399",
+        "tonalRamp": [
+          "#22262a",
+          "#3a4045",
+          "#4a5157",
+          "#626b72",
+          "#8a9399",
+          "#a9b0b5",
+          "#cbd0d3",
+          "#eef0f1"
+        ]
+      },
+      "post-shadow": {
+        "role": "secondary",
+        "displayName": "Post Shadow",
+        "canonical": "#4a5157",
+        "tonalRamp": [
+          "#22262a",
+          "#3a4045",
+          "#4a5157",
+          "#626b72",
+          "#8a9399",
+          "#a9b0b5",
+          "#cbd0d3",
+          "#eef0f1"
+        ]
+      },
       "dusk-top": {
         "role": "tertiary",
         "displayName": "Dusk Navy",
@@ -107,21 +152,6 @@
           "#95aed5",
           "#c1d0e7",
           "#edf1f8"
-        ]
-      },
-      "dusk-veil": {
-        "role": "tertiary",
-        "displayName": "Dusk Veil",
-        "canonical": "rgba(19,40,73,.22)",
-        "tonalRamp": [
-          "#10213d",
-          "#1b3a69",
-          "#275296",
-          "#336ac2",
-          "#5d8cd5",
-          "#8aabe0",
-          "#baceed",
-          "#ebf1fa"
         ]
       },
       "dusk-mauve": {
@@ -319,51 +349,6 @@
           "#eef6f2"
         ]
       },
-      "concrete": {
-        "role": "neutral",
-        "displayName": "Highway Concrete",
-        "canonical": "#e4e9e6",
-        "tonalRamp": [
-          "#222a25",
-          "#3c4941",
-          "#55685c",
-          "#6e8778",
-          "#8fa397",
-          "#aebdb4",
-          "#cfd8d3",
-          "#f1f4f2"
-        ]
-      },
-      "concrete-ink": {
-        "role": "neutral",
-        "displayName": "Concrete Ink",
-        "canonical": "#0c3a2a",
-        "tonalRamp": [
-          "#0d3f2e",
-          "#176e50",
-          "#209c71",
-          "#2acb93",
-          "#56dcad",
-          "#84e6c4",
-          "#b7f0dc",
-          "#eafbf5"
-        ]
-      },
-      "concrete-soft": {
-        "role": "neutral",
-        "displayName": "Concrete Soft",
-        "canonical": "#33584a",
-        "tonalRamp": [
-          "#1c3029",
-          "#315447",
-          "#457764",
-          "#5a9b82",
-          "#7eb4a0",
-          "#a1c9ba",
-          "#c8dfd6",
-          "#eff6f3"
-        ]
-      },
       "field-ink": {
         "role": "neutral",
         "displayName": "Field Ink",
@@ -439,6 +424,21 @@
           "#eef6f0"
         ]
       },
+      "rule-sign": {
+        "role": "neutral",
+        "displayName": "Sign Divider",
+        "canonical": "rgba(247,251,248,.22)",
+        "tonalRamp": [
+          "#1a3320",
+          "#2c5837",
+          "#3f7e4f",
+          "#52a366",
+          "#77bb88",
+          "#9ccea9",
+          "#c5e2cc",
+          "#eef6f0"
+        ]
+      },
       "rule-footer": {
         "role": "neutral",
         "displayName": "Footer Hairline",
@@ -452,21 +452,6 @@
           "#9ccea9",
           "#c5e2cc",
           "#eef6f0"
-        ]
-      },
-      "rule-concrete": {
-        "role": "neutral",
-        "displayName": "Concrete Rule",
-        "canonical": "rgba(12,58,42,.18)",
-        "tonalRamp": [
-          "#0d3f2e",
-          "#176e50",
-          "#209c71",
-          "#2acb93",
-          "#56dcad",
-          "#84e6c4",
-          "#b7f0dc",
-          "#eafbf5"
         ]
       },
       "tint-sent": {
@@ -496,7 +481,7 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section h2."
+        "purpose": "The h2 on each road sign."
       },
       "headline-close": {
         "displayName": "Headline Close",
@@ -508,7 +493,7 @@
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Step titles, FAQ questions, Rather talk line, step digits."
+        "purpose": "FAQ questions, Ed's greeting line."
       },
       "control": {
         "displayName": "Control",
@@ -516,7 +501,7 @@
       },
       "answer": {
         "displayName": "Answer",
-        "purpose": "FAQ answers, step lines, footer Ed line, field text."
+        "purpose": "FAQ answers, footer Ed line, field text."
       },
       "body": {
         "displayName": "Body",
@@ -528,19 +513,19 @@
       },
       "brand": {
         "displayName": "Brand",
-        "purpose": "Two-line uppercase wordmark; 14px under 430px is the single floor exception."
+        "purpose": "Two-line uppercase wordmark; 14px under 480px is the single floor exception."
       }
     },
     "shadows": [
       {
         "name": "sign-mount",
         "value": "inset 0 0 0 7px #0d6a43, inset 0 0 0 10px #f7fbf8, 0 18px 40px -18px rgba(0,0,0,.6)",
-        "purpose": "The form sign panel."
+        "purpose": "Every sign panel."
       },
       {
         "name": "button-lift",
         "value": "0 8px 22px -8px rgba(0,0,0,.55)",
-        "purpose": "Yellow call buttons."
+        "purpose": "Call buttons."
       },
       {
         "name": "headline-halo",
@@ -555,10 +540,25 @@
       {
         "name": "dusk-legibility",
         "value": "0 1px 8px rgba(0,0,0,.45)",
-        "purpose": "text-shadow on the header phone link and the line button label."
+        "purpose": "text-shadow on the header phone link."
       }
     ],
     "motion": [
+      {
+        "name": "scroll-drive",
+        "value": "travel = FRAME_TRAVEL - scrollY / (0.3^2 * RFIX)",
+        "purpose": "Scroll down backs the camera away so the road, posts and I-95 sign recede; scroll up brings them back. Redrawn once per rAF on scroll; never autonomous."
+      },
+      {
+        "name": "horizon-settle",
+        "value": "max(heroCopyBottom + 48px, 0.16 * vh, 0.42 * vh - scrollY)",
+        "purpose": "Horizon rides under the hero copy, then settles at 16% of the screen. Camera scale (RFIX) fixed: the road slides up, never zooms."
+      },
+      {
+        "name": "sign-recede",
+        "value": "scale(1 / (1 + u / L)) from 50% 100%; opacity (k - .12) / .3",
+        "purpose": "Once a sign's foot rises above 30% of the road height it shrinks toward the horizon along the road and fades below ~0.4."
+      },
       {
         "name": "press",
         "value": "transform .2s cubic-bezier(.2,.8,.2,1)",
@@ -573,6 +573,11 @@
         "name": "row-select",
         "value": "background .15s, color .15s, border-color .15s",
         "purpose": "Trip row selection. Off under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "One still road frame, no sign transforms, instant jump to the form, no transitions."
       }
     ],
     "breakpoints": [
@@ -586,11 +591,15 @@
       },
       {
         "name": "phone-small",
-        "value": "max-width: 429px"
+        "value": "max-width: 479px"
       },
       {
         "name": "desk",
         "value": "760px"
+      },
+      {
+        "name": "two-column",
+        "value": "1024px"
       },
       {
         "name": "wide",
@@ -607,33 +616,33 @@
       "name": "Call Button",
       "kind": "button",
       "refersTo": "button-call-hero",
-      "description": "The yellow call action: hero (76px), form submit and footer (60px).",
-      "html": "<a class=\"ds-btn-call\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z\"/></svg><span class=\"ds-stack\">Call Ed<small>732-300-3835</small></span></a>",
-      "css": ".ds-btn-call{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:76px;padding:14px 30px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;border:3px solid transparent;cursor:pointer;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s;background:#f5c242;color:#132a1f;border-color:#f5c242;box-shadow:0 8px 22px -8px rgba(0,0,0,.55)} .ds-btn-call:hover,.ds-btn-call:focus-visible{outline:3px solid #8fd6ff;outline-offset:3px;} .ds-btn-call:active{transform:translateY(1px) scale(.99)} .ds-stack{display:flex;flex-direction:column;align-items:flex-start} .ds-stack small{font-size:17px;font-weight:700}"
+      "description": "The yellow action: hero \"Get a rate by text\" (76px) and the form submit (60px).",
+      "html": "<a class=\"ds-btn-call\" href=\"#\">Get a rate by text<svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 4v15M6 13l6 6 6-6\"/></svg></a>",
+      "css": ".ds-btn-call{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:76px;padding:14px 30px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;border:3px solid transparent;cursor:pointer;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s;background:#f5c242;color:#132a1f;border-color:#f5c242;box-shadow:0 8px 22px -8px rgba(0,0,0,.55)} .ds-btn-call:hover,.ds-btn-call:focus-visible{outline:3px solid #8fd6ff;outline-offset:3px} .ds-btn-call:active{transform:translateY(1px) scale(.99)}"
     },
     {
-      "name": "Line Button",
+      "name": "Footer Call Button",
       "kind": "button",
-      "refersTo": "button-line",
-      "description": "The hero's second path, \"Get a rate by text\", outlined white over the dusk.",
-      "html": "<div class=\"ds-dusk\"><a class=\"ds-btn-line\" href=\"#\">Get a rate by text<svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 4v15M6 13l6 6 6-6\"/></svg></a></div>",
-      "css": ".ds-dusk{background:linear-gradient(180deg,#132849,#2c4770);padding:24px} .ds-btn-line{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:76px;padding:14px 30px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;border:3px solid transparent;cursor:pointer;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s;background:rgba(19,40,73,.22);color:#f7fbf8;border-color:#f7fbf8;text-shadow:0 1px 8px rgba(0,0,0,.45)} .ds-btn-line:hover,.ds-btn-line:focus-visible{outline:3px solid #8fd6ff;outline-offset:3px;} .ds-btn-line:active{transform:translateY(1px) scale(.99)}"
+      "refersTo": "button-call-footer",
+      "description": "Call Ed in the footer: shamrock green, white text, number as a second line.",
+      "html": "<div class=\"ds-foot\"><a class=\"ds-btn-foot\" href=\"#\"><span class=\"ds-telrow\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 3.5h3.2l1.6 4.2-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z\"/></svg><span class=\"ds-stack\">Call Ed<small>732-300-3835</small></span></span></a></div>",
+      "css": ".ds-foot{background:#082a1e;padding:24px;text-align:center} .ds-btn-foot{display:flex;align-items:center;justify-content:center;max-width:420px;margin:0 auto;min-height:60px;padding:14px 26px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:20px;font-weight:800;line-height:1.15;text-decoration:none;border:3px solid #178049;background:#178049;color:#f7fbf8;box-shadow:0 8px 22px -8px rgba(0,0,0,.55);transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s} .ds-btn-foot:hover,.ds-btn-foot:focus-visible{outline:3px solid #8fd6ff;outline-offset:3px} .ds-btn-foot:active{transform:translateY(1px) scale(.99)} .ds-telrow{display:flex;align-items:flex-end;gap:8px} .ds-telrow svg{margin-bottom:-2px} .ds-stack{display:flex;flex-direction:column;align-items:center} .ds-stack small{font-size:17px;font-weight:700}"
     },
     {
       "name": "Hero Headline",
       "kind": "custom",
       "refersTo": "display",
-      "description": "Uppercase two-line h1 over the still dusk road; second line lane yellow.",
+      "description": "Uppercase two-line h1 over the scroll-driven dusk road; second line lane yellow.",
       "html": "<div class=\"ds-hero\"><h1 class=\"ds-h1\"><span>You fly,</span><span class=\"ds-yl\">I'll drive.</span></h1><p class=\"ds-promise\">I'm Ed, and I take your car between New Jersey and Florida for $1 a mile.</p></div>",
       "css": ".ds-hero{background:linear-gradient(180deg,#132849 0%,#2c4770 62%,#8d6c72 90%,#eaa064 100%);padding:40px 20px;color:#f7fbf8;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-h1{margin:0;text-transform:uppercase;font-size:clamp(3rem,14.5vw,6rem);font-weight:900;line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 18px rgba(0,0,0,.28)} .ds-h1 span{display:block} .ds-yl{color:#f5c242} .ds-promise{margin:18px 0 0;font-size:20px;line-height:1.4;max-width:32ch;text-shadow:0 1px 10px rgba(0,0,0,.4)}"
     },
     {
-      "name": "Sign Panel",
+      "name": "Overhead Sign",
       "kind": "card",
       "refersTo": "sign-panel",
-      "description": "Guide-sign green panel with inset white rule; holds the rate form.",
-      "html": "<div class=\"ds-sign\"><p class=\"ds-legend\">Your trip</p><p class=\"ds-note\">This opens a text message on your phone, already written.</p></div>",
-      "css": ".ds-sign{background:#0d6a43;color:#f7fbf8;border-radius:16px;padding:38px 36px;box-shadow:inset 0 0 0 7px #0d6a43,inset 0 0 0 10px #f7fbf8,0 18px 40px -18px rgba(0,0,0,.6);font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-legend{margin:0 0 10px;font-size:20px;font-weight:800} .ds-note{margin:0;font-size:18px;color:#cfe5d9}"
+      "description": "Guide-sign green panel with inset white rule hung on a real steel structure (cantilever right, span truss, cantilever left); every section after the hero.",
+      "html": "<div class=\"ds-stop\"><div class=\"ds-sign\"><h2 class=\"ds-h2\">Straight answers</h2><div class=\"ds-qa\"><h3>Can I pack the car full?</h3><p>Yes. Your winter things ride along inside your own car.</p></div></div></div>",
+      "css": ".ds-stop{background:linear-gradient(180deg,#5c6e74,#2e363f);padding:40px 20px 96px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-sign{position:relative;background:#0d6a43;color:#f7fbf8;border-radius:16px;padding:38px 36px;box-shadow:inset 0 0 0 7px #0d6a43,inset 0 0 0 10px #f7fbf8,0 18px 40px -18px rgba(0,0,0,.6)} .ds-sign::before,.ds-sign::after{content:\"\";position:absolute;top:100%;width:12px;height:96px;background:linear-gradient(90deg,#4a5157,#8a9399 45%,#4a5157)} .ds-sign::before{left:12%} .ds-sign::after{right:12%} .ds-h2{margin:0;font-size:clamp(2rem,7.4vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-.01em} .ds-qa{margin-top:24px;padding:20px 0;border-top:2px solid rgba(247,251,248,.22)} .ds-qa h3{margin:0;font-size:22px;font-weight:800;line-height:1.3} .ds-qa p{margin:8px 0 0;font-size:19px;color:#cfe5d9;max-width:60ch}"
     },
     {
       "name": "Trip Row",
@@ -652,29 +661,22 @@
       "css": ".ds-fieldwrap{background:#0d6a43;padding:22px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-lbl{display:block;margin-bottom:10px;color:#f7fbf8;font-size:20px;font-weight:800} .ds-input{width:100%;box-sizing:border-box;min-height:58px;padding:14px 16px;font:inherit;font-size:19px;color:#10261c;background:#f7fbf8;border:2px solid #f7fbf8;border-radius:12px;caret-color:#0d6a43} .ds-input::placeholder{color:#6f897d} .ds-input:hover,.ds-input:focus{outline:3px solid #8fd6ff;outline-offset:2px}"
     },
     {
-      "name": "Step",
-      "kind": "custom",
-      "refersTo": "step-number",
-      "description": "Numbered step: yellow disc, title, one soft line. No card.",
-      "html": "<div class=\"ds-step\"><span class=\"ds-num\">1</span><h3>Call or text me</h3><p>Tell me your route, your dates and your car.</p></div>",
-      "css": ".ds-step{display:grid;grid-template-columns:48px 1fr;gap:4px 16px;background:#0c3a2a;color:#f7fbf8;padding:22px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-num{grid-row:1 / span 2;width:48px;height:48px;border-radius:50%;background:#f5c242;color:#132a1f;display:grid;place-items:center;font-size:22px;font-weight:900} .ds-step h3{margin:0;padding-top:8px;font-size:22px;font-weight:800;line-height:1.3} .ds-step p{margin:0;font-size:19px;color:#cfe5d9}"
-    },
-    {
       "name": "FAQ Item",
       "kind": "custom",
       "refersTo": "faq-item",
-      "description": "Always-open question and answer on concrete.",
-      "html": "<div class=\"ds-faq\"><div class=\"ds-qa\"><h3>Can I pack the car full?</h3><p>Yes. Your winter things ride along inside your own car.</p></div></div>",
-      "css": ".ds-faq{background:#e4e9e6;color:#0c3a2a;padding:24px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-qa{padding:20px 0;border-top:2px solid rgba(12,58,42,.18)} .ds-qa h3{margin:0;font-size:22px;font-weight:800;line-height:1.3} .ds-qa p{margin:8px 0 0;font-size:19px;color:#33584a;max-width:60ch}"
+      "description": "Always-open question and answer on a sign; white question, ink-soft answer, light divider.",
+      "html": "<div class=\"ds-faq\"><div class=\"ds-qa2\"><h3>Do you do airport runs?</h3><p>Yes, anywhere in Florida.</p></div></div>",
+      "css": ".ds-faq{background:#0d6a43;color:#f7fbf8;padding:24px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif} .ds-qa2{padding:20px 0;border-top:2px solid rgba(247,251,248,.22)} .ds-qa2 h3{margin:0;font-size:22px;font-weight:800;line-height:1.3} .ds-qa2 p{margin:8px 0 0;font-size:19px;color:#cfe5d9;max-width:60ch}"
     }
   ],
   "narrative": {
-    "northStar": "One Still Frame of I-95 at Dusk",
-    "overview": "**Creative North Star: \"One Still Frame of I-95 at Dusk\"**\n\nThe page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with white edge lines and yellow center dashes (one big dash right in front) bending gently right, reflector posts on both shoulders and a green guide sign ahead. Over it, in huge uppercase white, \"You fly, / I'll drive.\", the second line in lane yellow. It is one still picture, not a scene that plays. Below the hero the interstate's own grammar carries on: the rate form on a guide-sign panel, answers on highway concrete, a dark footer that closes with the call.\n\nDensity is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.",
+    "northStar": "I-95 at Dusk, Driven by Your Scroll",
+    "overview": "**Creative North Star: \"I-95 at Dusk, Driven by Your Scroll\"**\n\nThe page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with white edge lines and yellow center dashes (one right in front of the camera) bending gently right, reflector posts on both shoulders and a green I-95 guide sign just ahead. Over it, in huge uppercase white, \"You fly, / I'll drive.\", the second line in lane yellow. The road runs behind the whole page, and only the reader moves it: scrolling down backs the camera away so the road, posts and sign recede toward the horizon; scrolling up brings them back. Every section after the hero is an overhead road sign on a real steel structure (Meet your driver on a cantilever from the right, the $1-a-mile form on a span truss, Straight answers on a cantilever from the left), and the solid deep-green footer is where the road ends, closing with the call.\n\nDensity is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves on its own.",
     "keyCharacteristics": [
-      "A still canvas road at dusk behind an uppercase two-line headline and two buttons (yellow call, white outline).",
-      "One sign panel (green, inset white rule, 16px corners) holds the rate form; the road's own sign repeats that grammar.",
-      "One yellow for action; one sky-blue outline for hover and focus.",
+      "A fixed canvas road at dusk behind the whole page, driven only by the reader's scroll; still under reduced motion.",
+      "An uppercase two-line headline and one yellow \"Get a rate by text\" button; the header number is the call action.",
+      "Every section is a guide-sign panel (green, inset white rule, 16px corners) hung on a real steel structure (cantilever from the right, span truss, cantilever from the left); once it climbs past the road it shrinks toward the horizon.",
+      "One yellow for action; one sky-blue outline for hover and focus; shamrock green only for the footer call.",
       "One system font stack worked by weight: 900 headings, 800 controls, 400 talk.",
       "Phone-first, big targets (48px links, 58 to 76px controls), 17px text floor."
     ],
@@ -686,7 +688,7 @@
       },
       {
         "name": "The One Yellow Rule",
-        "body": "In the interface, a yellow rectangle is always a control; the only non-control yellow fills are the round step-number discs. Yellow type is reserved for the headline's second line, links and icons. The road picture paints yellow where a real road has it (edge line, reflectors).",
+        "body": "In the interface, a yellow rectangle is always a control. Yellow type is reserved for the headline's second line, the price, links and icons. The road picture paints yellow where a real road has it (center dashes, left reflectors).",
         "section": "colors"
       },
       {
@@ -700,32 +702,31 @@
         "section": "typography"
       },
       {
-        "name": "The Still Page Rule",
-        "body": "Nothing animates. The road is drawn once as a still picture and redrawn only when the hero's size changes; no loop, no parallax, no scroll or entrance effects. The only transitions are on controls: button press (translateY 1px, scale .99 over .2s cubic-bezier(.2,.8,.2,1)), outline color (.15s), trip-row color (.15s). The jump to the form scrolls smoothly; under prefers-reduced-motion it jumps and transitions are off.",
+        "name": "The Reader Drives Rule",
+        "body": "Motion comes only from the reader's own scroll; nothing is ever autonomous. Scrolling down backs the camera away (travel falls) so the dashes, posts and the I-95 sign recede toward the horizon; scrolling up brings them back. The camera scale is fixed at its top-of-page value, so the road slides up and never zooms. Once a sign's foot rises above 30% of the road height it shrinks toward the horizon along the road (scale from its bottom center, translate along the road, fading out between scale 0.42 and 0.12). The canvas redraws once per scroll frame and on a real resize, nothing more: no loop, no autoplay, no entrance effects. Control transitions: button press (translateY 1px, scale .99 over .2s cubic-bezier(.2,.8,.2,1)), outline color (.15s), trip-row color (.15s). The jump to the form scrolls smoothly. Under prefers-reduced-motion the road is one still frame, signs never transform, the jump is instant and transitions are off.",
         "section": "elevation"
       },
       {
         "name": "The Mounted Sign Rule",
-        "body": "The only raised surfaces are the sign panel and the yellow call button. Steps, answers and footer content stay flat, divided by space or rules, never cards.",
+        "body": "The only raised surfaces are the sign panels and the call buttons. Content on a sign stays flat, divided by space or rules, never cards inside the sign.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do keep the page still: draw the road once, redraw only on resize, transitions only on controls.",
-      "Do keep the hero to the two-line uppercase headline, the promise, and two buttons: yellow call first, white outline second.",
-      "Do put the rate form on the sign panel with the Sign Mount.",
+      "Do let only the reader's scroll move the road and the signs; keep it a still frame under reduced motion.",
+      "Do keep the hero to the two-line uppercase headline, the promise, and one yellow button to the form; the call lives in the header.",
+      "Do hang every section after the hero on a real structure (cantilever or span truss), alternating sides down the page, never floating on bare posts.",
       "Do use the 3px focus-sky outline for every hover and focus.",
       "Do keep controls 58px or taller, links 48px, answer choices as large rows, text at 17px or larger.",
       "Do show answers in full; a question and its answer sit together."
     ],
     "donts": [
-      "Don't animate anything: no drive loop, moving road, parallax, scroll reveals or entrance effects.",
+      "Don't animate anything on its own: no drive loop, autoplay, timed reveals or entrance effects; no zoom on scroll.",
       "Don't use accordions, tabs, carousels or other hide-and-reveal patterns.",
       "Don't use black or neutral charcoal as any ground; the darkest is ground-deep.",
       "Don't add a sticky header or sticky call bar, or email links.",
-      "Don't add a third hero action or a second yellow button in the hero.",
-      "Don't put yellow fills on interface non-controls beyond the step discs.",
-      "Don't place lane-yellow on concrete.",
+      "Don't add a second hero action; the call is the header number.",
+      "Don't put yellow fills on interface non-controls.",
       "Don't use hard offset shadows; depth is soft."
     ]
   }
