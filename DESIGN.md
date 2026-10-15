@@ -12,6 +12,7 @@ colors:
   post-shadow: "#4a5157"
   truss-chord: "#7d868c"
   truss-lace: "#6c757b"
+  plate-bolt: "#c9d2cd"
   dusk-top: "#132849"
   dusk-mid: "#2c4770"
   dusk-mauve: "#5d4f63"
@@ -202,14 +203,14 @@ components:
 
 **Creative North Star: "I-95 at Dusk, Driven by Your Scroll"**
 
-The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with white edge lines and yellow center dashes (one right in front of the camera) bending gently right, reflector posts on both shoulders and a green I-95 guide sign just ahead. Over it, in huge uppercase white, "You fly, / I'll drive.", the second line in lane yellow. The road runs behind the whole page, and only the reader moves it: scrolling down backs the camera away so the road, posts and sign recede toward the horizon; scrolling up brings them back. Every section after the hero is an overhead road sign on a real steel structure (Meet your driver on a cantilever from the right, the $1-a-mile form on a span truss, Straight answers on a cantilever from the left), and the solid deep-green footer is where the road ends, closing with the call.
+The page opens from the driver's seat: a dusk sky going peach at the horizon, a pine treeline, a two-lane road with white edge lines and yellow center dashes (one right in front of the camera) bending gently right, reflector posts on both shoulders and a green I-95 guide sign just ahead. Over it, in huge uppercase white, "You fly, / I'll drive.", the second line in lane yellow. The road runs behind the whole page, and only the reader moves it: scrolling down backs the camera away so the road, posts and sign recede toward the horizon; scrolling up brings them back. Every section after the hero is an overhead road sign on a real steel structure (Meet your driver on a cantilever from the right, the $1-a-mile form on a span truss, Straight answers as a stack of small plates on a roadside post), and the solid deep-green footer is where the road ends, closing with the call.
 
 Density is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves on its own.
 
 **Key Characteristics:**
 - A fixed canvas road at dusk behind the whole page, driven only by the reader's scroll; still under reduced motion.
 - An uppercase two-line headline and one yellow "Get a rate by text" button; the header number is the call action.
-- Every section is a guide-sign panel (green, inset white rule, 16px corners) hung on a real steel structure (cantilever from the right, span truss, cantilever from the left); once it climbs past the road it shrinks toward the horizon.
+- Every section is a guide-sign panel (green, inset white rule, 16px corners) hung on a real steel structure (a cantilever from the right, a span truss) or a roadside post assembly (Straight answers); once it climbs past the road it shrinks toward the horizon.
 - One yellow for action; one sky-blue outline for hover and focus; shamrock green only for the footer call.
 - One system font stack worked by weight: 900 headings, 800 controls, 400 talk.
 - Phone-first, big targets (48px links, 58 to 76px controls), 17px text floor.
@@ -309,11 +310,14 @@ Heavy, wide, unmistakable. Lane-yellow fill and 3px border, lane-ink text, 14px 
 A full-viewport fixed canvas behind the page, decorative and hidden from assistive tech: the dusk sky and sun glow, two rows of pines, mown verge bands, a two-lane road bending right with white edge lines on both sides and yellow center dashes (1.2 on, 3.8 off, one starting just in front of the camera), reflector posts (white-reflector right, yellow-reflector left) and one green guide sign on the right shoulder just ahead at the top of the page. The sign reads I-95 NORTH / NEW JERSEY from April through August and I-95 SOUTH / FLORIDA the rest of the year. Driven by scroll per the Reader Drives Rule; the opaque footer ends it.
 
 ### Overhead Sign (gantry)
-Every section after the hero is a Sign Panel hung on a real interstate structure, drawn in CSS behind the panel (`.gantry > .rig` + `.sign`), modelled on Ellie's reference photos (2026-10-15):
-- **Cantilever from the right** (Meet your driver): one tall post on the right shoulder (14px, 20px from 760px), an arm reaching over the sign's top, a second arm behind it at 55%, a diagonal brace from the post top to the upper arm. The panel leaves 30px (64px from 760px) on the post side so the arms show.
-- **Span truss** (the rate form): a post on each shoulder in the page gutter and a lattice truss across the road (two chords, crossed lacing) with the sign mounted on its face.
-- **Cantilever from the left** (Straight answers): the mirror of the first.
-- All three carry a light rail with lamps under the panel. The whole structure scales with the panel from its bottom center, so it recedes along the road like a real overhead sign.
+Each section after the hero is one object planted on the road: a Sign Panel and its steel structure, drawn in CSS behind the panel (`.gantry > .rig` + `.sign`), modelled on Ellie's reference photos (2026-10-15).
+- **Cantilever from the right** (Meet your driver): a tall post on the right shoulder, an arm reaching over the sign's top, a second arm behind it at 55%, a diagonal brace from the post top to the upper arm.
+- **Span truss** (the rate form): a post on each shoulder and a lattice truss across the road (two chords, crossed lacing) with the sign mounted on its face.
+- Both carry a light rail with lamps under the panel.
+- **Planted:** posts stand on the road shoulders. The script sets `--sh`, the shoulder distance from the road center at the sign's depth, so up close the posts are past the screen edge (main clips sideways overflow). While a sign's feet are below the screen it scrolls with the page at full size; once its feet reach the bottom edge it moves with the road: the ground at the bottom edge moves exactly with the page (road travel K = R / L²), and the sign recedes in true perspective (scale 1/(1+u/L), its offset from the road center shrinking with distance), fading below about 0.33.
+
+### Roadside Assembly (Straight answers)
+Off to the right side of the road (max 600px, 34px clear on the left on phones): one steel mast with a stack of small plates, like the NJ Turnpike assembly in Ellie's photo. Plates are guide-sign green with a 4px white edge and a mounting bolt: a keystone header plate ("Straight answers", like the Pennsylvania Turnpike), an octagon-cornered plate, plain rounded plates, a plate with one cut corner, and a round arrow disc pointing down to the call. Shaped plates use clip-path, with the white edge drawn as an even-odd ring on top. It is planted and recedes like the overhead signs.
 
 ### Meet Your Driver
 The first sign: the headline, then a photo frame (night-verge tint at 35%, 2px white stroke at 35%, 12px radius; 4:3, max 520px; square from 1024px) holding a 96px person outline and "Photo of Ed coming soon" in ink-soft, swapped for a cover-fit photo later; then a 22px/800 greeting and 20px lines, 36ch max.

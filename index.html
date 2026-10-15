@@ -81,6 +81,7 @@ section{position:relative}
 /* the road runs behind the whole page; scrolling drives it (see the script) */
 #road{position:fixed;left:0;top:0;width:100%;height:100vh;display:block;pointer-events:none;z-index:0;background:linear-gradient(180deg,var(--dusk-top) 0%,var(--dusk-mid) 30%,#5d4f63 42%,#284638 43%,#1a3d2c 100%)}
 main,footer{position:relative;z-index:1}
+main{overflow-x:clip}   /* sign structures reach out to the road shoulders, past the screen edge up close */
 .hero-copy{position:relative;z-index:2;padding-top:96px;pointer-events:none}
 .hero-copy .btn,.hero-copy a{pointer-events:auto}
 .hero h1{text-transform:uppercase;font-size:clamp(3rem,14.5vw,6rem);line-height:.94;letter-spacing:-.025em;text-shadow:0 2px 18px rgba(0,0,0,.28)}
@@ -99,29 +100,24 @@ main,footer{position:relative;z-index:1}
 /* Three real structures, as on the interstate: a cantilever from the right
    shoulder, a full span truss, a cantilever from the left. Galvanized steel. */
 .stop{padding:84px 0 92px}
-.gantry{position:relative;transform-origin:50% 100%;--steel:linear-gradient(90deg,#4a5157,#8a9399 45%,#4a5157);--steel-h:linear-gradient(180deg,#8a9399,#4a5157);--foot:92px}
+.gantry{position:relative;transform-origin:50% calc(100% + var(--foot));--steel:linear-gradient(90deg,#4a5157,#8a9399 45%,#4a5157);--steel-h:linear-gradient(180deg,#8a9399,#4a5157);--foot:92px;--sh:260px;--pw:14px}
 .gantry > .sign{position:relative}
 .rig{position:absolute;inset:0;pointer-events:none}
 .rig i{position:absolute;display:block}
-.rig .post{top:-66px;bottom:calc(-1 * var(--foot));width:14px;background:var(--steel)}
+/* posts stand on the road shoulders: --sh (set by the script) is the shoulder distance from the road center at this sign's depth */
+.rig .post{top:-66px;bottom:calc(-1 * var(--foot));width:var(--pw);left:calc(50% + var(--sh) - var(--pw) / 2);background:var(--steel)}
 .rig .rail{left:5%;right:5%;bottom:-11px;height:5px;background:#4a5157}
 .rig .rail::before{content:"";position:absolute;left:0;right:0;top:5px;height:6px;background:repeating-linear-gradient(90deg,transparent 0 12%,#4a5157 12% 17%,transparent 17% 25%)}
-/* cantilever: the sign hangs off arms from one post, so it leaves room on that side */
-.rig-right > .sign{margin-right:30px}
-.rig-left > .sign{margin-left:30px}
-.rig-right .post{right:6px}
-.rig-left .post{left:6px}
+/* cantilever: the sign hangs off arms reaching from one shoulder post */
 .rig .arm{top:-34px;height:10px;background:var(--steel-h);border-radius:5px}
 .rig .arm.low{top:55%}
-.rig-right .arm{left:30%;right:6px}
-.rig-left .arm{right:30%;left:6px}
+.rig-right .arm{left:30%;right:calc(50% - var(--sh))}
 .rig .brace{top:-62px;height:30px;width:90px;background:linear-gradient(to bottom right,transparent calc(50% - 3px),#6c757b calc(50% - 3px) calc(50% + 3px),transparent calc(50% + 3px))}
-.rig-right .brace{right:18px}
-.rig-left .brace{left:18px;transform:scaleX(-1)}
+.rig-right .brace{right:calc(50% - var(--sh) + var(--pw) / 2)}
 /* span: a post on each shoulder and a lattice truss across the road, the sign mounted on its face */
-.rig-span .post{left:-16px}
-.rig-span .post.r{left:auto;right:-16px}
-.rig-span .truss{left:-16px;right:-16px;top:-54px;height:76px;border-top:6px solid #7d868c;border-bottom:6px solid #7d868c;background:repeating-linear-gradient(55deg,transparent 0 22px,#6c757b 22px 26px),repeating-linear-gradient(-55deg,transparent 0 22px,#6c757b 22px 26px)}
+.rig-span .post{left:calc(50% - var(--sh) - var(--pw) / 2)}
+.rig-span .post.r{left:calc(50% + var(--sh) - var(--pw) / 2)}
+.rig-span .truss{left:calc(50% - var(--sh));right:calc(50% - var(--sh));top:-54px;height:76px;border-top:6px solid #7d868c;border-bottom:6px solid #7d868c;background:repeating-linear-gradient(55deg,transparent 0 22px,#6c757b 22px 26px),repeating-linear-gradient(-55deg,transparent 0 22px,#6c757b 22px 26px)}
 
 /* ============ MEET YOUR DRIVER ============ */
 .meet-photo{margin:26px 0 0;max-width:520px;aspect-ratio:4/3;display:grid;place-items:center;align-content:center;gap:10px;padding:22px;color:var(--ink-soft);font-size:18px;font-weight:700;text-align:center;background:rgba(8,42,30,.35);border:2px solid rgba(247,251,248,.35);border-radius:12px}
@@ -168,13 +164,29 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
 .sent.show{display:block}
 .sent pre{white-space:pre-wrap;font:inherit;margin:10px 0 0;color:var(--ink-soft)}
 
-/* ============ FAQ (answers always showing) ============ */
-.qa{margin-top:24px}
-.qa > div{padding:20px 0;border-top:2px solid rgba(247,251,248,.22)}
-.qa h3{font-size:22px;font-weight:800;text-transform:none;letter-spacing:0;line-height:1.3}
-.qa p,.qa ul{margin-top:8px;font-size:19px;color:var(--ink-soft);max-width:60ch}
-.qa ul{padding-left:1.2em;margin-bottom:8px}
-.qa li{margin:4px 0}
+/* ============ FAQ: a roadside assembly of small plates on one post ============ */
+.assembly{display:grid;gap:14px;width:calc(100% - 34px);max-width:600px;margin-left:auto}
+.mast{position:absolute;left:50%;width:var(--pw);margin-left:calc(var(--pw) / -2);top:20px;bottom:calc(-1 * var(--foot));background:var(--steel)}
+.plate{position:relative;display:block;margin:0;padding:22px 24px;background:var(--sign);border:4px solid var(--white);border-radius:12px;color:var(--white)}
+.plate::after{content:"";position:absolute;left:50%;top:6px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#c9d2cd}   /* mounting bolt */
+.plate h3{font-size:22px;font-weight:800;line-height:1.3;letter-spacing:0}
+.plate p,.plate ul{margin-top:8px;font-size:19px;color:var(--ink-soft)}
+.plate ul{padding-left:1.2em;margin-bottom:8px}
+.plate li{margin:4px 0}
+/* shaped plates: the shape is a clip-path; the white edge is a ring drawn on top (outer shape minus an inset copy) */
+.plate.oct,.plate.cut,.plate.keystone{border:0;border-radius:0}
+.plate.oct::before,.plate.cut::before,.plate.keystone::before{content:"";position:absolute;inset:0;background:var(--white);pointer-events:none}
+.plate.oct{padding:28px 30px;clip-path:polygon(18px 0,calc(100% - 18px) 0,100% 18px,100% calc(100% - 18px),calc(100% - 18px) 100%,18px 100%,0 calc(100% - 18px),0 18px)}
+.plate.oct::before{clip-path:polygon(evenodd,18px 0,calc(100% - 18px) 0,100% 18px,100% calc(100% - 18px),calc(100% - 18px) 100%,18px 100%,0 calc(100% - 18px),0 18px,18px 0,19.7px 4px,4px 19.7px,4px calc(100% - 19.7px),19.7px calc(100% - 4px),calc(100% - 19.7px) calc(100% - 4px),calc(100% - 4px) calc(100% - 19.7px),calc(100% - 4px) 19.7px,calc(100% - 19.7px) 4px,19.7px 4px)}
+.plate.cut{padding:26px 48px 26px 28px;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%)}
+.plate.cut::before{clip-path:polygon(evenodd,0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%,0 0,4px 4px,4px calc(100% - 4px),calc(100% - 4px) calc(100% - 4px),calc(100% - 4px) 29.7px,calc(100% - 29.7px) 4px,4px 4px)}
+/* the header plate is a keystone, like the Pennsylvania Turnpike sign */
+.plate.keystone{justify-self:center;width:min(100%,520px);padding:32px 34px 24px;text-align:center;clip-path:polygon(14% 0,86% 0,86% 14px,100% 14px,93% 100%,7% 100%,0 14px,14% 14px)}
+.plate.keystone::before{clip-path:polygon(evenodd,14% 0,86% 0,86% 14px,100% 14px,93% 100%,7% 100%,0 14px,14% 14px,14% 0,calc(14% + 4px) 4px,calc(14% + 4px) 18px,6px 18px,calc(7% + 3px) calc(100% - 4px),calc(93% - 3px) calc(100% - 4px),calc(100% - 6px) 18px,calc(86% - 4px) 18px,calc(86% - 4px) 4px,calc(14% + 4px) 4px)}
+.plate.keystone::after{top:20px}
+.plate.disc{justify-self:center;width:88px;height:88px;padding:0;border-radius:50%;display:grid;place-items:center}
+.plate.disc::after{display:none}
+.plate.disc svg{width:44px;height:44px}
 
 /* ============ FOOTER (the close) ============ */
 footer{background:var(--ground-deep);padding:56px 0 calc(44px + env(safe-area-inset-bottom));font-size:17px;color:var(--ink-soft);text-align:center}
@@ -200,22 +212,12 @@ footer .fine p + p{margin-top:6px}
   .hero-actions{grid-template-columns:auto;justify-content:start}
   .hero-actions .btn{padding:14px 30px}
   .stop{padding:110px 0 120px}
-  .gantry{--foot:120px}
+  .gantry{--foot:120px;--pw:20px}
   .gantry > .sign{padding:38px 36px}
-  .rig .post{width:20px;top:-86px}
-  .rig-right > .sign{margin-right:64px}
-  .rig-left > .sign{margin-left:64px}
-  .rig-right .post{right:16px}
-  .rig-left .post{left:16px}
+  .rig .post{top:-86px}
   .rig .arm{top:-44px;height:14px}
-  .rig-right .arm{right:16px}
-  .rig-left .arm{left:16px}
   .rig .brace{top:-80px;height:36px;width:150px}
-  .rig-right .brace{right:34px}
-  .rig-left .brace{left:34px}
-  .rig-span .post{left:-34px}
-  .rig-span .post.r{right:-34px}
-  .rig-span .truss{left:-34px;right:-34px;top:-70px;height:96px}
+  .rig-span .truss{top:-70px;height:96px}
   .chips{grid-template-columns:1fr 1fr}
   footer{padding:80px 0 48px}
 }
@@ -228,13 +230,10 @@ footer .fine p + p{margin-top:6px}
   .quote form{margin-top:8px;max-width:none}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:end}
   .form-foot{grid-template-columns:auto 1fr;align-items:center;gap:22px}
-  .faq-sign{display:grid;grid-template-columns:5fr 7fr;gap:56px}
   .meet-sign{display:grid;grid-template-columns:5fr 7fr;gap:0 56px;align-items:center}
   .meet h2{grid-column:1 / -1}
   .meet-photo{aspect-ratio:1/1}
   .meet-copy{margin-top:26px}
-  .qa{margin-top:0}
-  .qa > div:first-child{padding-top:0;border-top:0}
 }
 @media (max-height:500px) and (orientation:landscape){
   .hero{min-height:560px}
@@ -388,34 +387,32 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <!-- ============ FAQ ============ -->
   <section class="faq stop" aria-labelledby="faq-h">
     <div class="wrap">
-     <div class="gantry rig-left">
-      <div class="rig" aria-hidden="true"><i class="post"></i><i class="arm"></i><i class="arm low"></i><i class="brace"></i><i class="rail"></i></div>
-     <div class="sign faq-sign">
-      <h2 id="faq-h">Straight answers</h2>
-      <div class="qa">
-        <div>
-          <h3>Can I pack the car full?</h3>
-          <p>Yes. Your winter things ride along inside your own car. Trailer shippers make you empty it. I don't.</p>
-        </div>
-        <div>
-          <h3>Do you do airport runs?</h3>
-          <p>Yes, anywhere in Florida.</p>
-        </div>
-        <div>
-          <h3>Only New Jersey and Florida?</h3>
-          <p>That's the main run, both ways. I also do local and long distance trips. Call and tell me where.</p>
-        </div>
-        <div>
-          <h3>When is a truck carrier the better call?</h3>
-          <ul>
-            <li>Your budget is tight and your dates can wait.</li>
-            <li>Your car doesn't run.</li>
-            <li>It's a collector car you don't want miles on.</li>
-          </ul>
-          <p>Otherwise your car, and everything in it, rides with me.</p>
-        </div>
+     <!-- a roadside sign assembly off to the side: one post, a stack of small plates (Ellie, 2026-10-15) -->
+     <div class="gantry assembly">
+      <i class="mast" aria-hidden="true"></i>
+      <h2 class="plate keystone" id="faq-h">Straight answers</h2>
+      <div class="plate oct">
+        <h3>Can I pack the car full?</h3>
+        <p>Yes. Your winter things ride along inside your own car. Trailer shippers make you empty it. I don't.</p>
       </div>
-     </div>
+      <div class="plate">
+        <h3>Do you do airport runs?</h3>
+        <p>Yes, anywhere in Florida.</p>
+      </div>
+      <div class="plate cut">
+        <h3>Only New Jersey and Florida?</h3>
+        <p>That's the main run, both ways. I also do local and long distance trips. Call and tell me where.</p>
+      </div>
+      <div class="plate">
+        <h3>When is a truck carrier the better call?</h3>
+        <ul>
+          <li>Your budget is tight and your dates can wait.</li>
+          <li>Your car doesn't run.</li>
+          <li>It's a collector car you don't want miles on.</li>
+        </ul>
+        <p>Otherwise your car, and everything in it, rides with me.</p>
+      </div>
+      <span class="plate disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M12 4v15M6 13l6 6 6-6"/></svg></span>
      </div>
     </div>
   </section>
@@ -619,29 +616,35 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
      camera away (travel falls), so the road, the I-95 sign and the section signs
      recede toward the horizon; scrolling up brings them back. */
   var TOP = .16;       /* where the horizon settles, as a share of the screen height */
-  var START = .3;      /* signs start receding once their foot rises above this share of the road */
   time = FRAME_TIME; drive(0); camX = curve * .15;
   function frame(){
     queued = false;
-    size();
+    if (size() !== false) signs.forEach(function(g){ g._foot = 0; });   /* post length changes at 760px */
     var y = still ? 0 : window.scrollY || 0;
     var cb = copy.getBoundingClientRect().bottom + (still ? window.scrollY || 0 : 0);
     horizon = Math.max(cb + 48, H * TOP, H * .42 - y);
     /* the camera keeps the scale it has at the top of the page, so the road only
        slides up as the horizon rises; it never zooms */
     RFIX = Math.max(H - Math.max(cb + y + 48, H * .42), H * .45);
-    var K = 1 / (START * START * RFIX);            /* world units per scrolled pixel, matched to the signs below */
+    /* the ground at the bottom edge of the screen moves with the page, so the road and
+       everything planted on it travel together with the reader's scroll */
+    var L = H - horizon, K = RFIX / (L * L);
     travel = FRAME_TRAVEL - y * K;
     draw();
-    /* each section is an overhead sign standing on the road: once its foot rises
-       above the start line it shrinks into the distance along the road */
-    var R0 = RFIX, yref = horizon + START * R0, L = yref - horizon, x0 = px(0, R0 / L);
+    /* each section's sign and its structure are one object planted on the road. While the
+       posts' feet are below the screen it scrolls with the page at full size. Once the feet
+       reach the bottom edge they stand on the road and move with it: away toward the horizon,
+       shrinking with distance, and back again on the way up. The posts sit on the shoulders. */
+    var z0 = RFIX / L, x0 = px(0, z0), sh = (HALF + .7) * S / z0;
     signs.forEach(function(g){
-      var yn = g.parentNode.getBoundingClientRect().bottom;
-      if (still || yn >= yref){ if (g._s !== 1){ g.style.transform = ''; g.style.opacity = ''; g._s = 1; } return; }
-      var u = yref - yn, k = 1 / (1 + u / L), yv = horizon + L * k, dx = px(0, R0 / (L * k)) - x0;
-      g.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + (yv - yn).toFixed(1) + 'px,0) scale(' + k.toFixed(4) + ')';
-      g.style.opacity = Math.max(0, Math.min(1, (k - .12) / .3)).toFixed(3);
+      if (g._sh !== Math.round(sh)){ g._sh = Math.round(sh); g.style.setProperty('--sh', g._sh + 'px'); }
+      var wr = g.parentNode.getBoundingClientRect(), foot = wr.bottom + (g._foot || (g._foot = parseFloat(getComputedStyle(g).getPropertyValue('--foot')) || 92));
+      if (still || foot >= H){ if (g._s !== 1){ g.style.transform = ''; g.style.opacity = ''; g._s = 1; } return; }
+      /* it keeps its place across the road: its offset from the road center shrinks with distance */
+      var cx = wr.left + g.offsetLeft - g.parentNode.offsetLeft + g.offsetWidth / 2;
+      var u = H - foot, k = 1 / (1 + u / L), fv = horizon + L * k, dx = px(0, z0 / k) + (cx - x0) * k - cx;
+      g.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + (fv - foot).toFixed(1) + 'px,0) scale(' + k.toFixed(4) + ')';
+      g.style.opacity = Math.max(0, Math.min(1, (k - .08) / .25)).toFixed(3);
       g._s = k;
     });
   }
