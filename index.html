@@ -57,6 +57,9 @@ section{position:relative}
 .btn-line{background:rgba(19,40,73,.22);text-shadow:0 1px 8px rgba(0,0,0,.45);color:var(--white);border-color:var(--white)}
 .btn:active{transform:translateY(1px) scale(.99)}
 .btn small{display:block;font-size:17px;font-weight:700}
+/* phone icon sits on the number line, not between the two lines */
+.tel-row{display:flex;align-items:flex-end;gap:8px}
+.tel-row svg{flex:none;width:24px;height:24px;margin-bottom:-2px}
 .btn-stack{display:flex;flex-direction:column;align-items:center;text-align:center;line-height:1.15}
 
 /* ============ TOP BAR ============ */
@@ -250,7 +253,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <h1 id="h1"><span>You fly,</span> <span class="yl">I'll drive.</span></h1>
       <p class="promise">I'm Ed, and I take your car between New&nbsp;Jersey and Florida for <strong class="price">$1&nbsp;a&nbsp;mile</strong>.</p>
       <div class="hero-actions">
-        <a class="btn btn-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></a>
+        <a class="btn btn-call" href="tel:+17323003835"><span class="tel-row"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></span></a>
         <a class="btn btn-line" href="#quote">Get a rate by text<svg aria-hidden="true"><use href="#i-down"/></svg></a>
       </div>
     </div>
@@ -360,7 +363,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <svg class="mark" viewBox="-32 -32 64 64" aria-hidden="true"><g fill="#f7fbf8" color="#f7fbf8" transform="translate(-1 1)"><use href="#shamrock"/></g></svg>
     <h2>You fly. I'll drive.</h2>
     <p class="ed">I'm Ed Brannagan, owner and driver of Shamrock Transportation.</p>
-    <a class="btn btn-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></a>
+    <a class="btn btn-call" href="tel:+17323003835"><span class="tel-row"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></span></a>
     <p class="tag">&ldquo;Life is a Highway&hellip; Drive it All Night Long&rdquo;</p>
     <div class="fine">
       <p>Shamrock Transportation &middot; Local &amp; long distance &middot; Airport services anywhere in Florida</p>
