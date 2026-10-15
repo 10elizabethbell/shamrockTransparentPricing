@@ -54,7 +54,6 @@ section{position:relative}
 .btn{display:flex;align-items:center;justify-content:center;gap:12px;min-height:60px;padding:14px 26px;border-radius:14px;font-size:20px;font-weight:800;text-decoration:none;border:3px solid transparent;cursor:pointer;font-family:inherit;line-height:1.15;transition:transform .2s cubic-bezier(.2,.8,.2,1),outline-color .15s,box-shadow .2s}
 .btn svg{flex:none;width:24px;height:24px}
 .btn-call{background:var(--lane);color:var(--lane-ink);border-color:var(--lane);box-shadow:0 8px 22px -8px rgba(0,0,0,.55)}
-.btn-line{background:rgba(19,40,73,.22);text-shadow:0 1px 8px rgba(0,0,0,.45);color:var(--white);border-color:var(--white)}
 .btn:active{transform:translateY(1px) scale(.99)}
 .btn small{display:block;font-size:17px;font-weight:700}
 /* phone icon sits on the number line, not between the two lines */
@@ -176,7 +175,7 @@ footer .fine p + p{margin-top:6px}
   .hero-copy{padding-top:132px}
   .hero h1{font-size:clamp(4.4rem,8.4vw,6rem)}
   .promise{max-width:none}
-  .hero-actions{grid-template-columns:auto auto;justify-content:start;gap:16px}
+  .hero-actions{grid-template-columns:auto;justify-content:start}
   .hero-actions .btn{padding:14px 30px}
   .meet{padding:88px 0 0}
   .quote{padding:88px 0 88px}
@@ -217,7 +216,7 @@ footer .fine p + p{margin-top:6px}
 THESIS: The interstate itself sells the trip: a still dusk view down I-95, and the rate request on a guide sign, plain enough to read at 65 mph. Refuses the auto-transport default of a stock truck photo, a quote form wall and fine print.
 OWN-WORLD: Guide-sign green panels with an inset white border, retroreflective white lettering, lane-line yellow for the one action, asphalt with yellow left edge and white dashes, dusk sky (navy to Florida-peach glow), highway-concrete light sections. Deep roadside green ground, never black.
 STORY: Snowbird sees "You fly, I'll drive.", understands Ed drives their car while they fly, meets Ed, sees $1 a mile, picks their trip and texts (or calls) for the total, reads straight answers, and calls. Kept short, still and calm for a 40-70 audience: nothing moves, nothing to figure out.
-FIRST VIEWPORT: Phone: shamrock and name top-left, full number top-right; huge two-line headline; one-line promise; yellow Call Ed 732-300-3835 (full width) and outlined Get a rate by text; below, a still picture of the road running to a pine horizon, with an I-95 sign ahead.
+FIRST VIEWPORT: Phone: shamrock and name top-left, full number top-right; huge two-line headline; one-line promise; one yellow Get a rate by text button (full width), the call is the header number; below, a still picture of the road running to a pine horizon, with an I-95 sign ahead.
 FORM: Interstate guide signs + dusk highway, my list #1 (seed b9fde720 assigned #6 luggage tags; overridden by Ellie's pitch-site rule: brand + fluid touchable signature). No animation at all, by Ellie's decision (2026-10-14, audience 40-70): the hero road is one still frame. This overrides the pitch-site signature-motion rule for this site.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
@@ -253,8 +252,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <h1 id="h1"><span>You fly,</span> <span class="yl">I'll drive.</span></h1>
       <p class="promise">I'm Ed, and I take your car between New&nbsp;Jersey and Florida for <strong class="price">$1&nbsp;a&nbsp;mile</strong>.</p>
       <div class="hero-actions">
-        <a class="btn btn-call" href="tel:+17323003835"><span class="tel-row"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></span></a>
-        <a class="btn btn-line" href="#quote">Get a rate by text<svg aria-hidden="true"><use href="#i-down"/></svg></a>
+        <a class="btn btn-call" href="#quote">Get a rate by text<svg aria-hidden="true"><use href="#i-down"/></svg></a>
       </div>
     </div>
   </section>

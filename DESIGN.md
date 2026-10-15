@@ -206,7 +206,7 @@ The page opens from the driver's seat: a dusk sky going peach at the horizon, a 
 Density is low and type is big for a 40-to-70 reader on a phone. The ground is deep roadside green, never black; the one light section is concrete. Lane yellow is the action color; a sky-blue outline is the one hover/focus voice. Nothing moves.
 
 **Key Characteristics:**
-- A still canvas road at dusk behind an uppercase two-line headline and two buttons (yellow call, white outline).
+- A still canvas road at dusk behind an uppercase two-line headline and one yellow "Get a rate by text" button; the header number is the call action.
 - One sign panel (green, inset white rule, 16px corners) holds the rate form; the road's own sign repeats that grammar.
 - One yellow for action; one sky-blue outline for hover and focus.
 - One system font stack worked by weight: 900 headings, 800 controls, 400 talk.
@@ -272,7 +272,7 @@ The road sign's lettering is drawn in the same stack at 800 (route) and 900 (des
 
 Phone-first single column, 20px gutters in a 1160px container (40px from 760px; 14px in the header under 480px). Sections run 56 to 64px vertical padding on phones, 88px on desktop.
 
-The hero is a tall stage, `max(640px, min(100svh, 1000px))` (560px in short landscape), left-aligned at every width. Copy starts 96px down (132px from 760px, 84px in short landscape): h1, promise 18px below, actions 24px below. On phones the two buttons stack full width at 76px with a 12px gap; from 760px they sit side by side at their own width with a 16px gap. The canvas fills the hero; its horizon sits 48px below the copy or at 42% of the height, whichever is lower, so the road always shows under the buttons.
+The hero is a tall stage, `max(640px, min(100svh, 1000px))` (560px in short landscape), left-aligned at every width. Copy starts 96px down (132px from 760px, 84px in short landscape): h1, promise 18px below, actions 24px below. On phones the one button is full width at 76px; from 760px it sits at its own width. The canvas fills the hero; its horizon sits 48px below the copy or at 42% of the height, whichever is lower, so the road always shows under the buttons.
 
 The header is absolutely placed over the hero, not sticky: brand top-left, full phone number top-right, 72px tall (88px from 760px). From 760px trip rows pair into two columns. Only from 1024px do the form and FAQ split 5fr / 7fr with a 56px gap and When / Your car share a row (landscape phones and small tablets stay single-column, so the form never squeezes). The footer is centered with one call button (max 420px). Breakpoints: 760px, 1024px, 1100px; max-width 479px, 379px (header phone icon hides), 339px; max-height 500px landscape.
 
@@ -300,9 +300,6 @@ Softly rounded rectangles stepping down with size: sign panel 16px, buttons 14px
 
 ### Call Button
 Heavy, wide, unmistakable. Lane-yellow fill and 3px border, lane-ink text, 14px radius, Button Lift, a leading 24px phone or SMS icon, the number as a second 17px line. 60px tall; 76px in the hero. Used in the hero, as "Text this to Ed" on the form, and in the footer.
-
-### Line Button (hero only)
-The second path: "Get a rate by text" with a trailing 24px down arrow, jumping to the form. 3px white border, white text with Dusk Legibility, dusk-veil fill, 14px radius, no lift. Same height and padding as the hero call button beside it.
 
 ### Hero Road (signature)
 A full-bleed canvas behind the copy, decorative and hidden from assistive tech: the dusk sky and sun glow, two rows of pines, mown verge bands, a two-lane road bending right with a yellow left edge, white right edge and white dashes, reflector posts (white-reflector right, yellow-reflector left) and one green guide sign on the right shoulder. The sign reads I-95 NORTH / NEW JERSEY from April through August and I-95 SOUTH / FLORIDA the rest of the year.
@@ -332,7 +329,7 @@ Night Verge ground, centered: 64px white shamrock, the close headline, the Ed li
 
 ### Do:
 - **Do** keep the page still: draw the road once, redraw only on resize, transitions only on controls.
-- **Do** keep the hero to the two-line uppercase headline, the promise, and two buttons: yellow call first, white outline second.
+- **Do** keep the hero to the two-line uppercase headline, the promise, and one yellow button to the form; the call lives in the header.
 - **Do** put the rate form on the sign panel with the Sign Mount.
 - **Do** use the 3px focus-sky outline for every hover and focus.
 - **Do** keep controls 58px or taller, links 48px, answer choices as large rows, text at 17px or larger.
