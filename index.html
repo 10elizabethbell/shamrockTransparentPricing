@@ -94,6 +94,16 @@ section{position:relative}
 /* ============ SIGN PANEL (guide-sign grammar) ============ */
 .sign{position:relative;background:var(--sign);border-radius:var(--radius);box-shadow:inset 0 0 0 7px var(--sign),inset 0 0 0 10px var(--white),0 18px 40px -18px rgba(0,0,0,.6);padding:26px 22px}
 
+/* ============ MEET YOUR DRIVER ============ */
+.meet{padding:64px 0 0}
+.meet-photo{margin:26px 0 0;max-width:520px;aspect-ratio:4/3;display:grid;place-items:center;align-content:center;gap:10px;padding:22px;color:var(--ink-soft);font-size:18px;font-weight:700;text-align:center}
+.meet-photo svg{width:96px;height:96px}
+.meet-photo img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+.meet-copy{margin-top:26px}
+.meet-copy p{font-size:20px;max-width:36ch}
+.meet-copy p + p{margin-top:14px}
+.meet-copy .hi{font-size:22px;font-weight:800}
+
 /* ============ GET MY RATE ============ */
 .quote{padding:64px 0 60px}
 .quote h2{max-width:14ch}
@@ -165,6 +175,7 @@ footer .fine p + p{margin-top:6px}
   .promise{max-width:none}
   .hero-actions{grid-template-columns:auto auto;justify-content:start;gap:16px}
   .hero-actions .btn{padding:14px 30px}
+  .meet{padding:88px 0 0}
   .quote{padding:88px 0 88px}
   .chips{grid-template-columns:1fr 1fr}
   .quote form{padding:38px 36px;max-width:680px}
@@ -181,6 +192,10 @@ footer .fine p + p{margin-top:6px}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:end}
   .form-foot{grid-template-columns:auto 1fr;align-items:center;gap:22px}
   .faq .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px}
+  .meet .wrap{display:grid;grid-template-columns:5fr 7fr;gap:0 56px;align-items:center}
+  .meet h2{grid-column:1 / -1}
+  .meet-photo{aspect-ratio:1/1}
+  .meet-copy{margin-top:26px}
   .qa{margin-top:0}
   .qa > div:first-child{padding-top:0;border-top:0}
 }
@@ -198,7 +213,7 @@ footer .fine p + p{margin-top:6px}
 <!--
 THESIS: The interstate itself sells the trip: a still dusk view down I-95, and the rate request on a guide sign, plain enough to read at 65 mph. Refuses the auto-transport default of a stock truck photo, a quote form wall and fine print.
 OWN-WORLD: Guide-sign green panels with an inset white border, retroreflective white lettering, lane-line yellow for the one action, asphalt with yellow left edge and white dashes, dusk sky (navy to Florida-peach glow), highway-concrete light sections. Deep roadside green ground, never black.
-STORY: Snowbird sees "You fly, I'll drive.", understands Ed drives their car while they fly, sees $1 a mile, picks their trip and texts (or calls) for the total, reads straight answers, and calls. Kept short, still and calm for a 40-70 audience: nothing moves, nothing to figure out.
+STORY: Snowbird sees "You fly, I'll drive.", understands Ed drives their car while they fly, meets Ed, sees $1 a mile, picks their trip and texts (or calls) for the total, reads straight answers, and calls. Kept short, still and calm for a 40-70 audience: nothing moves, nothing to figure out.
 FIRST VIEWPORT: Phone: shamrock and name top-left, full number top-right; huge two-line headline; one-line promise; yellow Call Ed 732-300-3835 (full width) and outlined Get a rate by text; below, a still picture of the road running to a pine horizon, with an I-95 sign ahead.
 FORM: Interstate guide signs + dusk highway, my list #1 (seed b9fde720 assigned #6 luggage tags; overridden by Ellie's pitch-site rule: brand + fluid touchable signature). No animation at all, by Ellie's decision (2026-10-14, audience 40-70): the hero road is one still frame. This overrides the pitch-site signature-motion rule for this site.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
@@ -237,6 +252,24 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="hero-actions">
         <a class="btn btn-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="btn-stack">Call Ed<small>732-300-3835</small></span></a>
         <a class="btn btn-line" href="#quote">Get a rate by text<svg aria-hidden="true"><use href="#i-down"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEET YOUR DRIVER ============ -->
+  <section class="meet" aria-labelledby="meet-h">
+    <div class="wrap">
+      <h2 id="meet-h">Meet your driver</h2>
+      <!-- PHOTO: replace the placeholder's contents with <img src="ed.jpg" alt="Ed Brannagan beside a car"> once Ed sends one. -->
+      <figure class="meet-photo sign">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21c.8-4.2 4-6.5 8-6.5s7.2 2.3 8 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <figcaption>Photo of Ed coming soon</figcaption>
+      </figure>
+      <div class="meet-copy">
+        <p class="hi">Hi, I'm Ed Brannagan, owner and driver of Shamrock Transportation.</p>
+        <p>When snowbirds fly down to Florida for the winter, I drive their cars down. When they come back to Jersey for the summer, I drive them back up.</p>
+        <p>I also do local and long distance trips, and airport runs anywhere in Florida.</p>
+        <p>You call me on my own phone, and you can ask me anything before you hand over your keys.</p>
       </div>
     </div>
   </section>
@@ -296,10 +329,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <h2 id="faq-h">Straight answers</h2>
       <div class="qa">
-        <div>
-          <h3>Who will I be dealing with?</h3>
-          <p>Me, Ed Brannagan, owner and driver of Shamrock Transportation. You call my own phone, and you can ask me anything before you hand over your keys.</p>
-        </div>
         <div>
           <h3>Can I pack the car full?</h3>
           <p>Yes. Your winter things ride along inside your own car. Trailer shippers make you empty it. I don't.</p>

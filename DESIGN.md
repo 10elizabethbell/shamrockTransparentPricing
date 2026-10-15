@@ -307,6 +307,9 @@ The second path: "Get a rate by text" with a trailing 24px down arrow, jumping t
 ### Hero Road (signature)
 A full-bleed canvas behind the copy, decorative and hidden from assistive tech: the dusk sky and sun glow, two rows of pines, mown verge bands, a two-lane road bending right with a yellow left edge, white right edge and white dashes, reflector posts (white-reflector right, yellow-reflector left) and one green guide sign on the right shoulder. The sign reads I-95 NORTH / NEW JERSEY from April through August and I-95 SOUTH / FLORIDA the rest of the year.
 
+### Meet Your Driver
+Right after the hero on the deep-green ground. A photo frame built as a Sign Panel (4:3, max 520px on phones and tablets; square in a 5fr / 7fr split from 1024px) holding a 96px person outline and "Photo of Ed coming soon" in ink-soft, swapped for a cover-fit photo later. Beside or below it: a 22px/800 greeting and 20px lines, 36ch max.
+
 ### Sign Panel (the rate form)
 Sign-green, Sign Mount, 30px 22px 28px padding (38px 36px from 760px, max 680px wide until 1024px). Holds the trip rows, When / Your car / Your name fields, the yellow "Text this to Ed" button and a soft-white note.
 
