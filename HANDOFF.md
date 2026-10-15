@@ -12,16 +12,16 @@
 - **No animation anywhere.** The road is drawn once on load (and again only if the window size changes); there's no animation loop. This overrides the pitch-site "signature motion" rule for this site, by Ellie's call. To pick a different still view, change `FRAME_TIME` (the bend) and `FRAME_TRAVEL` (where the posts and sign sit) at the top of the hero script.
 - **How it works was removed** (Ellie, 2026-10-15). It's in git history (commit 535ea56) if wanted.
 - **Pricing: $1 a mile** (Ellie, 2026-10-15). In the hero promise, the form heading "$1 a mile. That's the rate.", the meta description, and the pre-written text ("I'd like a price for my trip").
-- **Meet your driver** (Ellie, 2026-10-15), right after the hero: a photo frame (guide-sign panel with a person outline and "Photo of Ed coming soon"), then "Hi, I'm Ed Brannagan, owner and driver…", the snowbird run both ways, local / long distance / Florida airport runs, and "you call me on my own phone". Only facts from the card and your description. To add the photo: replace the frame's contents with `<img src="ed.jpg" alt="…">` (`<!-- PHOTO -->` comment marks it); it fills the frame (4:3 on phones, square on desktop). The FAQ "Who will I be dealing with?" was removed since this section answers it.
+- **Meet your driver** (Ellie, 2026-10-15), right after the hero: a photo frame (guide-sign panel with a person outline and "Photo of Ed coming soon"), then "Hi, I'm Ed Brannagan, owner and driver…", then three paragraphs on how Ed treats the car (rewritten 2026-10-15 at Ellie's ask): careful, steady, "straight to where you're going"; never on a truck, carrier or trailer, winter things packed inside; his own number, ask anything first. **Confirm with Ed** he's comfortable promising "straight to where you're going" and the packed-car line (packing policy is still unconfirmed). Local / long distance / airport runs still appear in the FAQ and footer. To add the photo: replace the frame's contents with `<img src="ed.jpg" alt="…">` (`<!-- PHOTO -->` comment marks it); it fills the frame (4:3 on phones, square on desktop). The FAQ "Who will I be dealing with?" was removed since this section answers it.
 - **The form** (on a guide sign): four big trip choices (New Jersey to Florida, Florida to New Jersey, Florida airport run, Somewhere else), then when (optional), car and name. "Text this to Ed" opens a pre-written text to 732-300-3835, with a line under the button explaining exactly that. A fallback box shows the text if Messages doesn't open. There's also a "Call 732-300-3835" link beside the form.
 - **Straight answers:** four questions with the answers always showing (no tapping to open): packing the car full, airport runs, other routes, and when a truck carrier is the better call.
-- **Footer as the close:** shamrock, "You fly. I'll drive.", "I'm Ed Brannagan, owner and driver", a Call Ed button, the card tagline, and the services line.
+- **Footer as the close:** shamrock, "You fly. I'll drive.", "I'm Ed Brannagan, owner and driver", a Call Ed button (shamrock green #178049 with white text, not yellow, by Ellie 2026-10-15), the card tagline, and the services line.
 - Favicon and iPhone icon: a shamrock on a guide-sign green tile. og:image is the hero at 1200x630.
 
 ## Assumptions I made
 - **The shamrock is mine, drawn in SVG.** I don't have the card photo, and the brief says to ask before using a card scan publicly. Swap in Ed's real emblem when Ellie clears it; it's used in the header, the close, the favicon and `apple-touch-icon.png`.
 - **Green:** the brief said to sample the card's green, else use a deep Irish green. I used interstate guide-sign green (#0d6a43) because it is both. Re-sample it from the card.
-- **Footer close repeats "You fly. I'll drive."** now that it's also the headline. Left as a bookend; swap it if the repeat bothers you. The form lead no longer mentions gas, tolls or pickup days (Ellie removed it 2026-10-15).
+- **Footer close repeats "You fly. I'll drive."** now that it's also the headline. Left as a bookend; swap it if the repeat bothers you. The form section is now just the "$1 a mile. That's the rate." heading and the form: Ellie removed the intro line ("Tell me your trip and I'll tell you the miles and the total") and the "Rather talk? Call 732-300-3835" link on 2026-10-15.
 - **"Trailer shippers make you empty it. I don't."** The brief names "pack the car full" as the #1 differentiator. Ed hasn't confirmed his own packing policy or any weight limit.
 - **"I'm Ed Brannagan, owner and driver"** comes from the card. Nothing on the page says he's the only driver.
 - **First-person voice as Ed.** The tone is plain-spoken, from the brief's notes; no social presence exists to match.
@@ -30,7 +30,7 @@
 
 ## Placeholders and gaps
 - **Rates: $1 a mile, on the page.** No example totals are shown, because the miles depend on his exact pickup and drop-off. Whether airport runs or short local trips have a minimum is unknown.
-- **What a rate includes.** Once known, replace the second sentence of the form's lead with the plain answer (`<!-- CONFIRM -->` comment in place).
+- **What a rate includes.** Once known, add one plain line under the form heading or an FAQ answer.
 - **Missing facts:** insurance, hours, years in business, service area beyond NJ ↔ FL and "anywhere in Florida". None of these are on the page.
 - **No email and no Facebook exist**, so the footer email and the "see more of my work" Facebook link are absent by design.
 - **No photos at all.** A photo of Ed with his car (or the card) would do more for trust than anything else on the page.

@@ -22,6 +22,7 @@
   --ground:#0c3a2a;        /* page ground: deep roadside green */
   --ground-deep:#082a1e;   /* footer */
   --sign:#0d6a43;          /* interstate guide-sign green */
+  --shamrock:#178049;      /* brighter shamrock green: footer call button (white text 4.8:1) */
   --white:#f7fbf8;         /* retroreflective sign white */
   --ink-soft:#cfe5d9;      /* secondary text on green */
   --lane:#f5c242;          /* lane-line yellow: primary button */
@@ -109,7 +110,6 @@ section{position:relative}
 /* ============ GET MY RATE ============ */
 .quote{padding:64px 0 60px}
 .quote h2{max-width:14ch}
-.quote .lead{margin-top:16px;font-size:20px;color:var(--ink-soft);max-width:36ch}
 .quote form{margin-top:30px;padding:30px 22px 28px;display:grid;gap:22px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 legend,.lbl{display:block;font-weight:800;font-size:20px;margin-bottom:10px;padding:0}
@@ -129,7 +129,7 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
   .btn:hover{outline:3px solid var(--focus);outline-offset:3px}
   .chip:hover span{outline:3px solid var(--focus);outline-offset:2px}
   input[type=text]:hover,input[type=tel]:hover,textarea:hover{outline:3px solid var(--focus);outline-offset:2px}
-  footer a:hover,.note a:hover,.alt a:hover,.brand:hover,.top-call:hover{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+  footer a:hover,.note a:hover,.brand:hover,.top-call:hover{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
 }
 @media (forced-colors:active){.chip input:checked + span{outline:3px solid Highlight}}
 .field.bad input,.chips.bad .chip span{border-color:#ffb199}
@@ -139,8 +139,6 @@ input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
 .form-foot{display:grid;gap:14px;margin-top:4px}
 .form-foot noscript{display:block}
 .form-foot .note{font-size:18px;color:var(--ink-soft)}
-.alt{margin-top:22px;font-size:22px;font-weight:800}
-.alt a{color:var(--lane);text-decoration:none;white-space:nowrap;display:inline-block;padding:6px 0}
 .form-foot .note a{font-weight:800;color:var(--white);white-space:nowrap;display:inline-block;padding:10px 0}
 .sent{display:none;padding:18px;border-radius:12px;background:rgba(8,42,30,.55);font-size:18px}
 .sent.show{display:block}
@@ -161,6 +159,7 @@ footer .mark{width:64px;height:64px}
 footer h2{margin-top:10px;font-size:clamp(1.7rem,7.6vw,2.8rem);color:var(--white)}
 footer .ed{margin:14px auto 0;max-width:30ch;font-size:19px;color:var(--white)}
 footer .btn{margin:26px auto 0;max-width:420px}
+footer .btn-call{background:var(--shamrock);border-color:var(--shamrock);color:var(--white)}
 footer .tag{margin-top:20px;font-style:italic}
 footer .fine{margin-top:28px;padding-top:20px;border-top:1px solid rgba(247,251,248,.15)}
 footer .fine p + p{margin-top:6px}
@@ -268,9 +267,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </figure>
       <div class="meet-copy">
         <p class="hi">Hi, I'm Ed Brannagan, owner and driver of Shamrock Transportation.</p>
-        <p>When snowbirds fly down to Florida for the winter, I drive their cars down. When they come back to Jersey for the summer, I drive them back up.</p>
-        <p>I also do local and long distance trips, and airport runs anywhere in Florida.</p>
-        <p>You call me on my own phone, and you can ask me anything before you hand over your keys.</p>
+        <p>I know the car you're handing me isn't just a way to get around. You paid for it, you've looked after it, and you want it back exactly as you left it. So I drive it the way I'd want someone to drive mine: carefully, steadily, and straight to where you're going.</p>
+        <p>It never goes on a truck. It doesn't sit on an open carrier in the weather or get winched on and off a trailer. It travels the way it was built to, with your winter things still packed inside.</p>
+        <p>And you're not handing your keys to a stranger. You'll have my own number, and you can ask me anything before you hand them over.</p>
       </div>
     </div>
   </section>
@@ -280,9 +279,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap quote-grid">
       <div>
         <h2 id="quote-h">$1 a mile. That's the rate.</h2>
-        <!-- CONFIRM with Ed: what a rate includes (gas, tolls, his trip home). Once known, say it here plainly. -->
-        <p class="lead">Tell me your trip and I'll tell you the miles and the total.</p>
-        <p class="alt">Rather talk? <a href="tel:+17323003835">Call 732-300-3835</a></p>
       </div>
       <form class="sign" id="quoteForm" novalidate>
         <fieldset class="chips-wrap" id="tripSet" aria-describedby="tripErr">

@@ -217,7 +217,8 @@ Density is low and type is big for a 40-to-70 reader on a phone. The ground is d
 Roadside green and concrete for the page, guide-sign green for the panel, lane yellow for action, and a dusk palette that lives only in the hero picture.
 
 ### Primary
-- **Lane-Line Yellow** (lane-yellow): call buttons, the selected trip row, step-number discs, "I'll drive." in the headline, the "Call 732-300-3835" link beside the form, the header phone icon, text selection. In the road picture it is the left edge line and the left posts' reflectors. Never on concrete.
+- **Shamrock Green** (#178049): the footer Call Ed button only, with white text (4.8:1). Ellie, 2026-10-15: yellow there felt out of place.
+- **Lane-Line Yellow** (lane-yellow): the hero "Get a rate by text" and "Text this to Ed" buttons, the selected trip row, "I'll drive." and "$1 a mile" in the hero, the header phone icon, text selection. In the road picture it is the left edge line and the left posts' reflectors. Never on concrete.
 - **Lane Ink** (lane-ink): text and icons on yellow.
 - **Focus Sky** (focus-sky): the hover and focus outline, nothing else.
 
@@ -256,7 +257,7 @@ Roadside green and concrete for the page, guide-sign green for the panel, lane y
 - **Display** (900, 3rem to 6rem; 4.4rem to 6rem from 760px; 6rem from 1100px; 0.94, uppercase, -0.025em): the hero h1 only, two block lines, second line lane yellow, with a soft dark text-shadow.
 - **Headline** (900, 2rem to 3rem, 1.1, sentence case): section h2, held to 14ch on the form. The footer's "You fly. I'll drive." uses **Headline Close** (1.7rem to 2.8rem).
 - **Promise** (400, 19px to 20px, 1.4, max 32ch on phones): the white line under the h1, with a soft text-shadow.
-- **Title** (800, 22px, 1.3): step titles, FAQ questions, the "Rather talk?" line; the step digit is 22px at 900.
+- **Title** (800, 22px, 1.3): step titles, FAQ questions; the step digit is 22px at 900.
 - **Control** (800, 20px): button text, form legends, labels, trip rows. The header phone link is 800 at 18px (17px under 480px, 22px from 760px).
 - **Answer** (400, 19px): FAQ answers (60ch), step lines, the footer Ed line, field text.
 - **Body** (400, 18px, 1.55): running copy, notes, error sentences (700).
@@ -323,7 +324,7 @@ On concrete: headline left, answers right from 1024px. Each 22px/800 question ha
 No nav bar. The brand (shamrock sign tile plus two-line uppercase wordmark) links to top; the full phone number with a yellow phone icon sits top-right as a `tel:` link. It scrolls away with the hero.
 
 ### Footer (the close)
-Night Verge ground, centered: 64px white shamrock, the close headline, the Ed line, one call button, the italic tagline, then fine print under a rule-footer hairline.
+Night Verge ground, centered: 64px white shamrock, the close headline, the Ed line, one Shamrock Green call button, the italic tagline, then fine print under a rule-footer hairline.
 
 ## Do's and Don'ts
 
