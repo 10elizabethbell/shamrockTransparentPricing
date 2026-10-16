@@ -103,6 +103,8 @@ main{overflow-x:clip}   /* sign structures reach out to the road shoulders, past
 .stop{padding:84px 0 92px}
 .gantry{position:relative;transform-origin:50% calc(100% + var(--foot));--steel:linear-gradient(90deg,#4a5157,#8a9399 45%,#4a5157);--steel-h:linear-gradient(180deg,#8a9399,#4a5157);--foot:92px;--sh:260px;--pw:14px}
 .gantry > .sign{position:relative}
+/* as a sign recedes its words and photo fade out, leaving the bare green sign and its white edge */
+.gantry > .sign > *,.plate > *,.plate .t{opacity:var(--ink,1)}
 .rig{position:absolute;inset:0;pointer-events:none}
 .rig i{position:absolute;display:block}
 /* posts stand on the road shoulders: --sh (set by the script) is the shoulder distance from the road center at this sign's depth */
@@ -380,7 +382,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
      <!-- roadside signs off to the side, one question per sign, each on its own post, alternating sides (Ellie, 2026-10-15) -->
      <div class="gantry assembly rig-right">
       <div class="rig" aria-hidden="true"><i class="post"></i><i class="arm"></i><i class="arm low"></i><i class="brace"></i></div>
-      <h2 class="plate keystone" id="faq-h">Straight answers</h2>
+      <h2 class="plate keystone" id="faq-h"><span class="t">Straight answers</span></h2>
       <div class="plate oct">
         <h3>Can I pack the car full?</h3>
         <p>Yes. Your winter things ride along inside your own car. Trailer shippers make you empty it. I don't.</p>
@@ -560,11 +562,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     for (k = 1; k < rows.length; k++){ a = rows[k - 1]; b = rows[k]; if (!b.vis) continue;
       line(a, b, -.93, .07, rgb(mix([240, 242, 238], HAZE, b.fog * .8)));
       line(a, b, .93, .07, rgb(mix([240, 242, 238], HAZE, b.fog * .8))); }
-    /* yellow dashes between the lanes (Ellie, 2026-10-15): 1.2 on, 3.8 off, each one solid quad.
-       DASH_SHIFT slides them toward the camera so one sits right in front (Ellie, 2026-10-15) */
-    var D = 5, DL = 1.2, DASH_SHIFT = .1, dt = travel + DASH_SHIFT, first = Math.floor((1 + dt) / D) * D;
-    for (var dz = first; dz < dt + Z_FAR * .9; dz += D){
-      var z1 = dz - dt + DL, z0 = dz - dt;
+    /* yellow dashes between the lanes (Ellie, 2026-10-15): an even pattern, 0.6 on and 1.2 off,
+       laid from the first dash, which starts just above the bottom edge at the top of the page.
+       They are painted on the road, so scrolling carries them with the road and the signs. */
+    var D = 1.8, DL = .6, base = FRAME_TRAVEL + 1.03, n0 = Math.ceil((travel + .6 - DL - base) / D);
+    for (var n = n0; base + n * D - travel < Z_FAR * .9; n++){
+      var z0 = base + n * D - travel, z1 = z0 + DL;
       if (z1 < .6) continue; z0 = Math.max(.6, z0);
       var A = {z:z1, y:py(0, z1), x:px(0, z1), w:HALF * S / z1}, B = {z:z0, y:py(0, z0), x:px(0, z0), w:HALF * S / z0};
       if (B.y <= A.y || A.y > minAt(z1) + .5) continue;
@@ -591,7 +594,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           ctx.strokeStyle = rgb(mix([247, 251, 248], HAZE, fog)); ctx.lineWidth = Math.max(1, w * .015);
           roundRect(x1 + w * .035, yt + w * .035, w - w * .07, h - w * .07, w * .035); ctx.stroke();
           ctx.fillStyle = ctx.strokeStyle; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-          ctx.font = '800 ' + (h * .26) + 'px ' + FONT;
+          var f0 = h * .26; ctx.font = '800 ' + f0 + 'px ' + FONT;
+          var w0 = ctx.measureText(SIGN[0]).width; if (w0 > w * .86){ f0 *= w * .86 / w0; ctx.font = '800 ' + f0 + 'px ' + FONT; }   /* fit the top line too */
           ctx.fillText(SIGN[0], x1 + w / 2, yt + h * .32);
           var fs = h * .34; ctx.font = '900 ' + fs + 'px ' + FONT;
           var mw = ctx.measureText(SIGN[1]).width; if (mw > w * .86){ fs *= w * .86 / mw; ctx.font = '900 ' + fs + 'px ' + FONT; }
@@ -645,11 +649,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       var off = g._side ? (g._side > 0 ? x0 + sh - cx : cx - (x0 - sh)) : sh;
       if (g._sh !== Math.round(off)){ g._sh = Math.round(off); g.style.setProperty('--sh', g._sh + 'px'); }
       var foot = top + g.offsetHeight + (g._foot || (g._foot = parseFloat(getComputedStyle(g).getPropertyValue('--foot')) || 92));
-      if (still || foot >= H){ if (g._s !== 1){ g.style.transform = ''; g.style.opacity = ''; g._s = 1; } return; }
+      if (still || foot >= H){ if (g._s !== 1){ g.style.transform = ''; g.style.opacity = ''; g.style.removeProperty('--ink'); g._s = 1; } return; }
       /* it keeps its place across the road: its offset from the road center shrinks with distance */
       var u = H - foot, k = 1 / (1 + u / L), fv = horizon + L * k, dx = px(0, z0 / k) + (cx - x0) * k - cx;
       g.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + (fv - foot).toFixed(1) + 'px,0) scale(' + k.toFixed(4) + ')';
-      g.style.opacity = Math.max(0, Math.min(1, (k - .08) / .25)).toFixed(3);
+      g.style.opacity = Math.max(0, Math.min(1, (k - .04) / .08)).toFixed(3);
+      g.style.setProperty('--ink', Math.max(0, Math.min(1, (k - .45) / .35)).toFixed(3));
       g._s = k;
     });
   }
